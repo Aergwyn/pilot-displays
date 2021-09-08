@@ -9,7 +9,7 @@ class CfgPatches
 		requiredAddons[] = { "cba_settings" };
 		author = "Aergwyn"
 		authors[] = { "Aergwyn" };
-		authorUrl = "";
+		authorUrl = "https://github.com/Aergwyn/pilot-displays";
 	};
 };
 
@@ -28,6 +28,7 @@ class Extended_PreInit_EventHandlers
 		init = "call compileScript ['HMD\functions\XEH_preInit.sqf', true]";
 	};
 };
+
 class Extended_PostInit_EventHandlers
 {
 	class APD_HMD_PostInit

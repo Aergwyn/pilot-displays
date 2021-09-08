@@ -188,7 +188,6 @@ class APD_HMD_Base
 					source = "userText";
 					sourceIndex = 13;
 					sourceScale = 1;
-					text = "?:? ETA";
 					type = "text";
 
 					pos[] = { { 1 + X_OFFSET, 1 + Y_OFFSET }, 1 };
