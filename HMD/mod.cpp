@@ -1,0 +1,14 @@
+name			= "Aergwyn's Pilot HMD";
+author			= "Aergwyn";
+logo			= "";
+logoOver		= "";
+tooltip			= "Pilot HMD";
+tooltipOwned	= "Aergwyn";
+picture 		= "";
+actionName		= "";
+action			= "https://github.com/Aergwyn/pilot-displays";
+overview		= "Fully customizable HMD for pilots.";
+hideName		= 1;
+hidePicture		= 1;
+dlcColor[]		= { 0.25, 0.5, 0.25, 1 };
+logoSmall		= "";
