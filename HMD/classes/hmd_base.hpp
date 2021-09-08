@@ -1,8 +1,5 @@
 class APD_HMD_Base
 {
-	#define HMD_WIDTH 0.06
-	#define HMD_HEIGHT 0.04
-
 	color[] = { 0, 0, 0, 0 };
 	enableParallax = 0;
 	font = "EtelkaMonospacePro";
@@ -17,6 +14,9 @@ class APD_HMD_Base
 	topRight = "";
 	bottomLeft = "";
 
+	#define HMD_WIDTH 0.06
+	#define HMD_HEIGHT 0.04
+
 	helmetPosition[] = { -(HMD_WIDTH / 2), HMD_HEIGHT / 2, 0.04 };
 	helmetRight[] = { HMD_WIDTH, 0, 0 };
 	helmetDown[] = { 0, -HMD_HEIGHT, 0 };
@@ -29,15 +29,30 @@ class APD_HMD_Base
 	};
 	class Bones
 	{
+		#define VIEW_X_OFFSET 0.1214
+		#define VIEW_Y_OFFSET 0.1725
+
 		class Waypoint_To_View_Bone
 		{
-			#define X_OFFSET 0.1214
-			#define Y_OFFSET 0.1725
-
 			type = "vector";
 			source = "wppointtoview";
 			pos0[] = { 0.5, 0.5 };
-			pos10[] = { 0.5 + X_OFFSET, 0.5 + Y_OFFSET };
+			pos10[] = { 0.5 + VIEW_X_OFFSET, 0.5 + VIEW_Y_OFFSET };
+		};
+		class Horizon_0_Bone
+		{
+			angle = 0;
+			type = "horizon";
+			pos0[] = { 0.5, 0.5 };
+			pos10[] = { 0.5 + VIEW_X_OFFSET, 0.5 + VIEW_Y_OFFSET };
+		};
+		class Horizon_P10_Bone : Horizon_0_Bone
+		{
+			angle = 10;
+		};
+		class Horizon_N10_Bone : Horizon_0_Bone
+		{
+			angle = -10;
 		};
 	};
 	class Draw
@@ -77,9 +92,13 @@ class APD_HMD_Base
 				lineXleftMajor = 0.01;
 				lineYrightMajor =0.02;
 
-				pos[] = { -0.0027, 0.018 };
-				right[] = { 0.0273, 0.018 };
-				down[] = { -0.0027, 0.048 };
+				#define SIZE 0.03
+				#define X_OFFSET -0.0027
+				#define Y_OFFSET 0.018
+
+				pos[] = { 0 + X_OFFSET, 0 + Y_OFFSET };
+				right[] = { 0 + X_OFFSET + SIZE, 0 + Y_OFFSET };
+				down[] = { 0 + X_OFFSET, 0 + Y_OFFSET + SIZE };
 			};
 			class Heading_Index
 			{
@@ -100,10 +119,6 @@ class APD_HMD_Base
 			};
 			class Heading_Number
 			{
-				#define SIZE 0.03
-				#define X_OFFSET -0.003
-				#define Y_OFFSET 0.054
-
 				align = "center";
 				refreshRate = 0;
 				scale = 1;
@@ -112,9 +127,85 @@ class APD_HMD_Base
 				sourceScale = 1;
 				type = "text";
 
+				#define SIZE 0.03
+				#define X_OFFSET -0.003
+				#define Y_OFFSET 0.054
+
 				pos[] = { { 0.5 + X_OFFSET, 0 + Y_OFFSET }, 1 };
 				right[] = { { 0.5 + X_OFFSET + SIZE, 0 + Y_OFFSET }, 1 };
 				down[] = { { 0.5 + X_OFFSET, 0 + Y_OFFSET + SIZE }, 1 };
+			};
+		};
+		class Horizon_Group
+		{
+			#define HORIZON_WIDTH 0.5
+
+			alpha = "user1";
+			color[] = { "user2", "user3", "user4" };
+			type = "group";
+
+			class Orientation
+			{
+				lineType = 0;
+				type = "line";
+				width = 3;
+
+				#define WIDTH 0.15
+				#define HEIGHT 0.01
+				#define GAP_WIDTH 0.02
+
+				points[] =
+				{
+					{ { 0.5 + -(WIDTH / 2), 0.5 }, 1 },
+					{ { 0.5 - GAP_WIDTH, 0.5 }, 1 },
+					{ { 0.5 - GAP_WIDTH, 0.5 + HEIGHT }, 1 },
+					{ },
+					{ { 0.5 - GAP_WIDTH / 10, 0.5 }, 1 },
+					{ { 0.5 + GAP_WIDTH / 10, 0.5 }, 1 },
+					{ },
+					{ { 0.5, 0.5 - GAP_WIDTH / 10 }, 1 },
+					{ { 0.5, 0.5 + GAP_WIDTH / 10 }, 1 },
+					{ },
+					{ { 0.5 + GAP_WIDTH, 0.5 + HEIGHT }, 1 },
+					{ { 0.5 + GAP_WIDTH, 0.5 }, 1 },
+					{ { 0.5 + WIDTH / 2, 0.5 }, 1 },
+				};
+			};
+			class Horizon_P10
+			{
+				lineType = 2;
+				type = "line";
+				width = 1.5;
+
+				points[] =
+				{
+					{ "Horizon_P10_Bone", { -(HORIZON_WIDTH / 4), 0 }, 1 },
+					{ "Horizon_P10_Bone", { HORIZON_WIDTH / 4, 0 }, 1 }
+				};
+			};
+			class Horizon_0
+			{
+				lineType = 2;
+				type = "line";
+				width = 1.5;
+
+				points[] =
+				{
+					{ "Horizon_0_Bone", { -(HORIZON_WIDTH / 2), 0 }, 1 },
+					{ "Horizon_0_Bone", { HORIZON_WIDTH / 2, 0 }, 1 }
+				};
+			};
+			class Horizon_N10
+			{
+				lineType = 2;
+				type = "line";
+				width = 1.5;
+
+				points[] =
+				{
+					{ "Horizon_N10_Bone", { -(HORIZON_WIDTH / 4), 0 }, 1 },
+					{ "Horizon_N10_Bone", { HORIZON_WIDTH / 4, 0 }, 1 }
+				};
 			};
 		};
 		class Waypoint_Group
@@ -126,10 +217,11 @@ class APD_HMD_Base
 
 			class Waypoint_Triangle
 			{
-				#define SIZE 0.025
-
+				lineType = 0;
 				type = "line";
 				width = 2;
+
+				#define SIZE 0.025
 
 				points[] =
 				{
@@ -146,15 +238,15 @@ class APD_HMD_Base
 
 				class Waypoint_Header
 				{
-					#define SIZE 0.025
-					#define X_OFFSET -0.2
-					#define Y_OFFSET -0.13
-
 					align = "right";
 					scale = 1;
 					source = "static";
 					text  = "WYPT";
 					type = "text";
+
+					#define SIZE 0.025
+					#define X_OFFSET -0.2
+					#define Y_OFFSET -0.13
 
 					pos[] = { { 1 + X_OFFSET, 1 + Y_OFFSET }, 1 };
 					right[] = { { 1 + X_OFFSET + SIZE, 1 + Y_OFFSET }, 1 };
@@ -162,10 +254,6 @@ class APD_HMD_Base
 				};
 				class Waypoint_Distance
 				{
-					#define SIZE 0.025
-					#define X_OFFSET -0.2
-					#define Y_OFFSET -0.1
-
 					align = "right";
 					scale = 1;
 					source = "userText";
@@ -173,22 +261,26 @@ class APD_HMD_Base
 					sourceScale = 1;
 					type = "text";
 
+					#define SIZE 0.025
+					#define X_OFFSET -0.2
+					#define Y_OFFSET -0.1
+
 					pos[] = { { 1 + X_OFFSET, 1 + Y_OFFSET }, 1 };
 					right[] = { { 1 + X_OFFSET + SIZE, 1 + Y_OFFSET }, 1 };
 					down[] = { { 1 + X_OFFSET, 1 + Y_OFFSET + SIZE }, 1 };
 				};
 				class Waypoint_ETA
 				{
-					#define SIZE 0.025
-					#define X_OFFSET -0.2
-					#define Y_OFFSET -0.07
-
 					align = "right";
 					scale = 1;
 					source = "userText";
 					sourceIndex = 13;
 					sourceScale = 1;
 					type = "text";
+
+					#define SIZE 0.025
+					#define X_OFFSET -0.2
+					#define Y_OFFSET -0.07
 
 					pos[] = { { 1 + X_OFFSET, 1 + Y_OFFSET }, 1 };
 					right[] = { { 1 + X_OFFSET + SIZE, 1 + Y_OFFSET }, 1 };
