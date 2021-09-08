@@ -169,7 +169,7 @@ class APD_HMD_Base
 					align = "right";
 					scale = 1;
 					source = "userText";
-					sourceIndex = 42;
+					sourceIndex = 12;
 					sourceScale = 1;
 					type = "text";
 
@@ -186,7 +186,7 @@ class APD_HMD_Base
 					align = "right";
 					scale = 1;
 					source = "userText";
-					sourceIndex = 41;
+					sourceIndex = 13;
 					sourceScale = 1;
 					text = "?:? ETA";
 					type = "text";

@@ -13,8 +13,8 @@ if (_vehicle != player) then
 
 	_vehicle setUserMFDValue [10, parseNumber APD_HMD_HeadingEnabled];
 	_vehicle setUserMFDValue [11, APD_HMD_WaypointStyle];
-	// 8 Waypoint Distance
-	// 9 Waypoint ETA
+	// 12 Waypoint Distance
+	// 13 Waypoint ETA
 };
 
 call APD_fnc_evaluateWaypointLoop;
