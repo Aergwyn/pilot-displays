@@ -20,7 +20,7 @@ private _relativeHeading = _waypointHeading - _vectorHeading;
 * WYPT:   0		Vector:  90		=> Relative: - 90 [WYPT is ahead but we are moving perpendicular]
 * WYPT: 345		Vector: 145		=> Relative:  200
 * WYPT: 180		Vector: 180		=> Relative:    0 [WYPT is behind but we are moving backwards]
-* WYPT:   5 	Vector: 355		=> Relative: -350 [WYPT is slightly right but we are moving slightly left]
+* WYPT:   5		Vector: 355		=> Relative: -350 [WYPT is slightly right but we are moving slightly left]
 */
 
 if (_relativeHeading < 0) then

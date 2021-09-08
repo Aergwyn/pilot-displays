@@ -15,19 +15,19 @@ private _wynCategory01 = "01 - General";
 private _wynCategory02 = "02 - Specific";
 
 [
-    "APD_HMD_Enabled", "CHECKBOX",
+	"APD_HMD_Enabled", "CHECKBOX",
 	"Enabled",
-    [_wynCategory, _wynCategory01],
-    TRUE,
+	[_wynCategory, _wynCategory01],
+	TRUE,
 	nil,
 	{ call APD_fnc_updateMFDValues; }
 ] call CBA_Settings_fnc_init;
 
 [
-    "APD_HMD_SystemOfUnits", "LIST",
+	"APD_HMD_SystemOfUnits", "LIST",
 	"System of Units",
-    [_wynCategory, _wynCategory01],
-    [
+	[_wynCategory, _wynCategory01],
+	[
 		// Unit, Multiplier (to convert from metric meter), Precision
 		[
 			["M", 1, 0],
@@ -47,27 +47,27 @@ private _wynCategory02 = "02 - Specific";
 ] call CBA_Settings_fnc_init;
 
 [
-    "APD_HMD_Colour", "COLOR",
+	"APD_HMD_Colour", "COLOR",
 	"Colour",
-    [_wynCategory, _wynCategory01],
-    [ 0, 1, 0, 1 ],
+	[_wynCategory, _wynCategory01],
+	[ 0, 1, 0, 1 ],
 	nil,
 	{ call APD_fnc_updateMFDValues; }
 ] call CBA_Settings_fnc_init;
 
 [
-    "APD_HMD_HeadingEnabled", "CHECKBOX",
+	"APD_HMD_HeadingEnabled", "CHECKBOX",
 	"Show Heading",
-    [_wynCategory, _wynCategory02],
-    TRUE,
+	[_wynCategory, _wynCategory02],
+	TRUE,
 	nil,
 	{ call APD_fnc_updateMFDValues; }
 ] call CBA_Settings_fnc_init;
 
 [
-    "APD_HMD_WaypointStyle", "LIST",
+	"APD_HMD_WaypointStyle", "LIST",
 	"Waypoint Style",
-    [_wynCategory, _wynCategory02],
+	[_wynCategory, _wynCategory02],
 	[[0, 1, 2], ["Disabled", "Marker", "Marker + Detail"], 2],
 	nil,
 	{ call APD_fnc_updateMFDValues; }
