@@ -138,10 +138,9 @@ class APD_HMD_Base
 		};
 		class Horizon_Group
 		{
-			#define HORIZON_WIDTH 0.5
-
 			alpha = "user1";
 			color[] = { "user2", "user3", "user4" };
+			condition = "user14 * (on + abs(speed) >= 0.5)";
 			type = "group";
 
 			class Orientation
@@ -177,10 +176,12 @@ class APD_HMD_Base
 				type = "line";
 				width = 1.5;
 
+				#define WIDTH 0.3
+
 				points[] =
 				{
-					{ "Horizon_P10_Bone", { -(HORIZON_WIDTH / 4), 0 }, 1 },
-					{ "Horizon_P10_Bone", { HORIZON_WIDTH / 4, 0 }, 1 }
+					{ "Horizon_P10_Bone", { -(WIDTH / 2), 0 }, 1 },
+					{ "Horizon_P10_Bone", { WIDTH / 2, 0 }, 1 }
 				};
 			};
 			class Horizon_0
@@ -189,10 +190,12 @@ class APD_HMD_Base
 				type = "line";
 				width = 1.5;
 
+				#define WIDTH 0.7
+
 				points[] =
 				{
-					{ "Horizon_0_Bone", { -(HORIZON_WIDTH / 2), 0 }, 1 },
-					{ "Horizon_0_Bone", { HORIZON_WIDTH / 2, 0 }, 1 }
+					{ "Horizon_0_Bone", { -(WIDTH / 2), 0 }, 1 },
+					{ "Horizon_0_Bone", { WIDTH / 2, 0 }, 1 }
 				};
 			};
 			class Horizon_N10
@@ -201,10 +204,12 @@ class APD_HMD_Base
 				type = "line";
 				width = 1.5;
 
+				#define WIDTH 0.3
+
 				points[] =
 				{
-					{ "Horizon_N10_Bone", { -(HORIZON_WIDTH / 4), 0 }, 1 },
-					{ "Horizon_N10_Bone", { HORIZON_WIDTH / 4, 0 }, 1 }
+					{ "Horizon_N10_Bone", { -(WIDTH / 2), 0 }, 1 },
+					{ "Horizon_N10_Bone", { WIDTH / 2, 0 }, 1 }
 				};
 			};
 		};
