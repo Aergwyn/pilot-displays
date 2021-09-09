@@ -72,3 +72,12 @@ private _wynCategory02 = "02 - Specific";
 	nil,
 	{ call APD_fnc_updateMFDValues; }
 ] call CBA_Settings_fnc_init;
+
+[
+	"APD_HMD_HorizonEnabled", "CHECKBOX",
+	"Show Horizon",
+	[_wynCategory, _wynCategory02],
+	TRUE,
+	nil,
+	{ call APD_fnc_updateMFDValues; }
+] call CBA_Settings_fnc_init;
