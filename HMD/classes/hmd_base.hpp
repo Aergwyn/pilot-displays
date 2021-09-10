@@ -311,11 +311,81 @@ class APD_HMD_Base
 				};
 			};
 		};
+		class Speed_Group
+		{
+			alpha = "user1";
+			color[] = { "user2", "user3", "user4" };
+			condition = "user12";
+			type = "group";
+
+			#define SIZE 0.025
+
+			class Airspeed
+			{
+				align = "left";
+				scale = 1;
+				source = "speed";
+				sourceScale = 1;
+				type = "text";
+
+				#define X_OFFSET 0.16
+				#define Y_OFFSET -0.1
+
+				pos[] = { { 0 + X_OFFSET, 1 + Y_OFFSET }, 1 };
+				right[] = { { 0 + X_OFFSET + SIZE, 1 + Y_OFFSET }, 1 };
+				down[] = { { 0 + X_OFFSET, 1 + Y_OFFSET + SIZE }, 1 };
+			};
+			class Airspeed_Text
+			{
+				align = "left";
+				scale = 1;
+				source = "static";
+				text = "AS";
+				type = "text";
+
+				#define X_OFFSET 0.2
+				#define Y_OFFSET -0.1
+
+				pos[] = { { 0 + X_OFFSET, 1 + Y_OFFSET }, 1 };
+				right[] = { { 0 + X_OFFSET + SIZE, 1 + Y_OFFSET }, 1 };
+				down[] = { { 0 + X_OFFSET, 1 + Y_OFFSET + SIZE }, 1 };
+			};
+			class Vertical_Speed
+			{
+				align = "left";
+				scale = 1;
+				source = "vspeed";
+				sourceScale = 1;
+				type = "text";
+
+				#define X_OFFSET 0.16
+				#define Y_OFFSET -0.07
+
+				pos[] = { { 0 + X_OFFSET, 1 + Y_OFFSET }, 1 };
+				right[] = { { 0 + X_OFFSET + SIZE, 1 + Y_OFFSET }, 1 };
+				down[] = { { 0 + X_OFFSET, 1 + Y_OFFSET + SIZE }, 1 };
+			};
+			class Vertical_Speed_Text
+			{
+				align = "left";
+				scale = 1;
+				source = "static";
+				text = "VS";
+				type = "text";
+
+				#define X_OFFSET 0.2
+				#define Y_OFFSET -0.07
+
+				pos[] = { { 0 + X_OFFSET, 1 + Y_OFFSET }, 1 };
+				right[] = { { 0 + X_OFFSET + SIZE, 1 + Y_OFFSET }, 1 };
+				down[] = { { 0 + X_OFFSET, 1 + Y_OFFSET + SIZE }, 1 };
+			};
+		};
 		class Waypoint_Group
 		{
 			alpha = "user1";
 			color[] = { "user2", "user3", "user4" };
-			condition = "WPvalid * (user13 > 0)";
+			condition = "WPvalid * (user14 > 0)";
 			type = "group";
 
 			class Waypoint_Triangle
@@ -336,7 +406,7 @@ class APD_HMD_Base
 			};
 			class Waypoint_Detail_Group
 			{
-				condition = "user13 > 1";
+				condition = "user14 > 1";
 				type = "group";
 
 				class Waypoint_Header
@@ -360,7 +430,7 @@ class APD_HMD_Base
 					align = "right";
 					scale = 1;
 					source = "userText";
-					sourceIndex = 14;
+					sourceIndex = 15;
 					sourceScale = 1;
 					type = "text";
 
@@ -377,7 +447,7 @@ class APD_HMD_Base
 					align = "right";
 					scale = 1;
 					source = "userText";
-					sourceIndex = 15;
+					sourceIndex = 16;
 					sourceScale = 1;
 					type = "text";
 

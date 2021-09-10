@@ -101,6 +101,15 @@ private _wynCategory02 = "02 - Specific";
 ] call CBA_Settings_fnc_init;
 
 [
+	"APD_HMD_SpeedEnabled", "CHECKBOX",
+	"Show air- and vertical speed",
+	[_wynCategory, _wynCategory02],
+	TRUE,
+	nil,
+	{ call APD_fnc_updateMFDValues; }
+] call CBA_Settings_fnc_init;
+
+[
 	"APD_HMD_WaypointStyle", "LIST",
 	"Waypoint Style",
 	[_wynCategory, _wynCategory02],
