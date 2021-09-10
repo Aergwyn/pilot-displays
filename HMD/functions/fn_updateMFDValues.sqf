@@ -20,4 +20,4 @@ if (_vehicle != player) then
 	// 16 Waypoint ETA
 };
 
-call APD_fnc_evaluateWaypointLoop;
+call APD_fnc_evaluateLoops;

@@ -328,7 +328,7 @@ class APD_HMD_Base
 				sourceScale = 1;
 				type = "text";
 
-				#define X_OFFSET 0.16
+				#define X_OFFSET 0.17
 				#define Y_OFFSET -0.1
 
 				pos[] = { { 0 + X_OFFSET, 1 + Y_OFFSET }, 1 };
@@ -358,7 +358,7 @@ class APD_HMD_Base
 				sourceScale = 1;
 				type = "text";
 
-				#define X_OFFSET 0.16
+				#define X_OFFSET 0.17
 				#define Y_OFFSET -0.07
 
 				pos[] = { { 0 + X_OFFSET, 1 + Y_OFFSET }, 1 };
