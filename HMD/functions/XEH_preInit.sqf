@@ -24,8 +24,8 @@ private _wynCategory02 = "02 - Specific";
 ] call CBA_Settings_fnc_init;
 
 [
-	"APD_HMD_SystemOfUnits", "LIST",
-	"System of Units",
+	"APD_HMD_SoU_Distance", "LIST",
+	"System of Units for Distance",
 	[_wynCategory, _wynCategory01],
 	[
 		// Unit, Multiplier (to convert from metric meter), Precision
@@ -33,13 +33,40 @@ private _wynCategory02 = "02 - Specific";
 			["M", 1, 0],
 			["KM", (1 / 1000), 2],
 			["FT", 3.28084, 0],
+			["MI", (1 / 1609.34), 2],
 			["NM", (1 / 1852), 2]
 		],
 		[
 			"Metric (M)",
 			"Metric (KM)",
 			"Imperial (FT)",
-			"Imperial (NM)"
+			"Imperial (MI)",
+			"Aviation (NM)"
+		], 1
+	],
+	nil,
+	{ call APD_fnc_updateMFDValues; }
+] call CBA_Settings_fnc_init;
+
+[
+	"APD_HMD_SoU_Speed", "LIST",
+	"System of Units for Speed",
+	[_wynCategory, _wynCategory01],
+	[
+		// Unit, Multiplier (to convert from metric meter)
+		[
+			["M/S", 1],
+			["KM/H", 3.6],
+			["FT/S", 3.28084],
+			["MPH", 2.23694],
+			["KN", 1.94384]
+		],
+		[
+			"Metric (M/S)",
+			"Metric (KM/H)",
+			"Imperial (FT/S)",
+			"Imperial (MPH)",
+			"Aviation (KN)"
 		], 1
 	],
 	nil,
