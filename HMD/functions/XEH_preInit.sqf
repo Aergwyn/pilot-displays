@@ -4,6 +4,7 @@ if (!hasInterface) exitWith {};
 // --- Misc Init ---
 // -----------------
 
+APD_HMD_SpeedLoopRunning = false;
 APD_HMD_WaypointLoopRunning = false;
 
 // --------------------

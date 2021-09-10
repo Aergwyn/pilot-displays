@@ -324,7 +324,8 @@ class APD_HMD_Base
 			{
 				align = "left";
 				scale = 1;
-				source = "speed";
+				source = "userText";
+				sourceIndex = 13;
 				sourceScale = 1;
 				type = "text";
 
