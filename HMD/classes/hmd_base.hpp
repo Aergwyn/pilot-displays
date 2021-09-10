@@ -150,7 +150,7 @@ class APD_HMD_Base
 			clipTL[] = { 0, 0.09 };
 			clipBR[] = { 1, 1 };
 			color[] = { "user2", "user3", "user4" };
-			condition = "user11 * (on + abs(speed) >= 0.5)";
+			condition = "user11 * (on + (abs(speed) >= 0.5) + (abs(vspeed) >= 0.5))";
 			type = "group";
 
 			#define LINE_GAP 0.025
