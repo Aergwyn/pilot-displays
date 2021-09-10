@@ -36,15 +36,15 @@ while { APD_HMD_WaypointLoopRunning } do
 			};
 		};
 
-		_vehicle setUserMFDText [12, format ["%1 %2", _distanceValue, _distanceUnit]];
-		_vehicle setUserMFDText [13, format ["T-%1:%2", _etaMinute, _etaSecond]];
+		_vehicle setUserMFDText [14, format ["%1 %2", _distanceValue, _distanceUnit]];
+		_vehicle setUserMFDText [15, format ["T-%1:%2", _etaMinute, _etaSecond]];
 
 		sleep 0.5;
 	}
 	else
 	{
-		_vehicle setUserMFDText [12, ""]; // Waypoint Distance
-		_vehicle setUserMFDText [13, ""]; // Waypoint ETA
+		_vehicle setUserMFDText [14, ""]; // Waypoint Distance
+		_vehicle setUserMFDText [15, ""]; // Waypoint ETA
 		APD_HMD_WaypointLoopRunning = false;
 	};
 };

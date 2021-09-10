@@ -12,10 +12,11 @@ if (_vehicle != player) then
 	_vehicle setUserMFDValue [4, APD_HMD_Colour select 0];	// Red
 
 	_vehicle setUserMFDValue [10, parseNumber APD_HMD_HeadingEnabled];
-	_vehicle setUserMFDValue [11, APD_HMD_WaypointStyle];
-	// 12 Waypoint Distance
-	// 13 Waypoint ETA
-	_vehicle setUserMFDValue [14, parseNumber APD_HMD_HorizonEnabled];
+	_vehicle setUserMFDValue [11, parseNumber APD_HMD_HorizonEnabled];
+	// 12 Airspeed
+	_vehicle setUserMFDValue [13, APD_HMD_WaypointStyle];
+	// 14 Waypoint Distance
+	// 15 Waypoint ETA
 };
 
 call APD_fnc_evaluateWaypointLoop;

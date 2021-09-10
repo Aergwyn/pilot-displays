@@ -150,7 +150,7 @@ class APD_HMD_Base
 			clipTL[] = { 0, 0.09 };
 			clipBR[] = { 1, 1 };
 			color[] = { "user2", "user3", "user4" };
-			condition = "user14 * (on + abs(speed) >= 0.5)";
+			condition = "user11 * (on + abs(speed) >= 0.5)";
 			type = "group";
 
 			#define LINE_GAP 0.025
@@ -315,7 +315,7 @@ class APD_HMD_Base
 		{
 			alpha = "user1";
 			color[] = { "user2", "user3", "user4" };
-			condition = "WPvalid * (user11 > 0)";
+			condition = "WPvalid * (user13 > 0)";
 			type = "group";
 
 			class Waypoint_Triangle
@@ -336,7 +336,7 @@ class APD_HMD_Base
 			};
 			class Waypoint_Detail_Group
 			{
-				condition = "user11 > 1";
+				condition = "user13 > 1";
 				type = "group";
 
 				class Waypoint_Header
@@ -360,7 +360,7 @@ class APD_HMD_Base
 					align = "right";
 					scale = 1;
 					source = "userText";
-					sourceIndex = 12;
+					sourceIndex = 14;
 					sourceScale = 1;
 					type = "text";
 
@@ -377,7 +377,7 @@ class APD_HMD_Base
 					align = "right";
 					scale = 1;
 					source = "userText";
-					sourceIndex = 13;
+					sourceIndex = 15;
 					sourceScale = 1;
 					type = "text";
 

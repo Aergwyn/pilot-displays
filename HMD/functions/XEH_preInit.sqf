@@ -24,31 +24,6 @@ private _wynCategory02 = "02 - Specific";
 ] call CBA_Settings_fnc_init;
 
 [
-	"APD_HMD_SoU_Distance", "LIST",
-	"System of Units for Distance",
-	[_wynCategory, _wynCategory01],
-	[
-		// Unit, Multiplier (to convert from metric meter), Precision
-		[
-			["M", 1, 0],
-			["KM", (1 / 1000), 2],
-			["FT", 3.28084, 0],
-			["MI", (1 / 1609.34), 2],
-			["NM", (1 / 1852), 2]
-		],
-		[
-			"Metric (M)",
-			"Metric (KM)",
-			"Imperial (FT)",
-			"Imperial (MI)",
-			"Aviation (NM)"
-		], 1
-	],
-	nil,
-	{ call APD_fnc_updateMFDValues; }
-] call CBA_Settings_fnc_init;
-
-[
 	"APD_HMD_SoU_Speed", "LIST",
 	"System of Units for Speed",
 	[_wynCategory, _wynCategory01],
@@ -74,6 +49,31 @@ private _wynCategory02 = "02 - Specific";
 ] call CBA_Settings_fnc_init;
 
 [
+	"APD_HMD_SoU_Distance", "LIST",
+	"System of Units for Distance",
+	[_wynCategory, _wynCategory01],
+	[
+		// Unit, Multiplier (to convert from metric meter), Precision
+		[
+			["M", 1, 0],
+			["KM", (1 / 1000), 2],
+			["FT", 3.28084, 0],
+			["MI", (1 / 1609.34), 2],
+			["NM", (1 / 1852), 2]
+		],
+		[
+			"Metric (M)",
+			"Metric (KM)",
+			"Imperial (FT)",
+			"Imperial (MI)",
+			"Aviation (NM)"
+		], 1
+	],
+	nil,
+	{ call APD_fnc_updateMFDValues; }
+] call CBA_Settings_fnc_init;
+
+[
 	"APD_HMD_Colour", "COLOR",
 	"Colour",
 	[_wynCategory, _wynCategory01],
@@ -92,19 +92,19 @@ private _wynCategory02 = "02 - Specific";
 ] call CBA_Settings_fnc_init;
 
 [
-	"APD_HMD_WaypointStyle", "LIST",
-	"Waypoint Style",
+	"APD_HMD_HorizonEnabled", "CHECKBOX",
+	"Show Horizon",
 	[_wynCategory, _wynCategory02],
-	[[0, 1, 2], ["Disabled", "Marker", "Marker + Detail"], 2],
+	TRUE,
 	nil,
 	{ call APD_fnc_updateMFDValues; }
 ] call CBA_Settings_fnc_init;
 
 [
-	"APD_HMD_HorizonEnabled", "CHECKBOX",
-	"Show Horizon",
+	"APD_HMD_WaypointStyle", "LIST",
+	"Waypoint Style",
 	[_wynCategory, _wynCategory02],
-	TRUE,
+	[[0, 1, 2], ["Disabled", "Marker", "Marker + Detail"], 2],
 	nil,
 	{ call APD_fnc_updateMFDValues; }
 ] call CBA_Settings_fnc_init;
