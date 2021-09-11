@@ -322,64 +322,49 @@ class APD_HMD_Base
 
 			class Airspeed
 			{
-				align = "left";
+				align = "right";
 				scale = 1;
 				source = "userText";
 				sourceIndex = 13;
 				sourceScale = 1;
 				type = "text";
 
-				#define X_OFFSET 0.17
-				#define Y_OFFSET -0.1
-
-				pos[] = { { 0 + X_OFFSET, 1 + Y_OFFSET }, 1 };
-				right[] = { { 0 + X_OFFSET + SIZE, 1 + Y_OFFSET }, 1 };
-				down[] = { { 0 + X_OFFSET, 1 + Y_OFFSET + SIZE }, 1 };
-			};
-			class Airspeed_Text
-			{
-				align = "left";
-				scale = 1;
-				source = "static";
-				text = "AS";
-				type = "text";
-
 				#define X_OFFSET 0.2
-				#define Y_OFFSET -0.1
+				#define Y_OFFSET 0.15
 
-				pos[] = { { 0 + X_OFFSET, 1 + Y_OFFSET }, 1 };
-				right[] = { { 0 + X_OFFSET + SIZE, 1 + Y_OFFSET }, 1 };
-				down[] = { { 0 + X_OFFSET, 1 + Y_OFFSET + SIZE }, 1 };
+				pos[] = { { 0 + X_OFFSET, 0 + Y_OFFSET }, 1 };
+				right[] = { { 0 + X_OFFSET + SIZE, 0 + Y_OFFSET }, 1 };
+				down[] = { { 0 + X_OFFSET, 0 + Y_OFFSET + SIZE }, 1 };
 			};
 			class Vertical_Speed
 			{
-				align = "left";
+				align = "right";
 				scale = 1;
 				source = "vspeed";
 				sourceScale = 1;
 				type = "text";
 
-				#define X_OFFSET 0.17
-				#define Y_OFFSET -0.07
+				#define X_OFFSET 0.23
+				#define Y_OFFSET 0.18
 
-				pos[] = { { 0 + X_OFFSET, 1 + Y_OFFSET }, 1 };
-				right[] = { { 0 + X_OFFSET + SIZE, 1 + Y_OFFSET }, 1 };
-				down[] = { { 0 + X_OFFSET, 1 + Y_OFFSET + SIZE }, 1 };
+				pos[] = { { 0 + X_OFFSET, 0 + Y_OFFSET }, 1 };
+				right[] = { { 0 + X_OFFSET + SIZE, 0 + Y_OFFSET }, 1 };
+				down[] = { { 0 + X_OFFSET, 0 + Y_OFFSET + SIZE }, 1 };
 			};
 			class Vertical_Speed_Text
 			{
-				align = "left";
+				align = "right";
 				scale = 1;
 				source = "static";
 				text = "VS";
 				type = "text";
 
 				#define X_OFFSET 0.2
-				#define Y_OFFSET -0.07
+				#define Y_OFFSET 0.18
 
-				pos[] = { { 0 + X_OFFSET, 1 + Y_OFFSET }, 1 };
-				right[] = { { 0 + X_OFFSET + SIZE, 1 + Y_OFFSET }, 1 };
-				down[] = { { 0 + X_OFFSET, 1 + Y_OFFSET + SIZE }, 1 };
+				pos[] = { { 0 + X_OFFSET, 0 + Y_OFFSET }, 1 };
+				right[] = { { 0 + X_OFFSET + SIZE, 0 + Y_OFFSET }, 1 };
+				down[] = { { 0 + X_OFFSET, 0 + Y_OFFSET + SIZE }, 1 };
 			};
 		};
 		class Waypoint_Group
