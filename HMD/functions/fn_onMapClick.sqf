@@ -4,5 +4,5 @@ params["_shift"];
 
 if (_shift) then
 {
-	call APD_fnc_evaluateWaypointLoop;
+	call APD_fnc_evaluateLoops;
 };
