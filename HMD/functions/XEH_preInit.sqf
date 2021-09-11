@@ -31,19 +31,15 @@ private _wynCategory02 = "02 - Specific";
 	[
 		// Unit, Multiplier (to convert from metric meter)
 		[
-			["M/S", 1],
-			["KM/H", 3.6],
-			["FT/S", 3.28084],
+			["KMH", 3.6],
 			["MPH", 2.23694],
 			["KN", 1.94384]
 		],
 		[
-			"Metric (M/S)",
-			"Metric (KM/H)",
-			"Imperial (FT/S)",
+			"Metric (KMH)",
 			"Imperial (MPH)",
 			"Aviation (KN)"
-		], 1
+		], 0
 	],
 	nil,
 	{ call APD_fnc_updateMFDValues; }
