@@ -158,7 +158,7 @@ class APD_HMD_Base
 
 			#define TEXT_SIZE 0.025
 			#define TEXT_X_OFFSET -0.003
-			#define TEXT_Y_OFFSET 0
+			#define TEXT_Y_OFFSET -0.001
 
 			class Orientation
 			{
