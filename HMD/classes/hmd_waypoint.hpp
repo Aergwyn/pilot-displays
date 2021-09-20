@@ -26,6 +26,12 @@ class Waypoint_Group
 		condition = "user14 > 1";
 		type = "group";
 
+		#define X_OFFSET -0.2
+		#define Y_OFFSET -0.13
+		#define X_ALIGNMENT 1
+		#define Y_ALIGNMENT 1
+		#define TEXT_SIZE 0.025
+
 		class Waypoint_Header
 		{
 			align = "right";
@@ -34,13 +40,9 @@ class Waypoint_Group
 			text  = "WYPT";
 			type = "text";
 
-			#define SIZE 0.025
-			#define X_OFFSET -0.2
-			#define Y_OFFSET -0.13
-
-			pos[] = { { 1 + X_OFFSET, 1 + Y_OFFSET }, 1 };
-			right[] = { { 1 + X_OFFSET + SIZE, 1 + Y_OFFSET }, 1 };
-			down[] = { { 1 + X_OFFSET, 1 + Y_OFFSET + SIZE }, 1 };
+			pos[] = { { X_ALIGNMENT + X_OFFSET, Y_ALIGNMENT + Y_OFFSET }, 1 };
+			right[] = { { X_ALIGNMENT + X_OFFSET + TEXT_SIZE, Y_ALIGNMENT + Y_OFFSET }, 1 };
+			down[] = { { X_ALIGNMENT + X_OFFSET, Y_ALIGNMENT + Y_OFFSET + TEXT_SIZE }, 1 };
 		};
 		class Waypoint_Distance
 		{
@@ -51,13 +53,9 @@ class Waypoint_Group
 			sourceScale = 1;
 			type = "text";
 
-			#define SIZE 0.025
-			#define X_OFFSET -0.2
-			#define Y_OFFSET -0.1
-
-			pos[] = { { 1 + X_OFFSET, 1 + Y_OFFSET }, 1 };
-			right[] = { { 1 + X_OFFSET + SIZE, 1 + Y_OFFSET }, 1 };
-			down[] = { { 1 + X_OFFSET, 1 + Y_OFFSET + SIZE }, 1 };
+			pos[] = { { X_ALIGNMENT + X_OFFSET, Y_ALIGNMENT + Y_OFFSET + TEXT_SIZE }, 1 };
+			right[] = { { X_ALIGNMENT + X_OFFSET + TEXT_SIZE, Y_ALIGNMENT + Y_OFFSET + TEXT_SIZE }, 1 };
+			down[] = { { X_ALIGNMENT + X_OFFSET, Y_ALIGNMENT + Y_OFFSET + (TEXT_SIZE * 2) }, 1 };
 		};
 		class Waypoint_ETA
 		{
@@ -68,13 +66,9 @@ class Waypoint_Group
 			sourceScale = 1;
 			type = "text";
 
-			#define SIZE 0.025
-			#define X_OFFSET -0.2
-			#define Y_OFFSET -0.07
-
-			pos[] = { { 1 + X_OFFSET, 1 + Y_OFFSET }, 1 };
-			right[] = { { 1 + X_OFFSET + SIZE, 1 + Y_OFFSET }, 1 };
-			down[] = { { 1 + X_OFFSET, 1 + Y_OFFSET + SIZE }, 1 };
+			pos[] = { { X_ALIGNMENT + X_OFFSET, Y_ALIGNMENT + Y_OFFSET + (TEXT_SIZE * 2) }, 1 };
+			right[] = { { X_ALIGNMENT + X_OFFSET + TEXT_SIZE, Y_ALIGNMENT + Y_OFFSET + (TEXT_SIZE * 2) }, 1 };
+			down[] = { { X_ALIGNMENT + X_OFFSET, Y_ALIGNMENT + Y_OFFSET + (TEXT_SIZE * 3) }, 1 };
 		};
 	};
 };
