@@ -46,21 +46,53 @@ class APD_HMD_Base
 			pos0[] = { 0.5, 0.5 };
 			pos10[] = { 0.5 + VIEW_X_OFFSET, 0.5 + VIEW_Y_OFFSET };
 		};
-		class Horizon_P20_Bone : Horizon_0_Bone
+		class Horizon_P90_Bone : Horizon_0_Bone
 		{
-			angle = 20;
+			angle = 90;
 		};
-		class Horizon_P10_Bone : Horizon_0_Bone
+		class Horizon_P75_Bone : Horizon_0_Bone
 		{
-			angle = 10;
+			angle = 75;
 		};
-		class Horizon_N10_Bone : Horizon_0_Bone
+		class Horizon_P60_Bone : Horizon_0_Bone
 		{
-			angle = -10;
+			angle = 60;
 		};
-		class Horizon_N20_Bone : Horizon_0_Bone
+		class Horizon_P45_Bone : Horizon_0_Bone
 		{
-			angle = -20;
+			angle = 45;
+		};
+		class Horizon_P30_Bone : Horizon_0_Bone
+		{
+			angle = 30;
+		};
+		class Horizon_P15_Bone : Horizon_0_Bone
+		{
+			angle = 15;
+		};
+		class Horizon_N15_Bone : Horizon_0_Bone
+		{
+			angle = -15;
+		};
+		class Horizon_N30_Bone : Horizon_0_Bone
+		{
+			angle = -30;
+		};
+		class Horizon_N45_Bone : Horizon_0_Bone
+		{
+			angle = -45;
+		};
+		class Horizon_N60_Bone : Horizon_0_Bone
+		{
+			angle = -60;
+		};
+		class Horizon_N75_Bone : Horizon_0_Bone
+		{
+			angle = -75;
+		};
+		class Horizon_N90_Bone : Horizon_0_Bone
+		{
+			angle = -90;
 		};
 	};
 	class Draw
@@ -187,60 +219,6 @@ class APD_HMD_Base
 					{ { 0.5 + GAP + (WIDTH / 2), 0.5 }, 1 },
 				};
 			};
-			class Horizon_P20
-			{
-				lineType = 2;
-				type = "line";
-				width = 1.5;
-
-				points[] =
-				{
-					{ "Horizon_P20_Bone", { -(LINE_WIDTH / 2) - LINE_GAP, 0 }, 1 },
-					{ "Horizon_P20_Bone", { -LINE_GAP, 0 }, 1 },
-					{ },
-					{ "Horizon_P20_Bone", { LINE_GAP, 0 }, 1 },
-					{ "Horizon_P20_Bone", { (LINE_WIDTH / 2) + LINE_GAP, 0 }, 1 }
-				};
-			};
-			class Horizon_P20_Text
-			{
-				align = "center";
-				scale = 1;
-				source = "static";
-				text  = "20";
-				type = "text";
-
-				pos[] = { "Horizon_P20_Bone", { TEXT_X_OFFSET, TEXT_Y_OFFSET - (TEXT_SIZE / 2) }, 1 };
-				right[] = { "Horizon_P20_Bone", { TEXT_X_OFFSET + TEXT_SIZE, TEXT_Y_OFFSET - (TEXT_SIZE / 2) }, 1 };
-				down[] = { "Horizon_P20_Bone", { TEXT_X_OFFSET, TEXT_Y_OFFSET + (TEXT_SIZE / 2) }, 1 };
-			};
-			class Horizon_P10
-			{
-				lineType = 2;
-				type = "line";
-				width = 1.5;
-
-				points[] =
-				{
-					{ "Horizon_P10_Bone", { -(LINE_WIDTH / 2) - LINE_GAP, 0 }, 1 },
-					{ "Horizon_P10_Bone", { -LINE_GAP, 0 }, 1 },
-					{ },
-					{ "Horizon_P10_Bone", { LINE_GAP, 0 }, 1 },
-					{ "Horizon_P10_Bone", { (LINE_WIDTH / 2) + LINE_GAP, 0 }, 1 }
-				};
-			};
-			class Horizon_P10_Text
-			{
-				align = "center";
-				scale = 1;
-				source = "static";
-				text  = "10";
-				type = "text";
-
-				pos[] = { "Horizon_P10_Bone", { TEXT_X_OFFSET, TEXT_Y_OFFSET - (TEXT_SIZE / 2) }, 1 };
-				right[] = { "Horizon_P10_Bone", { TEXT_X_OFFSET + TEXT_SIZE, TEXT_Y_OFFSET - (TEXT_SIZE / 2) }, 1 };
-				down[] = { "Horizon_P10_Bone", { TEXT_X_OFFSET, TEXT_Y_OFFSET + (TEXT_SIZE / 2) }, 1 };
-			};
 			class Horizon_0
 			{
 				lineType = 2;
@@ -256,59 +234,179 @@ class APD_HMD_Base
 					{ "Horizon_0_Bone", { LINE_WIDTH + LINE_GAP, 0 }, 1 }
 				};
 			};
-			class Horizon_N10_Text
+			class Horizon_0_Text
 			{
 				align = "center";
 				scale = 1;
 				source = "static";
-				text  = "-10";
+				text  = "";
 				type = "text";
 
-				pos[] = { "Horizon_N10_Bone", { TEXT_X_OFFSET, TEXT_Y_OFFSET - (TEXT_SIZE / 2) }, 1 };
-				right[] = { "Horizon_N10_Bone", { TEXT_X_OFFSET + TEXT_SIZE, TEXT_Y_OFFSET - (TEXT_SIZE / 2) }, 1 };
-				down[] = { "Horizon_N10_Bone", { TEXT_X_OFFSET, TEXT_Y_OFFSET + (TEXT_SIZE / 2) }, 1 };
+				pos[] = { { 0, 0 }, 1 };
+				right[] = { { 0, 0 }, 1 };
+				down[] = { { 0, 0 }, 1 };
 			};
-			class Horizon_N10
+			class Horizon_P90 : Horizon_0
 			{
-				lineType = 2;
-				type = "line";
-				width = 1.5;
-
 				points[] =
 				{
-					{ "Horizon_N10_Bone", { -(LINE_WIDTH / 2) - LINE_GAP, 0 }, 1 },
-					{ "Horizon_N10_Bone", { -LINE_GAP, 0 }, 1 },
+					{ "Horizon_P90_Bone", { -(LINE_WIDTH / 2) - LINE_GAP, 0 }, 1 },
+					{ "Horizon_P90_Bone", { -LINE_GAP, 0 }, 1 },
 					{ },
-					{ "Horizon_N10_Bone", { LINE_GAP, 0 }, 1 },
-					{ "Horizon_N10_Bone", { (LINE_WIDTH / 2) + LINE_GAP, 0 }, 1 }
+					{ "Horizon_P90_Bone", { LINE_GAP, 0 }, 1 },
+					{ "Horizon_P90_Bone", { (LINE_WIDTH / 2) + LINE_GAP, 0 }, 1 }
 				};
 			};
-			class Horizon_N20_Text
+			class Horizon_P90_Text : Horizon_0_Text
 			{
-				align = "center";
-				scale = 1;
-				source = "static";
-				text  = "-20";
-				type = "text";
+				text  = "90";
 
-				pos[] = { "Horizon_N20_Bone", { TEXT_X_OFFSET, TEXT_Y_OFFSET - (TEXT_SIZE / 2) }, 1 };
-				right[] = { "Horizon_N20_Bone", { TEXT_X_OFFSET + TEXT_SIZE, TEXT_Y_OFFSET - (TEXT_SIZE / 2) }, 1 };
-				down[] = { "Horizon_N20_Bone", { TEXT_X_OFFSET, TEXT_Y_OFFSET + (TEXT_SIZE / 2) }, 1 };
+				pos[] = { "Horizon_P90_Bone", { TEXT_X_OFFSET, TEXT_Y_OFFSET - (TEXT_SIZE / 2) }, 1 };
+				right[] = { "Horizon_P90_Bone", { TEXT_X_OFFSET + TEXT_SIZE, TEXT_Y_OFFSET - (TEXT_SIZE / 2) }, 1 };
+				down[] = { "Horizon_P90_Bone", { TEXT_X_OFFSET, TEXT_Y_OFFSET + (TEXT_SIZE / 2) }, 1 };
 			};
-			class Horizon_N20
+			class Horizon_P75 : Horizon_0
 			{
-				lineType = 2;
-				type = "line";
-				width = 1.5;
-
 				points[] =
 				{
-					{ "Horizon_N20_Bone", { -(LINE_WIDTH / 2) - LINE_GAP, 0 }, 1 },
-					{ "Horizon_N20_Bone", { -LINE_GAP, 0 }, 1 },
-					{ },
-					{ "Horizon_N20_Bone", { LINE_GAP, 0 }, 1 },
-					{ "Horizon_N20_Bone", { (LINE_WIDTH / 2) + LINE_GAP, 0 }, 1 }
+					{ "Horizon_P75_Bone", { -(LINE_WIDTH / 4), 0 }, 1 },
+					{ "Horizon_P75_Bone", { (LINE_WIDTH / 4), 0 }, 1 }
 				};
+			};
+			class Horizon_P60 : Horizon_0
+			{
+				points[] =
+				{
+					{ "Horizon_P60_Bone", { -(LINE_WIDTH / 2) - LINE_GAP, 0 }, 1 },
+					{ "Horizon_P60_Bone", { -LINE_GAP, 0 }, 1 },
+					{ },
+					{ "Horizon_P60_Bone", { LINE_GAP, 0 }, 1 },
+					{ "Horizon_P60_Bone", { (LINE_WIDTH / 2) + LINE_GAP, 0 }, 1 }
+				};
+			};
+			class Horizon_P60_Text : Horizon_0_Text
+			{
+				text  = "60";
+
+				pos[] = { "Horizon_P60_Bone", { TEXT_X_OFFSET, TEXT_Y_OFFSET - (TEXT_SIZE / 2) }, 1 };
+				right[] = { "Horizon_P60_Bone", { TEXT_X_OFFSET + TEXT_SIZE, TEXT_Y_OFFSET - (TEXT_SIZE / 2) }, 1 };
+				down[] = { "Horizon_P60_Bone", { TEXT_X_OFFSET, TEXT_Y_OFFSET + (TEXT_SIZE / 2) }, 1 };
+			};
+			class Horizon_P45 : Horizon_0
+			{
+				points[] =
+				{
+					{ "Horizon_P45_Bone", { -(LINE_WIDTH / 4), 0 }, 1 },
+					{ "Horizon_P45_Bone", { (LINE_WIDTH / 4), 0 }, 1 }
+				};
+			};
+			class Horizon_P30 : Horizon_0
+			{
+				points[] =
+				{
+					{ "Horizon_P30_Bone", { -(LINE_WIDTH / 2) - LINE_GAP, 0 }, 1 },
+					{ "Horizon_P30_Bone", { -LINE_GAP, 0 }, 1 },
+					{ },
+					{ "Horizon_P30_Bone", { LINE_GAP, 0 }, 1 },
+					{ "Horizon_P30_Bone", { (LINE_WIDTH / 2) + LINE_GAP, 0 }, 1 }
+				};
+			};
+			class Horizon_P30_Text : Horizon_0_Text
+			{
+				text  = "30";
+
+				pos[] = { "Horizon_P30_Bone", { TEXT_X_OFFSET, TEXT_Y_OFFSET - (TEXT_SIZE / 2) }, 1 };
+				right[] = { "Horizon_P30_Bone", { TEXT_X_OFFSET + TEXT_SIZE, TEXT_Y_OFFSET - (TEXT_SIZE / 2) }, 1 };
+				down[] = { "Horizon_P30_Bone", { TEXT_X_OFFSET, TEXT_Y_OFFSET + (TEXT_SIZE / 2) }, 1 };
+			};
+			class Horizon_P15 : Horizon_0
+			{
+				points[] =
+				{
+					{ "Horizon_P15_Bone", { -(LINE_WIDTH / 4), 0 }, 1 },
+					{ "Horizon_P15_Bone", { (LINE_WIDTH / 4), 0 }, 1 }
+				};
+			};
+			class Horizon_N15 : Horizon_0
+			{
+				points[] =
+				{
+					{ "Horizon_N15_Bone", { -(LINE_WIDTH / 4), 0 }, 1 },
+					{ "Horizon_N15_Bone", { (LINE_WIDTH / 4), 0 }, 1 }
+				};
+			};
+			class Horizon_N30 : Horizon_0
+			{
+				points[] =
+				{
+					{ "Horizon_N30_Bone", { -(LINE_WIDTH / 2) - LINE_GAP, 0 }, 1 },
+					{ "Horizon_N30_Bone", { -LINE_GAP, 0 }, 1 },
+					{ },
+					{ "Horizon_N30_Bone", { LINE_GAP, 0 }, 1 },
+					{ "Horizon_N30_Bone", { (LINE_WIDTH / 2) + LINE_GAP, 0 }, 1 }
+				};
+			};
+			class Horizon_N30_Text : Horizon_0_Text
+			{
+				text  = "-30";
+
+				pos[] = { "Horizon_N30_Bone", { TEXT_X_OFFSET, TEXT_Y_OFFSET - (TEXT_SIZE / 2) }, 1 };
+				right[] = { "Horizon_N30_Bone", { TEXT_X_OFFSET + TEXT_SIZE, TEXT_Y_OFFSET - (TEXT_SIZE / 2) }, 1 };
+				down[] = { "Horizon_N30_Bone", { TEXT_X_OFFSET, TEXT_Y_OFFSET + (TEXT_SIZE / 2) }, 1 };
+			};
+			class Horizon_N45 : Horizon_0
+			{
+				points[] =
+				{
+					{ "Horizon_N45_Bone", { -(LINE_WIDTH / 4), 0 }, 1 },
+					{ "Horizon_N45_Bone", { (LINE_WIDTH / 4), 0 }, 1 }
+				};
+			};
+			class Horizon_N60 : Horizon_0
+			{
+				points[] =
+				{
+					{ "Horizon_N60_Bone", { -(LINE_WIDTH / 2) - LINE_GAP, 0 }, 1 },
+					{ "Horizon_N60_Bone", { -LINE_GAP, 0 }, 1 },
+					{ },
+					{ "Horizon_N60_Bone", { LINE_GAP, 0 }, 1 },
+					{ "Horizon_N60_Bone", { (LINE_WIDTH / 2) + LINE_GAP, 0 }, 1 }
+				};
+			};
+			class Horizon_N60_Text : Horizon_0_Text
+			{
+				text  = "-60";
+
+				pos[] = { "Horizon_N60_Bone", { TEXT_X_OFFSET, TEXT_Y_OFFSET - (TEXT_SIZE / 2) }, 1 };
+				right[] = { "Horizon_N60_Bone", { TEXT_X_OFFSET + TEXT_SIZE, TEXT_Y_OFFSET - (TEXT_SIZE / 2) }, 1 };
+				down[] = { "Horizon_N60_Bone", { TEXT_X_OFFSET, TEXT_Y_OFFSET + (TEXT_SIZE / 2) }, 1 };
+			};
+			class Horizon_N75 : Horizon_0
+			{
+				points[] =
+				{
+					{ "Horizon_N75_Bone", { -(LINE_WIDTH / 4), 0 }, 1 },
+					{ "Horizon_N75_Bone", { (LINE_WIDTH / 4), 0 }, 1 }
+				};
+			};
+			class Horizon_N90 : Horizon_0
+			{
+				points[] =
+				{
+					{ "Horizon_N90_Bone", { -(LINE_WIDTH / 2) - LINE_GAP, 0 }, 1 },
+					{ "Horizon_N90_Bone", { -LINE_GAP, 0 }, 1 },
+					{ },
+					{ "Horizon_N90_Bone", { LINE_GAP, 0 }, 1 },
+					{ "Horizon_N90_Bone", { (LINE_WIDTH / 2) + LINE_GAP, 0 }, 1 }
+				};
+			};
+			class Horizon_N90_Text : Horizon_0_Text
+			{
+				text  = "-90";
+
+				pos[] = { "Horizon_N90_Bone", { TEXT_X_OFFSET, TEXT_Y_OFFSET - (TEXT_SIZE / 2) }, 1 };
+				right[] = { "Horizon_N90_Bone", { TEXT_X_OFFSET + TEXT_SIZE, TEXT_Y_OFFSET - (TEXT_SIZE / 2) }, 1 };
+				down[] = { "Horizon_N90_Bone", { TEXT_X_OFFSET, TEXT_Y_OFFSET + (TEXT_SIZE / 2) }, 1 };
 			};
 		};
 		class Speed_Group
