@@ -1,7 +1,5 @@
 class Waypoint_Group
 {
-	alpha = "user1";
-	color[] = { "user2", "user3", "user4" };
 	condition = "WPvalid * (user14 > 0)";
 	type = "group";
 

@@ -1,5 +1,6 @@
 class APD_HMD_Base
 {
+	alpha = 0;
 	color[] = { 0, 0, 0, 0 };
 	enableParallax = 0;
 	font = "EtelkaMonospacePro";
@@ -99,64 +100,68 @@ class APD_HMD_Base
 	{
 		condition = "user0";
 
-		#include "classes/hmd_heading.hpp"
-		#include "classes/hmd_horizon.hpp"
-		#include "classes/hmd_waypoint.hpp"
-
-		class Speed_Group
+		class HMD_Content
 		{
 			alpha = "user1";
 			color[] = { "user2", "user3", "user4" };
-			condition = "user12";
-			type = "group";
 
-			#define SIZE 0.025
+			#include "classes/hmd_heading.hpp"
+			#include "classes/hmd_horizon.hpp"
+			#include "classes/hmd_waypoint.hpp"
 
-			class Airspeed
+			class Speed_Group
 			{
-				align = "right";
-				scale = 1;
-				source = "userText";
-				sourceIndex = 13;
-				sourceScale = 1;
-				type = "text";
+				condition = "user12";
+				type = "group";
 
-				#define X_OFFSET 0.2
-				#define Y_OFFSET 0.15
+				#define SIZE 0.025
 
-				pos[] = { { 0 + X_OFFSET, 0 + Y_OFFSET }, 1 };
-				right[] = { { 0 + X_OFFSET + SIZE, 0 + Y_OFFSET }, 1 };
-				down[] = { { 0 + X_OFFSET, 0 + Y_OFFSET + SIZE }, 1 };
-			};
-			class Vertical_Speed
-			{
-				align = "right";
-				scale = 1;
-				source = "vspeed";
-				sourceScale = 1;
-				type = "text";
+				class Airspeed
+				{
+					align = "right";
+					scale = 1;
+					source = "userText";
+					sourceIndex = 13;
+					sourceScale = 1;
+					type = "text";
 
-				#define X_OFFSET 0.23
-				#define Y_OFFSET 0.18
+					#define X_OFFSET 0.2
+					#define Y_OFFSET 0.15
 
-				pos[] = { { 0 + X_OFFSET, 0 + Y_OFFSET }, 1 };
-				right[] = { { 0 + X_OFFSET + SIZE, 0 + Y_OFFSET }, 1 };
-				down[] = { { 0 + X_OFFSET, 0 + Y_OFFSET + SIZE }, 1 };
-			};
-			class Vertical_Speed_Text
-			{
-				align = "right";
-				scale = 1;
-				source = "static";
-				text = "VS";
-				type = "text";
+					pos[] = { { 0 + X_OFFSET, 0 + Y_OFFSET }, 1 };
+					right[] = { { 0 + X_OFFSET + SIZE, 0 + Y_OFFSET }, 1 };
+					down[] = { { 0 + X_OFFSET, 0 + Y_OFFSET + SIZE }, 1 };
+				};
+				class Vertical_Speed
+				{
+					align = "right";
+					scale = 1;
+					source = "vspeed";
+					sourceScale = 1;
+					type = "text";
 
-				#define X_OFFSET 0.2
-				#define Y_OFFSET 0.18
+					#define X_OFFSET 0.23
+					#define Y_OFFSET 0.18
 
-				pos[] = { { 0 + X_OFFSET, 0 + Y_OFFSET }, 1 };
-				right[] = { { 0 + X_OFFSET + SIZE, 0 + Y_OFFSET }, 1 };
-				down[] = { { 0 + X_OFFSET, 0 + Y_OFFSET + SIZE }, 1 };
+					pos[] = { { 0 + X_OFFSET, 0 + Y_OFFSET }, 1 };
+					right[] = { { 0 + X_OFFSET + SIZE, 0 + Y_OFFSET }, 1 };
+					down[] = { { 0 + X_OFFSET, 0 + Y_OFFSET + SIZE }, 1 };
+				};
+				class Vertical_Speed_Text
+				{
+					align = "right";
+					scale = 1;
+					source = "static";
+					text = "VS";
+					type = "text";
+
+					#define X_OFFSET 0.2
+					#define Y_OFFSET 0.18
+
+					pos[] = { { 0 + X_OFFSET, 0 + Y_OFFSET }, 1 };
+					right[] = { { 0 + X_OFFSET + SIZE, 0 + Y_OFFSET }, 1 };
+					down[] = { { 0 + X_OFFSET, 0 + Y_OFFSET + SIZE }, 1 };
+				};
 			};
 		};
 	};

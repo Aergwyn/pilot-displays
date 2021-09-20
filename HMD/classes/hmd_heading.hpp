@@ -1,7 +1,5 @@
 class Heading_Group
 {
-	alpha = "user1";
-	color[] = { "user2", "user3", "user4" };
 	clipTL[] = { 0.03, 0 };
 	clipBR[] = { 0.97, 0.09 };
 	condition = "user10";
