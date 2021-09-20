@@ -99,8 +99,8 @@ class APD_HMD_Base
 	{
 		condition = "user0";
 
-		#include "hmd_heading.hpp"
-		#include "hmd_horizon.hpp"
+		#include "classes/hmd_heading.hpp"
+		#include "classes/hmd_horizon.hpp"
 
 		class Speed_Group
 		{
