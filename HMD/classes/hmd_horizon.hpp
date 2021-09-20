@@ -2,7 +2,7 @@ class Horizon_Group
 {
 	alpha = "user1";
 	clipTL[] = { 0, 0.09 };
-	clipBR[] = { 1, 1 };
+	clipBR[] = { 1, 0.91 };
 	color[] = { "user2", "user3", "user4" };
 	condition = "user11 * (on + (abs(speed) >= 0.5) + (abs(vspeed) >= 0.5))";
 	type = "group";
