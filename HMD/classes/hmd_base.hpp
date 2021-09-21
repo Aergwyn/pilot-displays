@@ -22,11 +22,11 @@ class APD_HMD_Base
 	helmetRight[] = { HMD_WIDTH, 0, 0 };
 	helmetDown[] = { 0, -HMD_HEIGHT, 0 };
 
-	class material
+	class Material
 	{
-		ambient[] = {1, 1, 1, 1};
-		diffuse[] = {0.5, 0.5, 0.5, 1};
-		emissive[] = {100, 100, 100, 1};
+		ambient[] = { 1, 1, 1, 1 };
+		diffuse[] = { 0, 0, 0, 0 };
+		emissive[] = { 0, 0, 0, 0 };
 	};
 	class Bones
 	{
