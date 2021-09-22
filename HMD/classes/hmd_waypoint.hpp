@@ -1,27 +1,33 @@
 class Waypoint_Group
 {
-	condition = "WPvalid * (user14 > 0)";
+	condition = "WPvalid";
 	type = "group";
 
-	class Waypoint_Triangle
+	class Waypoint_Triangle_Group
 	{
-		lineType = 0;
-		type = "line";
-		width = 2;
+		condition = "user20 = 1";
+		type = "group";
 
-		#define SIZE 0.025
-
-		points[] =
+		class Waypoint_Triangle
 		{
-			{ "Waypoint_To_View_Bone", { 0, SIZE / 2 }, 1 },
-			{ "Waypoint_To_View_Bone", { -(SIZE / 2), -(SIZE / 2) }, 1 },
-			{ "Waypoint_To_View_Bone", { SIZE / 2, -(SIZE / 2) }, 1 },
-			{ "Waypoint_To_View_Bone", { 0, SIZE / 2 }, 1 }
+			lineType = 0;
+			type = "line";
+			width = 2;
+
+			#define SIZE 0.025
+
+			points[] =
+			{
+				{ "Waypoint_To_View_Bone", { 0, SIZE / 2 }, 1 },
+				{ "Waypoint_To_View_Bone", { -(SIZE / 2), -(SIZE / 2) }, 1 },
+				{ "Waypoint_To_View_Bone", { SIZE / 2, -(SIZE / 2) }, 1 },
+				{ "Waypoint_To_View_Bone", { 0, SIZE / 2 }, 1 }
+			};
 		};
 	};
 	class Waypoint_Detail_Group
 	{
-		condition = "user14 > 1";
+		condition = "user21";
 		type = "group";
 
 		#define X_OFFSET -0.2
@@ -47,7 +53,7 @@ class Waypoint_Group
 			align = "right";
 			scale = 1;
 			source = "userText";
-			sourceIndex = 15;
+			sourceIndex = 22;
 			sourceScale = 1;
 			type = "text";
 
@@ -60,7 +66,7 @@ class Waypoint_Group
 			align = "right";
 			scale = 1;
 			source = "userText";
-			sourceIndex = 16;
+			sourceIndex = 23;
 			sourceScale = 1;
 			type = "text";
 

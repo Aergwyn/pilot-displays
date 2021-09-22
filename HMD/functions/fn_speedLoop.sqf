@@ -10,7 +10,7 @@ while { APD_HMD_SpeedLoopRunning } do
 	private _speedRaw = vectorMagnitude (velocity _vehicle);
 	private _speedValue = (_speedRaw * _speedMultiplier) toFixed 0;
 
-	_vehicle setUserMFDText [13, format ["%1 %2", _speedValue, _speedUnit]];
+	_vehicle setUserMFDText [26, format ["%1 %2", _speedValue, _speedUnit]];
 
 	sleep 0.1;
 };

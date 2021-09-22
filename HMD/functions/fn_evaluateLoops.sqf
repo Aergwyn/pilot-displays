@@ -15,7 +15,7 @@ else
 	APD_HMD_SpeedLoopRunning = false;
 };
 
-if (_vehicle != player && APD_HMD_Enabled && APD_HMD_WaypointStyle > 1) then
+if (_vehicle != player && APD_HMD_Enabled && APD_HMD_WaypointDetailsEnabled) then
 {
 	if (!APD_HMD_WaypointLoopRunning) then
 	{

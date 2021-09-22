@@ -102,8 +102,8 @@ class APD_HMD_Base
 
 		class HMD_Content
 		{
-			alpha = "user1";
-			color[] = { "user2", "user3", "user4" };
+			alpha = "user4";
+			color[] = { "user1", "user2", "user3" };
 
 			#include "classes/hmd_heading.hpp"
 			#include "classes/hmd_horizon.hpp"
@@ -111,7 +111,7 @@ class APD_HMD_Base
 
 			class Speed_Group
 			{
-				condition = "user12";
+				condition = "user25";
 				type = "group";
 
 				#define SIZE 0.025
@@ -121,7 +121,7 @@ class APD_HMD_Base
 					align = "right";
 					scale = 1;
 					source = "userText";
-					sourceIndex = 13;
+					sourceIndex = 26;
 					sourceScale = 1;
 					type = "text";
 

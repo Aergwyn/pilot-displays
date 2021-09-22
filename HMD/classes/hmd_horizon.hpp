@@ -1,8 +1,8 @@
 class Horizon_Group
 {
-	clipTL[] = { 0, 0.09 };
-	clipBR[] = { 1, 0.91 };
-	condition = "user11 * (on + (abs(speed) >= 0.5) + (abs(vspeed) >= 0.5))";
+	clipTL[] = { 0, 0.085 };
+	clipBR[] = { 1, 0.915 };
+	condition = "(user15 > 0) * (on + (abs(speed) >= 0.5) + (abs(vspeed) >= 0.5))";
 	type = "group";
 
 	#define LINE_GAP 0.025
