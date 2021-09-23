@@ -11,7 +11,7 @@ class CfgFunctions
 			class evaluateLoops {};
 			class updateMFDValues {};
 
-			class speedLoop {};
+			class vehicleLoop {};
 			class waypointLoop {};
 
 			class leftPadString {};

@@ -7,7 +7,7 @@ if (_vehicle != player && APD_HMD_Enabled && APD_HMD_SpeedEnabled) then
 	if (!APD_HMD_SpeedLoopRunning) then
 	{
 		APD_HMD_SpeedLoopRunning = true;
-		[_vehicle] spawn APD_fnc_speedLoop;
+		[_vehicle] spawn APD_fnc_vehicleLoop;
 	};
 }
 else

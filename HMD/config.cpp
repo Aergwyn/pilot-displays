@@ -13,12 +13,12 @@ class CfgPatches
 	};
 };
 
-#include "classes/hmd_base.hpp"
-#include "classes/cfgFunctions.hpp"
+#include "hmd/hmd_base.hpp"
+#include "config/cfgFunctions.hpp"
 
 class CfgVehicles
 {
-	#include "classes/cfgVehicles.hpp"
+	#include "config/cfgVehicles.hpp"
 };
 
 class Extended_PreInit_EventHandlers

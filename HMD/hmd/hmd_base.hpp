@@ -105,9 +105,9 @@ class APD_HMD_Base
 			alpha = "user4";
 			color[] = { "user1", "user2", "user3" };
 
-			#include "classes/hmd_heading.hpp"
-			#include "classes/hmd_horizon.hpp"
-			#include "classes/hmd_waypoint.hpp"
+			#include "hmd/hmd_compass.hpp"
+			#include "hmd/hmd_horizon.hpp"
+			#include "hmd/hmd_waypoint.hpp"
 
 			class Speed_Group
 			{
