@@ -51,45 +51,93 @@ class APD_HMD_Base
 		{
 			angle = 90;
 		};
+		class Horizon_P80_Bone : Horizon_0_Bone
+		{
+			angle = 80;
+		};
 		class Horizon_P75_Bone : Horizon_0_Bone
 		{
 			angle = 75;
+		};
+		class Horizon_P70_Bone : Horizon_0_Bone
+		{
+			angle = 70;
 		};
 		class Horizon_P60_Bone : Horizon_0_Bone
 		{
 			angle = 60;
 		};
+		class Horizon_P50_Bone : Horizon_0_Bone
+		{
+			angle = 50;
+		};
 		class Horizon_P45_Bone : Horizon_0_Bone
 		{
 			angle = 45;
+		};
+		class Horizon_P40_Bone : Horizon_0_Bone
+		{
+			angle = 40;
 		};
 		class Horizon_P30_Bone : Horizon_0_Bone
 		{
 			angle = 30;
 		};
+		class Horizon_P20_Bone : Horizon_0_Bone
+		{
+			angle = 20;
+		};
 		class Horizon_P15_Bone : Horizon_0_Bone
 		{
 			angle = 15;
+		};
+		class Horizon_P10_Bone : Horizon_0_Bone
+		{
+			angle = 10;
+		};
+		class Horizon_N10_Bone : Horizon_0_Bone
+		{
+			angle = -10;
 		};
 		class Horizon_N15_Bone : Horizon_0_Bone
 		{
 			angle = -15;
 		};
+		class Horizon_N20_Bone : Horizon_0_Bone
+		{
+			angle = -20;
+		};
 		class Horizon_N30_Bone : Horizon_0_Bone
 		{
 			angle = -30;
+		};
+		class Horizon_N40_Bone : Horizon_0_Bone
+		{
+			angle = -40;
 		};
 		class Horizon_N45_Bone : Horizon_0_Bone
 		{
 			angle = -45;
 		};
+		class Horizon_N50_Bone : Horizon_0_Bone
+		{
+			angle = -50;
+		};
 		class Horizon_N60_Bone : Horizon_0_Bone
 		{
 			angle = -60;
 		};
+		class Horizon_N70_Bone : Horizon_0_Bone
+		{
+			angle = -70;
+		};
 		class Horizon_N75_Bone : Horizon_0_Bone
 		{
 			angle = -75;
+		};
+		class Horizon_N80_Bone : Horizon_0_Bone
+		{
+			angle = -80;
 		};
 		class Horizon_N90_Bone : Horizon_0_Bone
 		{

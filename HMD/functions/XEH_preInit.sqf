@@ -120,7 +120,7 @@ private _wynCategory05 = "05 - Other";
 	"APD_HMD_HorizonStyle", "LIST",
 	"Horizon Style",
 	[_wynCategory, _wynCategory03],
-	[[0, 1, 2, 3, 4], ["Disabled", "Neutral Only", "10° Lines", "15° Lines", "30° Lines"], 2],
+	[[0, 1, 2, 3, 4], ["Disabled", "0° Only", "10° Lines", "15° Lines", "30° Lines"], 2],
 	nil,
 	{ call APD_fnc_updateMFDValues; }
 ] call CBA_Settings_fnc_init;
