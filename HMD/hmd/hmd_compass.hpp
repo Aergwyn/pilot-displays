@@ -1,7 +1,7 @@
 class Heading_Group
 {
 	clipTL[] = { 0.03, 0 };
-	clipBR[] = { 0.97, 0.075 };
+	clipBR[] = { 0.97, 0.08 };
 	condition = "user10";
 	type="group";
 
@@ -25,14 +25,14 @@ class Heading_Group
 		center = 0.5;
 
 		width = 2;
-		lineXleft = 0.01;
-		lineYright = 0.03;
-		lineXleftMajor = 0.02;
-		lineYrightMajor =0.03;
+		lineXleft = 0.02;
+		lineYright = 0.04;
+		lineXleftMajor = 0.03;
+		lineYrightMajor = 0.04;
 
 		#define SIZE 0.03
 		#define X_OFFSET -0.0027
-		#define Y_OFFSET -0.0075
+		#define Y_OFFSET 0.002
 
 		pos[] = { 0 + X_OFFSET, 0 + Y_OFFSET };
 		right[] = { 0 + X_OFFSET + SIZE, 0 + Y_OFFSET };
@@ -47,7 +47,7 @@ class Heading_Group
 		#define WIDTH 0.05
 		#define HEIGHT 0.02
 		#define X_OFFSET 0.5
-		#define Y_OFFSET 0.044
+		#define Y_OFFSET 0.054
 
 		points[] =
 		{
@@ -72,7 +72,7 @@ class Heading_Group
 
 		#define SIZE 0.03
 		#define X_OFFSET -0.003
-		#define Y_OFFSET 0.044
+		#define Y_OFFSET 0.054
 
 		pos[] = { { 0.5 + X_OFFSET, 0 + Y_OFFSET }, 1 };
 		right[] = { { 0.5 + X_OFFSET + SIZE, 0 + Y_OFFSET }, 1 };
