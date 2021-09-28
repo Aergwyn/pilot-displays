@@ -131,7 +131,7 @@ private _wynCategory05 = "05 - Other";
 	"APD_HMD_WaypointMarkerStyle", "LIST",
 	"Marker Style",
 	[_wynCategory, _wynCategory04],
-	[[0, 1], ["Disabled", "Triangle"], 1],
+	[[0, 1, 2], ["Disabled", "Cross", "Triangle"], 1],
 	nil,
 	{ call APD_fnc_updateMFDValues; }
 ] call CBA_Settings_fnc_init;
