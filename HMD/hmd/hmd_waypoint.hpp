@@ -3,25 +3,51 @@ class Waypoint_Group
 	condition = "WPvalid";
 	type = "group";
 
+	#define MARKER_SIZE 0.03
+	#define LINE_CLASS(CLASS, TYPE, WIDTH)\
+		class CLASS\
+		{\
+			lineType = TYPE;\
+			type = "line";\
+			width = WIDTH;\
+
+	#define POINT_SETUP\
+		points[] =\
+		{\
+			{ "Waypoint_To_View_Bone", { -0.002, 0 }, 1 },\
+			{ "Waypoint_To_View_Bone", { 0.002, 0 }, 1 },\
+			{ },\
+			{ "Waypoint_To_View_Bone", { 0, -0.002 }, 1 },\
+			{ "Waypoint_To_View_Bone", { 0, 0.002 }, 1 },\
+			{ },\
+
+	class Waypoint_Cross_Group
+	{
+		condition = EQUAL_CONDITION(user20, 1);
+		type = "group";
+
+		LINE_CLASS(Waypoint_Cross, 0, 2)
+			POINT_SETUP
+				{ "Waypoint_To_View_Bone", { -(MARKER_SIZE / 2), -(MARKER_SIZE / 2) }, 1 },
+				{ "Waypoint_To_View_Bone", { MARKER_SIZE / 2, MARKER_SIZE / 2 }, 1 },
+				{ },
+				{ "Waypoint_To_View_Bone", { -(MARKER_SIZE / 2), MARKER_SIZE / 2 }, 1 },
+				{ "Waypoint_To_View_Bone", { MARKER_SIZE / 2, -(MARKER_SIZE / 2) }, 1 }
+			};
+		};
+	};
 	class Waypoint_Triangle_Group
 	{
 		condition = EQUAL_CONDITION(user20, 2);
 		type = "group";
 
-		class Waypoint_Triangle
-		{
-			lineType = 0;
-			type = "line";
-			width = 2;
-
-			#define SIZE 0.025
-
-			points[] =
-			{
-				{ "Waypoint_To_View_Bone", { 0, SIZE / 2 }, 1 },
-				{ "Waypoint_To_View_Bone", { -(SIZE / 2), -(SIZE / 2) }, 1 },
-				{ "Waypoint_To_View_Bone", { SIZE / 2, -(SIZE / 2) }, 1 },
-				{ "Waypoint_To_View_Bone", { 0, SIZE / 2 }, 1 }
+		LINE_CLASS(Waypoint_Cross, 0, 2)
+			POINT_SETUP
+				// Offset according to centroid
+				{ "Waypoint_To_View_Bone", { 0, MARKER_SIZE * 0.6666 }, 1 },
+				{ "Waypoint_To_View_Bone", { -(MARKER_SIZE / 2), -(MARKER_SIZE / 3) }, 1 },
+				{ "Waypoint_To_View_Bone", { MARKER_SIZE / 2, -(MARKER_SIZE / 3) }, 1 },
+				{ "Waypoint_To_View_Bone", { 0, MARKER_SIZE * 0.6666 }, 1 }
 			};
 		};
 	};
