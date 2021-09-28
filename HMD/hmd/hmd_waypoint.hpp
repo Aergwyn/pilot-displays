@@ -5,7 +5,7 @@ class Waypoint_Group
 
 	class Waypoint_Triangle_Group
 	{
-		condition = "user20 = 1";
+		condition = EQUAL_CONDITION(user20, 2);
 		type = "group";
 
 		class Waypoint_Triangle

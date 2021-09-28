@@ -100,7 +100,7 @@ class Horizon_Group
 
 	class Horizon_10_Degree_Group
 	{
-		condition = "(user15 > 1) * (user15 < 3)";
+		condition = EQUAL_CONDITION(user15, 2);
 		type = "group";
 
 		CREATE_SHORT_LINE_CLASS(Horizon_P80);
@@ -118,7 +118,7 @@ class Horizon_Group
 	};
 	class Horizon_15_Degree_Group
 	{
-		condition = "(user15 > 2) * (user15 < 4)";
+		condition = EQUAL_CONDITION(user15, 3);
 		type = "group";
 
 		CREATE_SHORT_LINE_CLASS(Horizon_P75);
