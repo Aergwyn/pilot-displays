@@ -22,6 +22,8 @@ class APD_HMD_Base
 	helmetRight[] = { HMD_WIDTH, 0, 0 };
 	helmetDown[] = { 0, -HMD_HEIGHT, 0 };
 
+	#define EQUAL_CONDITION(ARG, VALUE) ((ARG >= VALUE) * (ARG <= VALUE))
+
 	class Material
 	{
 		ambient[] = { 1, 1, 1, 1 };
