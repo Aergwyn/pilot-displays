@@ -158,62 +158,8 @@ class APD_HMD_Base
 
 			#include "hmd/hmd_compass.hpp"
 			#include "hmd/hmd_horizon.hpp"
+			#include "hmd/hmd_vehicle.hpp"
 			#include "hmd/hmd_waypoint.hpp"
-
-			class Speed_Group
-			{
-				condition = "user25";
-				type = "group";
-
-				#define SIZE 0.025
-
-				class Airspeed
-				{
-					align = "right";
-					scale = 1;
-					source = "userText";
-					sourceIndex = 26;
-					sourceScale = 1;
-					type = "text";
-
-					#define X_OFFSET 0.2
-					#define Y_OFFSET 0.15
-
-					pos[] = { { 0 + X_OFFSET, 0 + Y_OFFSET }, 1 };
-					right[] = { { 0 + X_OFFSET + SIZE, 0 + Y_OFFSET }, 1 };
-					down[] = { { 0 + X_OFFSET, 0 + Y_OFFSET + SIZE }, 1 };
-				};
-				class Vertical_Speed
-				{
-					align = "right";
-					scale = 1;
-					source = "vspeed";
-					sourceScale = 1;
-					type = "text";
-
-					#define X_OFFSET 0.23
-					#define Y_OFFSET 0.18
-
-					pos[] = { { 0 + X_OFFSET, 0 + Y_OFFSET }, 1 };
-					right[] = { { 0 + X_OFFSET + SIZE, 0 + Y_OFFSET }, 1 };
-					down[] = { { 0 + X_OFFSET, 0 + Y_OFFSET + SIZE }, 1 };
-				};
-				class Vertical_Speed_Text
-				{
-					align = "right";
-					scale = 1;
-					source = "static";
-					text = "VS";
-					type = "text";
-
-					#define X_OFFSET 0.2
-					#define Y_OFFSET 0.18
-
-					pos[] = { { 0 + X_OFFSET, 0 + Y_OFFSET }, 1 };
-					right[] = { { 0 + X_OFFSET + SIZE, 0 + Y_OFFSET }, 1 };
-					down[] = { { 0 + X_OFFSET, 0 + Y_OFFSET + SIZE }, 1 };
-				};
-			};
 		};
 	};
 };
