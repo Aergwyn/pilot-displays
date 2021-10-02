@@ -1,7 +1,7 @@
 class Heading_Group
 {
-	clipTL[] = { 0.03, 0 };
-	clipBR[] = { 0.97, 0.08 };
+	clipTL[] = { 0.025, 0.1 };
+	clipBR[] = { 0.975, 0.3 };
 	condition = "user10";
 	type="group";
 
@@ -24,15 +24,15 @@ class Heading_Group
 		bottom = 1;
 		center = 0.5;
 
-		width = 2;
-		lineXleft = 0.02;
-		lineYright = 0.04;
-		lineXleftMajor = 0.03;
-		lineYrightMajor = 0.04;
+		width = 1.5;
+		lineXleft = 0.174;
+		lineYright = 0.19;
+		lineXleftMajor = 0.18;
+		lineYrightMajor = 0.19;
 
-		#define SIZE 0.03
-		#define X_OFFSET -0.0027
-		#define Y_OFFSET 0.002
+		#define SIZE 0.02
+		#define X_OFFSET -0.002
+		#define Y_OFFSET 0.16
 
 		pos[] = { 0 + X_OFFSET, 0 + Y_OFFSET };
 		right[] = { 0 + X_OFFSET + SIZE, 0 + Y_OFFSET };
@@ -42,12 +42,12 @@ class Heading_Group
 	{
 		lineType = 0;
 		type = "line";
-		width = 2;
+		width = 1.5;
 
-		#define WIDTH 0.05
-		#define HEIGHT 0.02
+		#define WIDTH 0.042
+		#define HEIGHT 0.014
 		#define X_OFFSET 0.5
-		#define Y_OFFSET 0.054
+		#define Y_OFFSET 0.2
 
 		points[] =
 		{
@@ -70,9 +70,9 @@ class Heading_Group
 		sourceScale = 1;
 		type = "text";
 
-		#define SIZE 0.03
-		#define X_OFFSET -0.003
-		#define Y_OFFSET 0.054
+		#define SIZE 0.025
+		#define X_OFFSET -0.0022
+		#define Y_OFFSET 0.198
 
 		pos[] = { { 0.5 + X_OFFSET, 0 + Y_OFFSET }, 1 };
 		right[] = { { 0.5 + X_OFFSET + SIZE, 0 + Y_OFFSET }, 1 };
