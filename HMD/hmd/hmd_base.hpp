@@ -16,7 +16,7 @@ class APD_HMD_Base
 	bottomLeft = "";
 
 	#define HMD_WIDTH 0.06
-	#define HMD_HEIGHT 0.04
+	#define HMD_HEIGHT 0.06
 
 	helmetPosition[] = { -(HMD_WIDTH / 2), HMD_HEIGHT / 2, 0.04 };
 	helmetRight[] = { HMD_WIDTH, 0, 0 };
@@ -32,22 +32,21 @@ class APD_HMD_Base
 	};
 	class Bones
 	{
-		#define VIEW_X_OFFSET 0.1214
-		#define VIEW_Y_OFFSET 0.1725
+		#define VIEW_POS10 0.1214
 
 		class Waypoint_To_View_Bone
 		{
 			type = "vector";
 			source = "wppointtoview";
 			pos0[] = { 0.5, 0.5 };
-			pos10[] = { 0.5 + VIEW_X_OFFSET, 0.5 + VIEW_Y_OFFSET };
+			pos10[] = { 0.5 + VIEW_POS10, 0.5 + VIEW_POS10 };
 		};
 		class Horizon_0_Bone
 		{
 			angle = 0;
 			type = "horizon";
 			pos0[] = { 0.5, 0.5 };
-			pos10[] = { 0.5 + VIEW_X_OFFSET, 0.5 + VIEW_Y_OFFSET };
+			pos10[] = { 0.5 + VIEW_POS10, 0.5 + VIEW_POS10 };
 		};
 		class Horizon_P90_Bone : Horizon_0_Bone
 		{
@@ -153,6 +152,8 @@ class APD_HMD_Base
 		class HMD_Content
 		{
 			alpha = "user4";
+			clipTL[] = { 0, 0.15 };
+			clipBR[] = { 1, 0.8 };
 			color[] = { "user1", "user2", "user3" };
 
 			#include "hmd/hmd_compass.hpp"
