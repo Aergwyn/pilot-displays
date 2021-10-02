@@ -9,7 +9,7 @@ class Vehicle_Stat_Group
 	#define Y_ALIGNMENT 0.5
 	#define TEXT_SIZE 0.02
 
-	class Airspeed
+	class Above_Ground_Level
 	{
 		align = "right";
 		scale = 1;
@@ -22,11 +22,12 @@ class Vehicle_Stat_Group
 		right[] = { { X_ALIGNMENT + X_OFFSET + TEXT_SIZE, Y_ALIGNMENT + Y_OFFSET }, 1 };
 		down[] = { { X_ALIGNMENT + X_OFFSET, Y_ALIGNMENT + Y_OFFSET + TEXT_SIZE }, 1 };
 	};
-	class Altitude_Ground
+	class Mean_Sea_Level
 	{
 		align = "right";
 		scale = 1;
-		source = "altitudeAGL";
+		source = "userText";
+		sourceIndex = 27;
 		sourceScale = 1;
 		type = "text";
 
@@ -34,11 +35,12 @@ class Vehicle_Stat_Group
 		right[] = { { X_ALIGNMENT + X_OFFSET + TEXT_SIZE, Y_ALIGNMENT + Y_OFFSET + TEXT_SIZE }, 1 };
 		down[] = { { X_ALIGNMENT + X_OFFSET, Y_ALIGNMENT + Y_OFFSET + (TEXT_SIZE * 2) }, 1 };
 	};
-	class Altitude_Sea
+	class Speed
 	{
 		align = "right";
 		scale = 1;
-		source = "altitudeASL";
+		source = "userText";
+		sourceIndex = 28;
 		sourceScale = 1;
 		type = "text";
 

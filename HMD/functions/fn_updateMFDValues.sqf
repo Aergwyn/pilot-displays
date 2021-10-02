@@ -20,7 +20,9 @@ if (_vehicle != player) then
 	// 23 Waypoint ETA
 
 	_vehicle setUserMFDValue [25, parseNumber APD_HMD_SpeedEnabled];
-	// 26 Airspeed
+	// 26 AGL
+	// 27 ASL
+	// 28 Airspeed
 };
 
 call APD_fnc_evaluateLoops;
