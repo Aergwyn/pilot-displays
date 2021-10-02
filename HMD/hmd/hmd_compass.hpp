@@ -25,14 +25,14 @@ class Heading_Group
 		center = 0.5;
 
 		width = 1.5;
-		lineXleft = 0.174;
+		lineXleft = 0.172;
 		lineYright = 0.19;
 		lineXleftMajor = 0.18;
 		lineYrightMajor = 0.19;
 
-		#define SIZE 0.02
+		#define SIZE 0.025
 		#define X_OFFSET -0.002
-		#define Y_OFFSET 0.16
+		#define Y_OFFSET 0.158
 
 		pos[] = { 0 + X_OFFSET, 0 + Y_OFFSET };
 		right[] = { 0 + X_OFFSET + SIZE, 0 + Y_OFFSET };
