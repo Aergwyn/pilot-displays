@@ -3,7 +3,7 @@ class Waypoint_Group
 	condition = "WPvalid";
 	type = "group";
 
-	#define MARKER_SIZE 0.03
+	#define MARKER_SIZE 0.02
 	#define LINE_CLASS(CLASS, TYPE, WIDTH)\
 		class CLASS\
 		{\
@@ -41,7 +41,7 @@ class Waypoint_Group
 		condition = EQUAL_CONDITION(user20, 2);
 		type = "group";
 
-		LINE_CLASS(Waypoint_Cross, 0, 2)
+		LINE_CLASS(Waypoint_Triangle, 0, 2)
 			POINT_SETUP
 				// Offset according to centroid
 				{ "Waypoint_To_View_Bone", { 0, MARKER_SIZE * 0.6666 }, 1 },
@@ -56,11 +56,11 @@ class Waypoint_Group
 		condition = "user21";
 		type = "group";
 
-		#define X_OFFSET -0.2
-		#define Y_OFFSET -0.13
+		#define X_OFFSET -0.25
+		#define Y_OFFSET 0.2
 		#define X_ALIGNMENT 1
-		#define Y_ALIGNMENT 1
-		#define TEXT_SIZE 0.025
+		#define Y_ALIGNMENT 0.5
+		#define TEXT_SIZE 0.02
 
 		class Waypoint_Header
 		{
