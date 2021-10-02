@@ -4,6 +4,7 @@ class Waypoint_Group
 	type = "group";
 
 	#define MARKER_SIZE 0.02
+	
 	#define LINE_CLASS(CLASS, TYPE, WIDTH)\
 		class CLASS\
 		{\

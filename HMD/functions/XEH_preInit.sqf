@@ -45,12 +45,12 @@ private _wynCategory05 = "05 - Other";
 	[
 		// Unit, Multiplier (to convert from metric meter)
 		[
-			["KPH", 3.6],
+			["KM/H", 3.6],
 			["MPH", 2.23694],
 			["KN", 1.94384]
 		],
 		[
-			"Metric (KMH)",
+			"Metric (KM/H)",
 			"Imperial (MPH)",
 			"Aviation (KN)"
 		], 0
