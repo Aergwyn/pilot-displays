@@ -4,7 +4,7 @@ if (!hasInterface) exitWith {};
 // --- Misc Init ---
 // -----------------
 
-APD_HMD_SpeedLoopRunning = false;
+APD_HMD_VehicleLoopRunning = false;
 APD_HMD_WaypointLoopRunning = false;
 
 // --------------------
@@ -15,8 +15,9 @@ private _wynCategory = "Aergwyn's Pilot HMD";
 private _wynCategory01 = "01 - General";
 private _wynCategory02 = "02 - Compass";
 private _wynCategory03 = "03 - Horizon";
-private _wynCategory04 = "04 - Waypoint";
-private _wynCategory05 = "05 - Other";
+private _wynCategory04 = "04 - Vehicle";
+private _wynCategory05 = "05 - Waypoint";
+private _wynCategory06 = "06 - Other";
 
 // - 01
 
@@ -125,12 +126,32 @@ private _wynCategory05 = "05 - Other";
 	{ call APD_fnc_updateMFDValues; }
 ] call CBA_Settings_fnc_init;
 
+// - Vehicle
+
+[
+	"APD_HMD_VehicleAltitudeEnabled", "CHECKBOX",
+	"Show Altitude",
+	[_wynCategory, _wynCategory04],
+	TRUE,
+	nil,
+	{ call APD_fnc_updateMFDValues; }
+] call CBA_Settings_fnc_init;
+
+[
+	"APD_HMD_VehicleAirspeedEnabled", "CHECKBOX",
+	"Show Airspeed",
+	[_wynCategory, _wynCategory04],
+	TRUE,
+	nil,
+	{ call APD_fnc_updateMFDValues; }
+] call CBA_Settings_fnc_init;
+
 // - Waypoint
 
 [
 	"APD_HMD_WaypointMarkerStyle", "LIST",
 	"Marker Style",
-	[_wynCategory, _wynCategory04],
+	[_wynCategory, _wynCategory05],
 	[[0, 1, 2], ["Disabled", "Cross", "Triangle"], 1],
 	nil,
 	{ call APD_fnc_updateMFDValues; }
@@ -139,19 +160,10 @@ private _wynCategory05 = "05 - Other";
 [
 	"APD_HMD_WaypointDetailsEnabled", "CHECKBOX",
 	"Show Details",
-	[_wynCategory, _wynCategory04],
+	[_wynCategory, _wynCategory05],
 	TRUE,
 	nil,
 	{ call APD_fnc_updateMFDValues; }
 ] call CBA_Settings_fnc_init;
 
 // - Other
-
-[
-	"APD_HMD_SpeedEnabled", "CHECKBOX",
-	"Show air- and vertical speed",
-	[_wynCategory, _wynCategory05],
-	TRUE,
-	nil,
-	{ call APD_fnc_updateMFDValues; }
-] call CBA_Settings_fnc_init;
