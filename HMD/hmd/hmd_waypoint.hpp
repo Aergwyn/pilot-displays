@@ -4,7 +4,7 @@ class Waypoint_Group
 	type = "group";
 
 	#define MARKER_SIZE 0.02
-	
+
 	#define LINE_CLASS(CLASS, TYPE, WIDTH)\
 		class CLASS\
 		{\
@@ -22,13 +22,30 @@ class Waypoint_Group
 			{ "Waypoint_To_View_Bone", { 0, 0.002 }, 1 },\
 			{ },\
 
-	class Waypoint_Cross_Group
+	class Waypoint_Plus_Group
 	{
 		condition = EQUAL_CONDITION(user20, 1);
 		type = "group";
 
+		LINE_CLASS(Waypoint_Plus, 0, 2)
+			points[] =
+			{
+				{ "Waypoint_To_View_Bone", { -(MARKER_SIZE / 2), 0 }, 1 },
+				{ "Waypoint_To_View_Bone", { MARKER_SIZE / 2, 0 }, 1 },
+				{ },
+				{ "Waypoint_To_View_Bone", { 0, MARKER_SIZE / 2 }, 1 },
+				{ "Waypoint_To_View_Bone", { 0, -(MARKER_SIZE / 2) }, 1 }
+			};
+		};
+	};
+	class Waypoint_Cross_Group
+	{
+		condition = EQUAL_CONDITION(user20, 2);
+		type = "group";
+
 		LINE_CLASS(Waypoint_Cross, 0, 2)
-			POINT_SETUP
+			points[] =
+			{
 				{ "Waypoint_To_View_Bone", { -(MARKER_SIZE / 2), -(MARKER_SIZE / 2) }, 1 },
 				{ "Waypoint_To_View_Bone", { MARKER_SIZE / 2, MARKER_SIZE / 2 }, 1 },
 				{ },
@@ -39,7 +56,7 @@ class Waypoint_Group
 	};
 	class Waypoint_Triangle_Group
 	{
-		condition = EQUAL_CONDITION(user20, 2);
+		condition = EQUAL_CONDITION(user20, 3);
 		type = "group";
 
 		LINE_CLASS(Waypoint_Triangle, 0, 2)
