@@ -32,7 +32,7 @@ class APD_HMD_Base
 	};
 	class Bones
 	{
-		#define VIEW_POS10 0.1214
+		#define VIEW_POS10 0.1225
 
 		class Waypoint_To_View_Bone
 		{
