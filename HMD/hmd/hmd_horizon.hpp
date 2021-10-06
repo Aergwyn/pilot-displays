@@ -1,7 +1,7 @@
 class Horizon_Group
 {
-	clipTL[] = { 0, 0.085 };
-	clipBR[] = { 1, 0.915 };
+	clipTL[] = { 0.225, 0.225 };
+	clipBR[] = { 0.775, 0.775 };
 	condition = "(user15 > 0) * (on + (abs(speed) >= 0.5) + (abs(vspeed) >= 0.5))";
 	type = "group";
 
