@@ -16,7 +16,7 @@ if (_enable && isNil "_handle") then
 
 		if (count _waypoint > 0) then
 		{
-			drawIcon3D [APD_HMD_WaypointMarkerTexture, APD_HMD_Colour, customWaypointPosition, 1, 1, 0];
+			drawIcon3D [APD_HMD_WaypointMarkerTexture, APD_HMD_Colour, _waypoint, 1, 1, 0];
 		}
 		else
 		{
