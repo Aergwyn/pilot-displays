@@ -1,9 +1,9 @@
 if (!hasInterface) exitWith {};
 
 private _vehicle = vehicle player;
+private _isValidVehicle = [_vehicle] call APD_fnc_isValidHMDVehicle;
 
-if (_vehicle != player && APD_HMD_Enabled &&
-	(APD_HMD_VehicleAltitudeEnabled || APD_HMD_VehicleAirspeedEnabled)) then
+if (_isValidVehicle && (APD_HMD_VehicleAltitudeEnabled || APD_HMD_VehicleAirspeedEnabled)) then
 {
 	if (!APD_HMD_VehicleLoopRunning) then
 	{
@@ -16,7 +16,7 @@ else
 	APD_HMD_VehicleLoopRunning = false;
 };
 
-if (_vehicle != player && APD_HMD_Enabled && APD_HMD_WaypointDetailsEnabled) then
+if (_isValidVehicle && APD_HMD_WaypointDetailsEnabled) then
 {
 	if (!APD_HMD_WaypointLoopRunning) then
 	{

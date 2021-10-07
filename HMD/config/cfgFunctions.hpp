@@ -10,6 +10,7 @@ class CfgFunctions
 
 			class directionRelativeToWaypoint {};
 			class evaluateLoops {};
+			class isValidHMDVehicle {};
 			class leftPadString {};
 			class updateMFDValues {};
 			class vectorToHeading {};
