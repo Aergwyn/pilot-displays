@@ -7,7 +7,6 @@ player addEventHandler ["Killed", { call APD_fnc_evaluateLoops; }];
 
 player onMapSingleClick
 {
-	params["_shift"];
 	if (_shift) then
 	{
 		call APD_fnc_evaluateLoops;
