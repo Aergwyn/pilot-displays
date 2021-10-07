@@ -14,7 +14,6 @@ if (_vehicle != player) then
 
 	_vehicle setUserMFDValue [15, APD_HMD_HorizonStyle];
 
-	_vehicle setUserMFDValue [20, APD_HMD_WaypointMarkerStyle];
 	_vehicle setUserMFDValue [21, parseNumber APD_HMD_WaypointDetailsEnabled];
 	// 22 Waypoint Distance
 	// 23 Waypoint ETA
