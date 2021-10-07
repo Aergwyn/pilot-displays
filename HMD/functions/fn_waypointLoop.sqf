@@ -2,22 +2,12 @@ if (!hasInterface) exitWith {};
 
 params["_vehicle"];
 
-private _handle = nil;
-
 while { APD_HMD_WaypointLoopRunning } do
 {
 	private _waypoint = customWaypointPosition;
 
 	if (count _waypoint > 0) then
 	{
-		if (isNil "_handle") then
-		{
-			_handle = addMissionEventHandler ["Draw3D",
-			{
-				drawIcon3D [APD_HMD_WaypointMarkerStyle, APD_HMD_Colour, customWaypointPosition, 1, 1, 0];
-			}];
-		};
-
 		private _distanceUnit = APD_HMD_SoU_Distance select 0;
 		private _distanceMultiplier = APD_HMD_SoU_Distance select 1;
 		private _distancePrecision = APD_HMD_SoU_Distance select 2;
@@ -57,9 +47,4 @@ while { APD_HMD_WaypointLoopRunning } do
 		_vehicle setUserMFDText [23, ""]; // Waypoint ETA
 		APD_HMD_WaypointLoopRunning = false;
 	};
-};
-
-if (!isNil "_handle") then
-{
-	removeMissionEventHandler ["Draw3D", _handle];
 };

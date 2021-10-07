@@ -149,7 +149,7 @@ private _wynCategory06 = "06 - Other";
 // - Waypoint
 
 [
-	"APD_HMD_WaypointMarkerStyle", "LIST",
+	"APD_HMD_WaypointMarkerTexture", "LIST",
 	"Marker Style",
 	[_wynCategory, _wynCategory05],
 	[

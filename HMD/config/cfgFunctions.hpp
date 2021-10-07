@@ -12,6 +12,7 @@ class CfgFunctions
 			class evaluateLoops {};
 			class isValidHMDVehicle {};
 			class leftPadString {};
+			class toggleWaypointRender {};
 			class updateMFDValues {};
 			class vectorToHeading {};
 			class vehicleLoop {};
