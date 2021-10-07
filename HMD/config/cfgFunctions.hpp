@@ -7,16 +7,14 @@ class CfgFunctions
 		class Functions
 		{
 			file = "HMD\functions";
-			class onMapClick {};
-			class evaluateLoops {};
-			class updateMFDValues {};
 
+			class directionRelativeToWaypoint {};
+			class evaluateLoops {};
+			class leftPadString {};
+			class updateMFDValues {};
+			class vectorToHeading {};
 			class vehicleLoop {};
 			class waypointLoop {};
-
-			class leftPadString {};
-			class vectorToHeading {};
-			class directionRelativeToWaypoint {};
 		};
 	};
 };
