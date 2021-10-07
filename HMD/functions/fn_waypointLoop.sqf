@@ -1,6 +1,9 @@
+/*
+* This function processes the necessary waypoint statistics to display.
+*/
 if (!hasInterface) exitWith {};
 
-params["_vehicle"];
+params ["_vehicle"];
 
 while { APD_HMD_WaypointLoopRunning } do
 {

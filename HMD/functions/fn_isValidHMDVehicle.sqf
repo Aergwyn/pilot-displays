@@ -1,7 +1,9 @@
 /*
 * This function checks if the given vehicle allows displaying the HMD.
 */
-params["_vehicle"];
+if (!hasInterface) exitWith {};
+
+params ["_vehicle"];
 
 if (isNil "_vehicle") exitWith { false; };
 

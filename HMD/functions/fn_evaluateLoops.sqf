@@ -1,3 +1,7 @@
+/*
+* This function determines which (if any) processing loops need to be spawned or terminated.
+* The latter is achieved through variables which keep those loops alive.
+*/
 if (!hasInterface) exitWith {};
 
 private _vehicle = vehicle player;

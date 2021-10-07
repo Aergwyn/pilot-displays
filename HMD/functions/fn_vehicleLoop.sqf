@@ -1,6 +1,9 @@
+/*
+* This function processes the necessary vehicle statistics to display.
+*/
 if (!hasInterface) exitWith {};
 
-params["_vehicle"];
+params ["_vehicle"];
 
 while { APD_HMD_VehicleLoopRunning } do
 {

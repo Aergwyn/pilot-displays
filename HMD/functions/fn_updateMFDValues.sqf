@@ -1,3 +1,6 @@
+/*
+* This function updates the currently used vehicle with the necessary MFD user values that control the HMD.
+*/
 if (!hasInterface) exitWith {};
 
 private _vehicle = vehicle player;

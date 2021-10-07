@@ -1,7 +1,9 @@
 /*
-* This function will calculate an Azimuth (0-360 number) from the player towards given waypoint.
+* This function will calculate a heading of the player towards given waypoint.
 * The passed vector is a direction/movement from which we can determine our own relevant heading.
 */
+if (!hasInterface) exitWith {};
+
 params [["_waypoint", nil, [[0, 0], [0, 0, 0]]], ["_vector", nil, [[0, 0], [0, 0, 0]]]];
 
 // Calculate the "vector" relative from the player to the waypoint

@@ -1,8 +1,10 @@
 /*
-* This function will convert a vector (direction/movement) into an Azimuth (0-360 number).
+* This function will convert a vector (direction/movement) into a heading.
 */
-params[["_vector", nil, [[0, 0], [0, 0, 0]]]];
-_vector params["_x", "_y"];
+if (!hasInterface) exitWith {};
+
+params [["_vector", nil, [[0, 0], [0, 0, 0]]]];
+_vector params ["_x", "_y"];
 
 if (_y != 0) then
 {

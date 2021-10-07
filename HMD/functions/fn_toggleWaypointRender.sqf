@@ -1,6 +1,6 @@
 /*
 * This function toggles the rendering of the waypoint marker, granted the circumstances allow it.
-* Actions like deleting the current waypoint or changing specific settings will cause the rendering to stop.
+* For example deleting the current waypoint or changing specific settings will cause the rendering to stop.
 */
 if (!hasInterface) exitWith {};
 
