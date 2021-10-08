@@ -14,7 +14,11 @@ class CfgPatches
 };
 
 #include "hmd/hmd_base.hpp"
-#include "config/cfgFunctions.hpp"
+
+class CfgFunctions
+{
+	#include "config/cfgFunctions.hpp"
+};
 
 class CfgVehicles
 {

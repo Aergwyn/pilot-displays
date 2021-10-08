@@ -1,40 +1,37 @@
-class CfgFunctions
+class APD_HMD_Functions
 {
-	class APD_HMD_Functions
+	tag = "APD";
+
+	class Functions
 	{
-		tag = "APD";
+		file = "HMD\functions";
 
-		class Functions
-		{
-			file = "HMD\functions";
+		class directionRelativeToWaypoint {};
+		class isValidHMDVehicle {};
+		class updateMFDValues {};
+	};
 
-			class directionRelativeToWaypoint {};
-			class isValidHMDVehicle {};
-			class updateMFDValues {};
-		};
+	class Processing
+	{
+		file = "HMD\functions\process";
 
-		class Processing
-		{
-			file = "HMD\functions\process";
+		class evaluateLoops {};
+		class vehicleLoop {};
+		class waypointLoop {};
+	};
 
-			class evaluateLoops {};
-			class vehicleLoop {};
-			class waypointLoop {};
-		};
+	class Rendering
+	{
+		file = "HMD\functions\render";
 
-		class Rendering
-		{
-			file = "HMD\functions\render";
+		class toggleWaypointRender {};
+	};
 
-			class toggleWaypointRender {};
-		};
+	class Utility
+	{
+		file = "HMD\functions\util";
 
-		class Utility
-		{
-			file = "HMD\functions\util";
-
-			class leftPadString {};
-			class vectorToHeading {};
-		};
+		class leftPadString {};
+		class vectorToHeading {};
 	};
 };
