@@ -34,13 +34,4 @@ addMissionEventHandler ["Map",
 	}
 ];
 
-
-// TESTING
-private _layer = "APD_HUD_Layer" call BIS_fnc_rscLayer;
-_layer cutRsc ["APD_HUD", "PLAIN", -1, false];
-
-private _display = ["APD_HUD_Display"] call APD_fnc_getDisplay;
-
-private _text = _display ctrlCreate ["RscText", 5001];
-_text ctrlSetPosition [0.25 * safezoneW + safezoneX, 0.22 * safezoneH + safezoneY];
-_text ctrlSetTextColor APD_HMD_Colour;
+call APD_fnc_setupHUD;

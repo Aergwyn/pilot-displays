@@ -5,6 +5,12 @@ if (!hasInterface) exitWith {};
 
 params ["_vehicle"];
 
+private _display = ["APD_HUD_Display"] call APD_fnc_getDisplay;
+private _ctrlTextDistance = _display displayCtrl 5001;
+private _ctrlTextETA = _display displayCtrl 5002;
+
+[true] call APD_fnc_toggleHUD;
+
 while { APD_HMD_WaypointLoopRunning } do
 {
 	private _waypoint = customWaypointPosition;
@@ -46,5 +52,10 @@ while { APD_HMD_WaypointLoopRunning } do
 	_vehicle setUserMFDText [22, format ["%1 %2", _distanceValue, _distanceUnit]];
 	_vehicle setUserMFDText [23, format ["T-%1:%2", _etaMinute, _etaSecond]];
 
+	_ctrlTextDistance ctrlSetText (format ["%1 %2", _distanceValue, _distanceUnit]);
+	_ctrlTextETA ctrlSetText (format ["T-%1:%2", _etaMinute, _etaSecond]);
+
 	sleep 0.5;
 };
+
+[false] call APD_fnc_toggleHUD;

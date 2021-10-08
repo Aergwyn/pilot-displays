@@ -4,6 +4,7 @@ if (!hasInterface) exitWith {};
 // --- Misc Init ---
 // -----------------
 
+APD_HMD_HUDCtrlList = [];
 APD_HMD_VehicleLoopRunning = false;
 APD_HMD_WaypointLoopRunning = false;
 

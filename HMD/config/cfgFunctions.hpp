@@ -16,6 +16,9 @@ class APD_HMD_Functions
 		file = "HMD\functions\ui";
 
 		class getDisplay {};
+		class setupHUD {};
+		class toggleHUD {};
+		class updateHUD {};
 	};
 
 	class Util

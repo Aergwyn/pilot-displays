@@ -28,5 +28,6 @@ if (_vehicle != player) then
 	// 29 Speed
 };
 
+call APD_fnc_updateHUD;
 call APD_fnc_evaluateVehicleProcessing;
 call APD_fnc_evaluateWaypointProcessing;

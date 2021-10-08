@@ -13,6 +13,8 @@ class CfgPatches
 	};
 };
 
+#include "ui/waypoint.hpp"
+
 #include "hmd/hmd_base.hpp"
 
 class CfgFunctions
