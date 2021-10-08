@@ -11,22 +11,6 @@ class APD_HMD_Functions
 		class updateMFDValues {};
 	};
 
-	class Processing
-	{
-		file = "HMD\functions\process";
-
-		class evaluateLoops {};
-		class vehicleLoop {};
-		class waypointLoop {};
-	};
-
-	class Rendering
-	{
-		file = "HMD\functions\render";
-
-		class toggleWaypointRender {};
-	};
-
 	class UI
 	{
 		file = "HMD\functions\ui";
@@ -34,11 +18,30 @@ class APD_HMD_Functions
 		class getDisplay {};
 	};
 
-	class Utility
+	class Util
 	{
 		file = "HMD\functions\util";
 
 		class leftPadString {};
 		class vectorToHeading {};
 	};
+
+	class Vehicle
+	{
+		file = "HMD\functions\vehicle";
+
+		class evaluateVehicleProcessing {};
+		class startVehicleLoop {};
+	};
+
+	class Waypoint
+	{
+		file = "HMD\functions\waypoint";
+
+		class evaluateWaypointProcessing {};
+		class startWaypointLoop {};
+		class toggleWaypointRendering {};
+	};
+
+
 };
