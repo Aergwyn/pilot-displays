@@ -8,15 +8,21 @@ _layer cutRsc ["APD_HUD", "PLAIN", -1, false];
 
 private _display = ["APD_HUD_Display"] call APD_fnc_getDisplay;
 
-private _ctrlTextDistance = _display ctrlCreate ["RscText", 5001];
-_ctrlTextDistance ctrlSetPosition [safezoneX + 0.6 * safeZoneW, safezoneY + 0.745 * safeZoneH];
-_ctrlTextDistance ctrlCommit 0;
-APD_HMD_HUDCtrlList pushBack _ctrlTextDistance;
+private _ctrlTextWaypointTitle = _display ctrlCreate ["RscText", 5000];
+_ctrlTextWaypointTitle ctrlSetText "WYPT";
+_ctrlTextWaypointTitle ctrlSetPosition [safezoneX + 0.66 * safeZoneW, safezoneY + 0.74 * safeZoneH];
+_ctrlTextWaypointTitle ctrlCommit 0;
+APD_HMD_HUDCtrlList pushBack _ctrlTextWaypointTitle;
 
-private _ctrlTextETA = _display ctrlCreate ["RscText", 5002];
-_ctrlTextETA ctrlSetPosition [safezoneX + 0.6 * safeZoneW, safezoneY + 0.765 * safeZoneH];
-_ctrlTextETA ctrlCommit 0;
-APD_HMD_HUDCtrlList pushBack _ctrlTextETA;
+private _ctrlTextWaypointDistance = _display ctrlCreate ["RscText", 5001];
+_ctrlTextWaypointDistance ctrlSetPosition [safezoneX + 0.66 * safeZoneW, safezoneY + 0.76 * safeZoneH];
+_ctrlTextWaypointDistance ctrlCommit 0;
+APD_HMD_HUDCtrlList pushBack _ctrlTextWaypointDistance;
+
+private _ctrlTextWaypointETA = _display ctrlCreate ["RscText", 5002];
+_ctrlTextWaypointETA ctrlSetPosition [safezoneX + 0.66 * safeZoneW, safezoneY + 0.78 * safeZoneH];
+_ctrlTextWaypointETA ctrlCommit 0;
+APD_HMD_HUDCtrlList pushBack _ctrlTextWaypointETA;
 
 [false] call APD_fnc_toggleHUD;
 call APD_fnc_updateHUD;
