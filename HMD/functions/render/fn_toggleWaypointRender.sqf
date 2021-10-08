@@ -7,8 +7,9 @@ if (!hasInterface) exitWith {};
 params [["_enable", false, [true]]];
 
 private _handle = player getVariable ["APD_WaypointRenderHandle", nil];
+private _allowRender = !(APD_HMD_WaypointMarkerTexture isEqualTo "") && count customWaypointPosition > 0;
 
-if (_enable && isNil "_handle") then
+if (_enable && _allowRender && isNil "_handle") then
 {
 	_handle = addMissionEventHandler ["Draw3D",
 	{

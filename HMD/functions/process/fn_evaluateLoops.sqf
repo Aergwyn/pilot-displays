@@ -33,4 +33,4 @@ else
 	APD_HMD_WaypointLoopRunning = false;
 };
 
-[_isValidVehicle && !(APD_HMD_WaypointMarkerTexture isEqualTo "")] call APD_fnc_toggleWaypointRender;
+[_isValidVehicle] call APD_fnc_toggleWaypointRender;
