@@ -9,14 +9,32 @@ class CfgFunctions
 			file = "HMD\functions";
 
 			class directionRelativeToWaypoint {};
-			class evaluateLoops {};
 			class isValidHMDVehicle {};
-			class leftPadString {};
-			class toggleWaypointRender {};
 			class updateMFDValues {};
-			class vectorToHeading {};
+		};
+
+		class Processing
+		{
+			file = "HMD\functions\process";
+
+			class evaluateLoops {};
 			class vehicleLoop {};
 			class waypointLoop {};
+		};
+
+		class Rendering
+		{
+			file = "HMD\functions\render";
+
+			class toggleWaypointRender {};
+		};
+
+		class Utility
+		{
+			file = "HMD\functions\util";
+
+			class leftPadString {};
+			class vectorToHeading {};
 		};
 	};
 };
