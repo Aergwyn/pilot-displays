@@ -14,5 +14,5 @@ if (_enable) then
 
 {
 	_x ctrlSetFade _t;
-	_x ctrlCommit 0.5;
+	_x ctrlCommit 0.4;
 } forEach APD_HMD_HUDCtrlList;
