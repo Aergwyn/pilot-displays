@@ -27,6 +27,13 @@ class APD_HMD_Functions
 		class toggleWaypointRender {};
 	};
 
+	class UI
+	{
+		file = "HMD\functions\ui";
+
+		class getDisplay {};
+	};
+
 	class Utility
 	{
 		file = "HMD\functions\util";
