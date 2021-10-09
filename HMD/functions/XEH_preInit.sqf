@@ -20,8 +20,23 @@ private _wynCategory05 = "05 - Waypoint";
 private _wynCategory06 = "06 - Other";
 
 private _defaultFont = 1;
-//private _supportedFonts = ["Caveat", "EtelkaMonospacePro", "LucidaConsoleB", "PuristaLight", "TahomaB"];
-private _supportedFonts = ("true" configClasses (configFile >> "CfgFontFamilies")) apply { configName _x; };
+private _supportedFonts =
+[
+	"Caveat",
+	"EtelkaMonospacePro",
+	"LCD14",
+	"LucidaConsoleB",
+	"PixelSplitterBold",
+	"PuristaBold",
+	"PuristaLight",
+	"PuristaMedium",
+	"PuristaSemibold",
+	"RobotoCondensed",
+	"TahomaB"
+];
+
+// TODO I'm not sure about the order as custom fonts appearing/disappearing could change the index and thus the used font randomly...
+//private _supportedFonts = ("true" configClasses (configFile >> "CfgFontFamilies")) apply { configName _x; };
 
 private _supportedSizes = [0.25, 4, 1, 2, true]; // Min, Max, Default, Decimals, Percentage
 
@@ -163,15 +178,15 @@ private _supportedSizes = [0.25, 4, 1, 2, true]; // Min, Max, Default, Decimals,
 			"",
 			"HMD\textures\wypt_plus.paa",
 			"HMD\textures\wypt_cross.paa",
-			"HMD\textures\wypt_circle.paa",
-			"HMD\textures\wypt_square.paa"
+			"HMD\textures\wypt_square.paa",
+			"HMD\textures\wypt_circle.paa"
 		],
 		[
 			"Disabled",
 			"Plus",
 			"Cross",
-			"Circle",
-			"Square"
+			"Square",
+			"Circle"
 		], 2
 	],
 	nil,
