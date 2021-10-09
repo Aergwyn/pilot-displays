@@ -27,7 +27,7 @@ player addEventHandler ["Killed",
 
 addMissionEventHandler ["Map",
 	{
-		params ["_mapIsOpened", "_mapIsForced"];
+		params ["_mapIsOpened"];
 
 		if (!_mapIsOpened) then
 		{
