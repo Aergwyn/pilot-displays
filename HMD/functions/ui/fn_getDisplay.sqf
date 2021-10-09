@@ -1,8 +1,6 @@
 /*
-* This function returns the named class of RscTitles as defined by the "onLoad" in the UI.
+* This function returns the "APD_HUD_Display" class of RscTitles.
 */
 if (!hasInterface) exitWith {};
 
-params [["_name", "", [""]]];
-
-uiNamespace getVariable [_name, displayNull];
+uiNamespace getVariable ["APD_HUD_Display", displayNull];

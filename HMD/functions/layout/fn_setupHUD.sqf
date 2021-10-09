@@ -6,7 +6,7 @@ if (!hasInterface) exitWith {};
 private _layer = "APD_HUD_Layer" call BIS_fnc_rscLayer;
 _layer cutRsc ["APD_HUD", "PLAIN", -1, false];
 
-private _display = ["APD_HUD_Display"] call APD_fnc_getDisplay;
+private _display = call APD_fnc_getDisplay;
 
 private _ctrlTextWaypointTitle = _display ctrlCreate ["RscText", 5000];
 _ctrlTextWaypointTitle ctrlSetText "WYPT";

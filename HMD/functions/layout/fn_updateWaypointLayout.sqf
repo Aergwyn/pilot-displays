@@ -3,7 +3,7 @@
 */
 if (!hasInterface) exitWith {};
 
-private _display = ["APD_HUD_Display"] call APD_fnc_getDisplay;
+private _display = call APD_fnc_getDisplay;
 
 private _ctrlTextWaypointTitle = _display displayCtrl 5000;
 _ctrlTextWaypointTitle setVariable ["APD_Control_Enabled", APD_HMD_WaypointHeaderEnabled];
