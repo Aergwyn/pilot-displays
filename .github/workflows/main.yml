@@ -28,4 +28,6 @@ jobs:
       - name: sqflint
         # You may pin to the exact commit or the version.
         # uses: arma-actions/sqflint@bc970657e0ffc0f6280f8d3a578fdd11fa20e076
-        uses: arma-actions/sqflint@v1.0 --exit e --directory HMD
+        uses: arma-actions/sqflint@v1.0
+        with:
+          directory: HMD
