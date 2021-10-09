@@ -40,7 +40,7 @@ private _supportedFonts =
 
 private _supportedSizes = [0.25, 4, 1, 2, true]; // Min, Max, Default, Decimals, Percentage
 
-// - 01
+// - General
 
 [
 	"APD_HMD_Enabled", "CHECKBOX",
@@ -125,7 +125,7 @@ private _supportedSizes = [0.25, 4, 1, 2, true]; // Min, Max, Default, Decimals,
 	{ call APD_fnc_updateMFDValues; }
 ] call CBA_fnc_addSetting;
 
-// - 02
+// - Compass
 
 [
 	"APD_HMD_CompassEnabled", "CHECKBOX",
