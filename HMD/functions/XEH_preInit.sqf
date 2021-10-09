@@ -29,7 +29,7 @@ private _wynCategory06 = "06 - Other";
 	TRUE,
 	nil,
 	{ call APD_fnc_updateMFDValues; }
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
 	"APD_HMD_Colour", "COLOR",
@@ -38,7 +38,7 @@ private _wynCategory06 = "06 - Other";
 	[ 0, 1, 0, 1 ],
 	nil,
 	{ call APD_fnc_updateMFDValues; }
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
 	"APD_HMD_SoU_Speed", "LIST",
@@ -59,7 +59,7 @@ private _wynCategory06 = "06 - Other";
 	],
 	nil,
 	{ call APD_fnc_updateMFDValues; }
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
 	"APD_HMD_SoU_Distance", "LIST",
@@ -84,7 +84,7 @@ private _wynCategory06 = "06 - Other";
 	],
 	nil,
 	{ call APD_fnc_updateMFDValues; }
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
 	"APD_HMD_SoU_Altitude", "LIST",
@@ -103,7 +103,7 @@ private _wynCategory06 = "06 - Other";
 	],
 	nil,
 	{ call APD_fnc_updateMFDValues; }
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 // - 02
 
@@ -114,7 +114,7 @@ private _wynCategory06 = "06 - Other";
 	TRUE,
 	nil,
 	{ call APD_fnc_updateMFDValues; }
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 // - Horizon
 
@@ -125,7 +125,7 @@ private _wynCategory06 = "06 - Other";
 	[[0, 1, 2, 3, 4], ["Disabled", "0° Only", "10° Lines", "15° Lines", "30° Lines"], 2],
 	nil,
 	{ call APD_fnc_updateMFDValues; }
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 // - Vehicle
 
@@ -136,7 +136,7 @@ private _wynCategory06 = "06 - Other";
 	TRUE,
 	nil,
 	{ call APD_fnc_updateMFDValues; }
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
 	"APD_HMD_VehicleAirspeedEnabled", "CHECKBOX",
@@ -145,7 +145,7 @@ private _wynCategory06 = "06 - Other";
 	TRUE,
 	nil,
 	{ call APD_fnc_updateMFDValues; }
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 // - Waypoint
 
@@ -171,15 +171,51 @@ private _wynCategory06 = "06 - Other";
 	],
 	nil,
 	{ call APD_fnc_updateMFDValues; }
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
 
 [
-	"APD_HMD_WaypointDetailsEnabled", "CHECKBOX",
-	"Show Details",
+	"APD_HMD_WaypointHeaderEnabled", "CHECKBOX",
+	"Show Title",
 	[_wynCategory, _wynCategory05],
 	TRUE,
 	nil,
 	{ call APD_fnc_updateMFDValues; }
-] call CBA_Settings_fnc_init;
+] call CBA_fnc_addSetting;
+
+[
+	"APD_HMD_WaypointDistanceEnabled", "CHECKBOX",
+	"Show Distance",
+	[_wynCategory, _wynCategory05],
+	TRUE,
+	nil,
+	{ call APD_fnc_updateMFDValues; }
+] call CBA_fnc_addSetting;
+
+[
+	"APD_HMD_WaypointTimeEnabled", "CHECKBOX",
+	"Show Estimated Time",
+	[_wynCategory, _wynCategory05],
+	TRUE,
+	nil,
+	{ call APD_fnc_updateMFDValues; }
+] call CBA_fnc_addSetting;
+
+[
+	"APD_HMD_WaypointXOffset", "SLIDER",
+	"Horizontal Offset",
+	[_wynCategory, _wynCategory05],
+	[0, 1, 0.66, 2],
+	nil,
+	{ call APD_fnc_updateMFDValues; }
+] call CBA_fnc_addSetting;
+
+[
+	"APD_HMD_WaypointYOffset", "SLIDER",
+	"Vertical Offset",
+	[_wynCategory, _wynCategory05],
+	[0, 1, 0.74, 2],
+	nil,
+	{ call APD_fnc_updateMFDValues; }
+] call CBA_fnc_addSetting;
 
 // - Other
