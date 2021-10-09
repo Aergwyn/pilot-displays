@@ -17,7 +17,6 @@ private _wynCategory02 = "02 - Compass";
 private _wynCategory03 = "03 - Horizon";
 private _wynCategory04 = "04 - Vehicle";
 private _wynCategory05 = "05 - Waypoint";
-private _wynCategory06 = "06 - Other";
 
 private _defaultFont = 1;
 private _supportedFonts =

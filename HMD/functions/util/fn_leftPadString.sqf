@@ -5,7 +5,7 @@ if (!hasInterface) exitWith {};
 
 params [["_value", nil, ["", 0]], ["_length", 1, [0]], ["_padChar", " ", [""]]];
 
-_text = str _value;
+private _text = str _value;
 
 while { (count _text) < _length } do
 {
