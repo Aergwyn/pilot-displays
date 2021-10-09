@@ -13,14 +13,14 @@ player addEventHandler ["GetInMan",
 player addEventHandler ["GetOutMan",
 	{
 		systemChat "GetOutMan";
-		call APD_fnc_evaluateVehicleProcessing;
+		call APD_fnc_updateVehicleProcessing;
 		call APD_fnc_updateWaypointProcessing;
 	}
 ];
 
 player addEventHandler ["Killed",
 	{
-		call APD_fnc_evaluateVehicleProcessing;
+		call APD_fnc_updateVehicleProcessing;
 		call APD_fnc_updateWaypointProcessing;
 	}
 ];
