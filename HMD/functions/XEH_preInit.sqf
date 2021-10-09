@@ -11,12 +11,12 @@ APD_HMD_WaypointLoopRunning = false;
 // --- CBA-Settings ---
 // --------------------
 
-private _wynCategory = "Aergwyn's Pilot HMD";
-private _wynCategory01 = "01 - General";
-private _wynCategory02 = "02 - Compass";
-private _wynCategory03 = "03 - Horizon";
-private _wynCategory04 = "04 - Vehicle";
-private _wynCategory05 = "05 - Waypoint";
+private _modCategory = "Aergwyn's Pilot HMD";
+private _subCategory01 = "01 - General";
+private _subCategory02 = "02 - Compass";
+private _subCategory03 = "03 - Horizon";
+private _subCategory04 = "04 - Vehicle";
+private _subCategory05 = "05 - Waypoint";
 
 private _defaultFont = 1;
 private _supportedFonts =
@@ -44,7 +44,7 @@ private _supportedSizes = [0.25, 4, 1, 2, true]; // Min, Max, Default, Decimals,
 [
 	"APD_HMD_Enabled", "CHECKBOX",
 	"Enabled",
-	[_wynCategory, _wynCategory01],
+	[_modCategory, _subCategory01],
 	TRUE,
 	nil,
 	{ call APD_fnc_updateMFDValues; }
@@ -53,7 +53,7 @@ private _supportedSizes = [0.25, 4, 1, 2, true]; // Min, Max, Default, Decimals,
 [
 	"APD_HMD_Colour", "COLOR",
 	"Colour",
-	[_wynCategory, _wynCategory01],
+	[_modCategory, _subCategory01],
 	[ 0, 1, 0, 1 ],
 	nil,
 	{ call APD_fnc_updateMFDValues; }
@@ -62,7 +62,7 @@ private _supportedSizes = [0.25, 4, 1, 2, true]; // Min, Max, Default, Decimals,
 [
 	"APD_HMD_SoU_Speed", "LIST",
 	"Unit for Speed",
-	[_wynCategory, _wynCategory01],
+	[_modCategory, _subCategory01],
 	[
 		// Unit, Multiplier (to convert from metric meter)
 		[
@@ -83,7 +83,7 @@ private _supportedSizes = [0.25, 4, 1, 2, true]; // Min, Max, Default, Decimals,
 [
 	"APD_HMD_SoU_Distance", "LIST",
 	"Unit for Distance",
-	[_wynCategory, _wynCategory01],
+	[_modCategory, _subCategory01],
 	[
 		// Unit, Multiplier (to convert from metric meter), Precision
 		[
@@ -108,7 +108,7 @@ private _supportedSizes = [0.25, 4, 1, 2, true]; // Min, Max, Default, Decimals,
 [
 	"APD_HMD_SoU_Altitude", "LIST",
 	"Unit for Altitude",
-	[_wynCategory, _wynCategory01],
+	[_modCategory, _subCategory01],
 	[
 		// Unit, Multiplier (to convert from metric meter)
 		[
@@ -129,7 +129,7 @@ private _supportedSizes = [0.25, 4, 1, 2, true]; // Min, Max, Default, Decimals,
 [
 	"APD_HMD_CompassEnabled", "CHECKBOX",
 	"Show Compass",
-	[_wynCategory, _wynCategory02],
+	[_modCategory, _subCategory02],
 	TRUE,
 	nil,
 	{ call APD_fnc_updateMFDValues; }
@@ -140,7 +140,7 @@ private _supportedSizes = [0.25, 4, 1, 2, true]; // Min, Max, Default, Decimals,
 [
 	"APD_HMD_HorizonStyle", "LIST",
 	"Horizon Style",
-	[_wynCategory, _wynCategory03],
+	[_modCategory, _subCategory03],
 	[[0, 1, 2, 3, 4], ["Disabled", "0° Only", "10° Lines", "15° Lines", "30° Lines"], 2],
 	nil,
 	{ call APD_fnc_updateMFDValues; }
@@ -151,7 +151,7 @@ private _supportedSizes = [0.25, 4, 1, 2, true]; // Min, Max, Default, Decimals,
 [
 	"APD_HMD_VehicleAGLEnabled", "CHECKBOX",
 	"Show Altitude Above Ground Level (AGL)",
-	[_wynCategory, _wynCategory04],
+	[_modCategory, _subCategory04],
 	TRUE,
 	nil,
 	{ call APD_fnc_updateVehicleProcessing; }
@@ -160,7 +160,7 @@ private _supportedSizes = [0.25, 4, 1, 2, true]; // Min, Max, Default, Decimals,
 [
 	"APD_HMD_VehicleASLEnabled", "CHECKBOX",
 	"Show Altitude Above Sea Level (ASL)",
-	[_wynCategory, _wynCategory04],
+	[_modCategory, _subCategory04],
 	TRUE,
 	nil,
 	{ call APD_fnc_updateVehicleProcessing; }
@@ -169,7 +169,7 @@ private _supportedSizes = [0.25, 4, 1, 2, true]; // Min, Max, Default, Decimals,
 [
 	"APD_HMD_VehicleSPDEnabled", "CHECKBOX",
 	"Show Speed (SPD)",
-	[_wynCategory, _wynCategory04],
+	[_modCategory, _subCategory04],
 	TRUE,
 	nil,
 	{ call APD_fnc_updateVehicleProcessing; }
@@ -178,7 +178,7 @@ private _supportedSizes = [0.25, 4, 1, 2, true]; // Min, Max, Default, Decimals,
 [
 	"APD_HMD_VehicleTextFont", "LIST",
 	"Font",
-	[_wynCategory, _wynCategory04],
+	[_modCategory, _subCategory04],
 	[_supportedFonts, _supportedFonts, _defaultFont],
 	nil,
 	{ call APD_fnc_updateVehicleLayout; }
@@ -187,7 +187,7 @@ private _supportedSizes = [0.25, 4, 1, 2, true]; // Min, Max, Default, Decimals,
 [
 	"APD_HMD_VehicleTextScale", "SLIDER",
 	"Text Size",
-	[_wynCategory, _wynCategory04],
+	[_modCategory, _subCategory04],
 	_supportedSizes,
 	nil,
 	{ call APD_fnc_updateVehicleLayout; }
@@ -196,7 +196,7 @@ private _supportedSizes = [0.25, 4, 1, 2, true]; // Min, Max, Default, Decimals,
 [
 	"APD_HMD_VehicleXOffset", "SLIDER",
 	"Horizontal Position",
-	[_wynCategory, _wynCategory04],
+	[_modCategory, _subCategory04],
 	[0, 1, 0.66, 2],
 	nil,
 	{ call APD_fnc_updateVehicleLayout; }
@@ -205,7 +205,7 @@ private _supportedSizes = [0.25, 4, 1, 2, true]; // Min, Max, Default, Decimals,
 [
 	"APD_HMD_VehicleYOffset", "SLIDER",
 	"Vertical Position",
-	[_wynCategory, _wynCategory04],
+	[_modCategory, _subCategory04],
 	[0, 1, 0.28, 2],
 	nil,
 	{ call APD_fnc_updateVehicleLayout; }
@@ -216,7 +216,7 @@ private _supportedSizes = [0.25, 4, 1, 2, true]; // Min, Max, Default, Decimals,
 [
 	"APD_HMD_WaypointMarkerTexture", "LIST",
 	"Marker Style",
-	[_wynCategory, _wynCategory05],
+	[_modCategory, _subCategory05],
 	[
 		[
 			"",
@@ -240,7 +240,7 @@ private _supportedSizes = [0.25, 4, 1, 2, true]; // Min, Max, Default, Decimals,
 [
 	"APD_HMD_WaypointHeaderEnabled", "CHECKBOX",
 	"Show Title",
-	[_wynCategory, _wynCategory05],
+	[_modCategory, _subCategory05],
 	TRUE,
 	nil,
 	{ call APD_fnc_updateWaypointLayout; }
@@ -249,7 +249,7 @@ private _supportedSizes = [0.25, 4, 1, 2, true]; // Min, Max, Default, Decimals,
 [
 	"APD_HMD_WaypointDistanceEnabled", "CHECKBOX",
 	"Show Distance",
-	[_wynCategory, _wynCategory05],
+	[_modCategory, _subCategory05],
 	TRUE,
 	nil,
 	{ call APD_fnc_updateWaypointProcessing; }
@@ -258,7 +258,7 @@ private _supportedSizes = [0.25, 4, 1, 2, true]; // Min, Max, Default, Decimals,
 [
 	"APD_HMD_WaypointTimeEnabled", "CHECKBOX",
 	"Show Estimated Time",
-	[_wynCategory, _wynCategory05],
+	[_modCategory, _subCategory05],
 	TRUE,
 	nil,
 	{ call APD_fnc_updateWaypointProcessing; }
@@ -268,7 +268,7 @@ private _supportedSizes = [0.25, 4, 1, 2, true]; // Min, Max, Default, Decimals,
 [
 	"APD_HMD_WaypointTextFont", "LIST",
 	"Font",
-	[_wynCategory, _wynCategory05],
+	[_modCategory, _subCategory05],
 	[_supportedFonts, _supportedFonts, _defaultFont],
 	nil,
 	{ call APD_fnc_updateWaypointLayout; }
@@ -277,7 +277,7 @@ private _supportedSizes = [0.25, 4, 1, 2, true]; // Min, Max, Default, Decimals,
 [
 	"APD_HMD_WaypointTextScale", "SLIDER",
 	"Text Size",
-	[_wynCategory, _wynCategory05],
+	[_modCategory, _subCategory05],
 	_supportedSizes,
 	nil,
 	{ call APD_fnc_updateWaypointLayout; }
@@ -286,7 +286,7 @@ private _supportedSizes = [0.25, 4, 1, 2, true]; // Min, Max, Default, Decimals,
 [
 	"APD_HMD_WaypointXOffset", "SLIDER",
 	"Horizontal Position",
-	[_wynCategory, _wynCategory05],
+	[_modCategory, _subCategory05],
 	[0, 1, 0.66, 2],
 	nil,
 	{ call APD_fnc_updateWaypointLayout; }
@@ -295,7 +295,7 @@ private _supportedSizes = [0.25, 4, 1, 2, true]; // Min, Max, Default, Decimals,
 [
 	"APD_HMD_WaypointYOffset", "SLIDER",
 	"Vertical Position",
-	[_wynCategory, _wynCategory05],
+	[_modCategory, _subCategory05],
 	[0, 1, 0.74, 2],
 	nil,
 	{ call APD_fnc_updateWaypointLayout; }
