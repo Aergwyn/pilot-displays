@@ -30,4 +30,4 @@ jobs:
         # uses: arma-actions/sqflint@bc970657e0ffc0f6280f8d3a578fdd11fa20e076
         uses: arma-actions/sqflint@v1.0
         with:
-          args: --directory HMD
+          args: --directory HMD --exit w
