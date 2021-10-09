@@ -9,8 +9,6 @@ private _display = ["APD_HUD_Display"] call APD_fnc_getDisplay;
 private _ctrlTextWaypointDistance = _display displayCtrl 5001;
 private _ctrlTextWaypointTime = _display displayCtrl 5002;
 
-[true] call APD_fnc_toggleHUD;
-
 while { APD_HMD_WaypointLoopRunning } do
 {
 	private _waypoint = customWaypointPosition;
@@ -54,5 +52,3 @@ while { APD_HMD_WaypointLoopRunning } do
 
 	sleep 0.5;
 };
-
-[false] call APD_fnc_toggleHUD;

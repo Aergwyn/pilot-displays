@@ -1,5 +1,5 @@
 /*
-* This function evaluates if processing regarding waypoint functionality is necessary.
+* This function evaluates if processing data for waypoint HUD elements is required.
 */
 if (!hasInterface) exitWith {};
 
@@ -21,3 +21,5 @@ else
 {
 	APD_HMD_WaypointLoopRunning = false;
 };
+
+call APD_fnc_updateWaypointLayout;

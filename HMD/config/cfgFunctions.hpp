@@ -6,9 +6,22 @@ class APD_HMD_Functions
 	{
 		file = "HMD\functions";
 
-		class directionRelativeToWaypoint {};
-		class isValidHMDVehicle {};
 		class updateMFDValues {};
+	};
+
+	class Layout
+	{
+		file = "HMD\functions\layout";
+
+		class setupHUD {};
+		class updateWaypointLayout {};
+	};
+
+	class Processing
+	{
+		file = "HMD\functions\processing";
+
+		class updateWaypointProcessing {};
 	};
 
 	class UI
@@ -18,15 +31,15 @@ class APD_HMD_Functions
 		class getDisplay {};
 		class setCtrlPosition {};
 		class setCtrlPositionAsGroup {};
-		class setupHUD {};
-		class toggleHUD {};
-		class updateHUD {};
+		class setCtrlVisibility {};
 	};
 
 	class Util
 	{
 		file = "HMD\functions\util";
 
+		class directionRelativeToWaypoint {};
+		class isValidHMDVehicle {};
 		class leftPadString {};
 		class vectorToHeading {};
 	};
@@ -43,10 +56,7 @@ class APD_HMD_Functions
 	{
 		file = "HMD\functions\waypoint";
 
-		class evaluateWaypointProcessing {};
 		class startWaypointLoop {};
 		class toggleWaypointRendering {};
 	};
-
-
 };

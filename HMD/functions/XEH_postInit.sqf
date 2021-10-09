@@ -1,5 +1,7 @@
 if (!hasInterface) exitWith {};
 
+call APD_fnc_setupHUD;
+
 // TODO remove debug output once events were tested if being loaded in by 3rd party triggers these as well
 player addEventHandler ["GetInMan",
 	{
@@ -12,14 +14,14 @@ player addEventHandler ["GetOutMan",
 	{
 		systemChat "GetOutMan";
 		call APD_fnc_evaluateVehicleProcessing;
-		call APD_fnc_evaluateWaypointProcessing;
+		call APD_fnc_updateWaypointProcessing;
 	}
 ];
 
 player addEventHandler ["Killed",
 	{
 		call APD_fnc_evaluateVehicleProcessing;
-		call APD_fnc_evaluateWaypointProcessing;
+		call APD_fnc_updateWaypointProcessing;
 	}
 ];
 
@@ -29,9 +31,7 @@ addMissionEventHandler ["Map",
 
 		if (!_mapIsOpened) then
 		{
-			call APD_fnc_evaluateWaypointProcessing;
+			call APD_fnc_updateWaypointProcessing;
 		};
 	}
 ];
-
-call APD_fnc_setupHUD;

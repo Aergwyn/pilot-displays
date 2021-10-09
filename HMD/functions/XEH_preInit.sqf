@@ -4,7 +4,6 @@ if (!hasInterface) exitWith {};
 // --- Misc Init ---
 // -----------------
 
-APD_HMD_HUDCtrlList = [];
 APD_HMD_VehicleLoopRunning = false;
 APD_HMD_WaypointLoopRunning = false;
 
@@ -19,6 +18,12 @@ private _wynCategory03 = "03 - Horizon";
 private _wynCategory04 = "04 - Vehicle";
 private _wynCategory05 = "05 - Waypoint";
 private _wynCategory06 = "06 - Other";
+
+private _defaultFont = 1;
+//private _supportedFonts = ["Caveat", "EtelkaMonospacePro", "LucidaConsoleB", "PuristaLight", "TahomaB"];
+private _supportedFonts = ("true" configClasses (configFile >> "CfgFontFamilies")) apply { configName _x; };
+
+private _supportedSizes = [0.25, 4, 1, 2, true]; // Min, Max, Default, Decimals, Percentage
 
 // - 01
 
@@ -170,7 +175,7 @@ private _wynCategory06 = "06 - Other";
 		], 2
 	],
 	nil,
-	{ call APD_fnc_updateMFDValues; }
+	{ call APD_fnc_updateWaypointProcessing; }
 ] call CBA_fnc_addSetting;
 
 [
@@ -179,7 +184,7 @@ private _wynCategory06 = "06 - Other";
 	[_wynCategory, _wynCategory05],
 	TRUE,
 	nil,
-	{ call APD_fnc_updateMFDValues; }
+	{ call APD_fnc_updateWaypointLayout; }
 ] call CBA_fnc_addSetting;
 
 [
@@ -188,7 +193,7 @@ private _wynCategory06 = "06 - Other";
 	[_wynCategory, _wynCategory05],
 	TRUE,
 	nil,
-	{ call APD_fnc_updateMFDValues; }
+	{ call APD_fnc_updateWaypointProcessing; }
 ] call CBA_fnc_addSetting;
 
 [
@@ -197,25 +202,44 @@ private _wynCategory06 = "06 - Other";
 	[_wynCategory, _wynCategory05],
 	TRUE,
 	nil,
-	{ call APD_fnc_updateMFDValues; }
+	{ call APD_fnc_updateWaypointProcessing; }
+] call CBA_fnc_addSetting;
+
+
+[
+	"APD_HMD_WaypointTextFont", "LIST",
+	"Font",
+	[_wynCategory, _wynCategory05],
+	[_supportedFonts, _supportedFonts, _defaultFont],
+	nil,
+	{ call APD_fnc_updateWaypointLayout; }
+] call CBA_fnc_addSetting;
+
+[
+	"APD_HMD_WaypointTextScale", "SLIDER",
+	"Text Size",
+	[_wynCategory, _wynCategory05],
+	_supportedSizes,
+	nil,
+	{ call APD_fnc_updateWaypointLayout; }
 ] call CBA_fnc_addSetting;
 
 [
 	"APD_HMD_WaypointXOffset", "SLIDER",
-	"Horizontal Offset",
+	"Horizontal Position",
 	[_wynCategory, _wynCategory05],
 	[0, 1, 0.66, 2],
 	nil,
-	{ call APD_fnc_updateMFDValues; }
+	{ call APD_fnc_updateWaypointLayout; }
 ] call CBA_fnc_addSetting;
 
 [
 	"APD_HMD_WaypointYOffset", "SLIDER",
-	"Vertical Offset",
+	"Vertical Position",
 	[_wynCategory, _wynCategory05],
 	[0, 1, 0.74, 2],
 	nil,
-	{ call APD_fnc_updateMFDValues; }
+	{ call APD_fnc_updateWaypointLayout; }
 ] call CBA_fnc_addSetting;
 
 // - Other
