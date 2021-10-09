@@ -16,6 +16,8 @@ class APD_HMD_Functions
 		file = "HMD\functions\ui";
 
 		class getDisplay {};
+		class setCtrlPosition {};
+		class setCtrlPositionAsGroup {};
 		class setupHUD {};
 		class toggleHUD {};
 		class updateHUD {};
