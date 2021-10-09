@@ -5,6 +5,11 @@ if (!hasInterface) exitWith {};
 
 params ["_vehicle"];
 
+private _display = call APD_fnc_getDisplay;
+private _ctrlTextVehicleAGL = _display displayCtrl 5100;
+private _ctrlTextVehicleASL = _display displayCtrl 5101;
+private _ctrlTextVehicleSPD = _display displayCtrl 5102;
+
 while { APD_HMD_VehicleLoopRunning } do
 {
 	private _altUnit = APD_HMD_SoU_Altitude select 0;
@@ -19,9 +24,9 @@ while { APD_HMD_VehicleLoopRunning } do
 	private _speedRaw = vectorMagnitude (velocity _vehicle);
 	private _speedValue = (_speedRaw * _speedMultiplier) toFixed 0;
 
-	_vehicle setUserMFDText [27, format ["AGL: %1 %2", _aglValue, _altUnit]];
-	_vehicle setUserMFDText [28, format ["ASL: %1 %2", _aslValue, _altUnit]];
-	_vehicle setUserMFDText [29, format ["SPD: %1 %2", _speedValue, _speedUnit]];
+	_ctrlTextVehicleAGL ctrlSetText (format ["AGL: %1 %2", _aglValue, _altUnit]);
+	_ctrlTextVehicleASL ctrlSetText (format ["ASL: %1 %2", _aslValue, _altUnit]);
+	_ctrlTextVehicleSPD ctrlSetText (format ["SPD: %1 %2", _speedValue, _speedUnit]);
 
 	sleep 0.1;
 };

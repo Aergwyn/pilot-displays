@@ -150,21 +150,66 @@ private _supportedSizes = [0.25, 4, 1, 2, true]; // Min, Max, Default, Decimals,
 // - Vehicle
 
 [
-	"APD_HMD_VehicleAltitudeEnabled", "CHECKBOX",
-	"Show Altitude",
+	"APD_HMD_VehicleAGLEnabled", "CHECKBOX",
+	"Show Altitude Above Ground Level (AGL)",
 	[_wynCategory, _wynCategory04],
 	TRUE,
 	nil,
-	{ call APD_fnc_updateMFDValues; }
+	{ call APD_fnc_updateVehicleProcessing; }
 ] call CBA_fnc_addSetting;
 
 [
-	"APD_HMD_VehicleAirspeedEnabled", "CHECKBOX",
-	"Show Airspeed",
+	"APD_HMD_VehicleASLEnabled", "CHECKBOX",
+	"Show Altitude Above Sea Level (ASL)",
 	[_wynCategory, _wynCategory04],
 	TRUE,
 	nil,
-	{ call APD_fnc_updateMFDValues; }
+	{ call APD_fnc_updateVehicleProcessing; }
+] call CBA_fnc_addSetting;
+
+[
+	"APD_HMD_VehicleSPDEnabled", "CHECKBOX",
+	"Show Speed (SPD)",
+	[_wynCategory, _wynCategory04],
+	TRUE,
+	nil,
+	{ call APD_fnc_updateVehicleProcessing; }
+] call CBA_fnc_addSetting;
+
+[
+	"APD_HMD_VehicleTextFont", "LIST",
+	"Font",
+	[_wynCategory, _wynCategory04],
+	[_supportedFonts, _supportedFonts, _defaultFont],
+	nil,
+	{ call APD_fnc_updateVehicleLayout; }
+] call CBA_fnc_addSetting;
+
+[
+	"APD_HMD_VehicleTextScale", "SLIDER",
+	"Text Size",
+	[_wynCategory, _wynCategory04],
+	_supportedSizes,
+	nil,
+	{ call APD_fnc_updateVehicleLayout; }
+] call CBA_fnc_addSetting;
+
+[
+	"APD_HMD_VehicleXOffset", "SLIDER",
+	"Horizontal Position",
+	[_wynCategory, _wynCategory04],
+	[0, 1, 0.66, 2],
+	nil,
+	{ call APD_fnc_updateVehicleLayout; }
+] call CBA_fnc_addSetting;
+
+[
+	"APD_HMD_VehicleYOffset", "SLIDER",
+	"Vertical Position",
+	[_wynCategory, _wynCategory04],
+	[0, 1, 0.28, 2],
+	nil,
+	{ call APD_fnc_updateVehicleLayout; }
 ] call CBA_fnc_addSetting;
 
 // - Waypoint

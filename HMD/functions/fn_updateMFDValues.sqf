@@ -16,13 +16,7 @@ if (_vehicle != player) then
 	_vehicle setUserMFDValue [10, parseNumber APD_HMD_CompassEnabled];
 
 	_vehicle setUserMFDValue [15, APD_HMD_HorizonStyle];
-
-	_vehicle setUserMFDValue [25, parseNumber APD_HMD_VehicleAltitudeEnabled];
-	_vehicle setUserMFDValue [26, parseNumber APD_HMD_VehicleAirspeedEnabled];
-	// 27 AGL
-	// 28 ASL
-	// 29 Speed
 };
 
+call APD_fnc_updateVehicleProcessing;
 call APD_fnc_updateWaypointProcessing;
-call APD_fnc_evaluateVehicleProcessing;

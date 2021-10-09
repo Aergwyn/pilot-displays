@@ -158,7 +158,6 @@ class APD_HMD_Base
 
 			#include "hmd/hmd_compass.hpp"
 			#include "hmd/hmd_horizon.hpp"
-			#include "hmd/hmd_vehicle.hpp"
 		};
 	};
 };

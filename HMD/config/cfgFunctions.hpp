@@ -14,6 +14,7 @@ class APD_HMD_Functions
 		file = "HMD\functions\layout";
 
 		class setupHUD {};
+		class updateVehicleLayout  {};
 		class updateWaypointLayout {};
 	};
 
@@ -21,6 +22,7 @@ class APD_HMD_Functions
 	{
 		file = "HMD\functions\processing";
 
+		class updateVehicleProcessing {};
 		class updateWaypointProcessing {};
 	};
 
@@ -48,7 +50,6 @@ class APD_HMD_Functions
 	{
 		file = "HMD\functions\vehicle";
 
-		class evaluateVehicleProcessing {};
 		class startVehicleLoop {};
 	};
 
