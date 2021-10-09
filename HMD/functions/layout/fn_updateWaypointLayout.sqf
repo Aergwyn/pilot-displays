@@ -1,5 +1,5 @@
 /*
-* This function updates the layout of Waypoint HUD elements.
+* This function updates the layout of waypoint HUD elements.
 */
 if (!hasInterface) exitWith {};
 
