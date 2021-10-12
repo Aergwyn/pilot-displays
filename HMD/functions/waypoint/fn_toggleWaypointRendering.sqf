@@ -5,9 +5,11 @@ if (!hasInterface) exitWith {};
 
 params [["_enable", false, [true]]];
 
-private _handle = player getVariable ["APD_WaypointRenderHandle", nil];
+private _handleName = "APD_WaypointRenderHandle";
+private _handle = player getVariable [_handleName, nil];
+private _exists = !isNil "_handle";
 
-if (_enable && isNil "_handle") then
+if (_enable && !_exists) then
 {
 	_handle = addMissionEventHandler ["Draw3D",
 	{
@@ -15,10 +17,10 @@ if (_enable && isNil "_handle") then
 	}];
 };
 
-if (!_enable && !isNil "_handle") then
+if (!_enable && _exists) then
 {
 	removeMissionEventHandler ["Draw3D", _handle];
 	_handle = nil;
 };
 
-player setVariable ["APD_WaypointRenderHandle", _handle];
+player setVariable [_handleName, _handle];

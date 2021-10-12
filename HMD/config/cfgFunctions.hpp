@@ -9,6 +9,13 @@ class APD_HMD_Functions
 		class updateMFDValues {};
 	};
 
+	class GunView
+	{
+		file = "HMD\functions\gunview";
+
+		class toggleGunViewRendering {};
+	};
+
 	class Layout
 	{
 		file = "HMD\functions\layout";
@@ -22,6 +29,7 @@ class APD_HMD_Functions
 	{
 		file = "HMD\functions\processing";
 
+		class updateGunViewProcessing {};
 		class updateVehicleProcessing {};
 		class updateWaypointProcessing {};
 	};
