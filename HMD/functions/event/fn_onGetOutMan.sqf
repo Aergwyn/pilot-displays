@@ -30,6 +30,8 @@ if (_seatSwitchedHandle >= 0) then
 	player setVariable ["APD_SeatSwitchedHandle", -1];
 };
 
+player setVariable ["APD_CopilotTurret", nil];
+
 call APD_fnc_updateVehicleProcessing;
 call APD_fnc_updateWaypointProcessing;
 call APD_fnc_updateGunViewProcessing;

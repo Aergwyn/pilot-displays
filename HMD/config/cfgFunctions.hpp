@@ -62,6 +62,7 @@ class APD_HMD_Functions
 		file = "HMD\functions\util";
 
 		class directionRelativeToWaypoint {};
+		class getFirstCopilotTurret {};
 		class isValidHMDVehicle {};
 		class leftPadString {};
 		class vectorToHeading {};
