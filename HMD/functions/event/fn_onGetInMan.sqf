@@ -15,7 +15,7 @@ private _seatSwitchedHandle = _vehicle addEventHandler ["SeatSwitched", { _this 
 player setVariable ["APD_GetInHandle", _getInHandle];
 player setVariable ["APD_GetOutHandle", _getOutHandle];
 player setVariable ["APD_SeatSwitchedHandle", _seatSwitchedHandle];
-player setVariable ["APD_CopilotTurret", [_vehicle] call APD_fnc_getFirstCopilotTurret];
+player setVariable ["APD_CopilotTurretData", [_vehicle] call APD_fnc_getFirstCopilotTurret];
 
 call APD_fnc_updateMFDValues;
 call APD_fnc_updateGunViewProcessing;

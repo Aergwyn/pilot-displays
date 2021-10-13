@@ -5,6 +5,4 @@ if (!hasInterface) exitWith {};
 
 //params ["_vehicle", "_role", "_unit", "_turret"];
 
-systemChat "GetIn";
-
 call APD_fnc_updateGunViewProcessing;
