@@ -4,7 +4,11 @@
 if (!hasInterface) exitWith {};
 
 //params ["_vehicle", "_role", "_unit", "_turret"];
+private _unit = param [2];
 
-systemChat "GetOut";
+if (_unit != player) then
+{
+	systemChat "GetOut";
 
-call APD_fnc_updateGunViewProcessing;
+	call APD_fnc_updateGunViewProcessing;
+};
