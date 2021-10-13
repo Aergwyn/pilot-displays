@@ -9,6 +9,19 @@ class APD_HMD_Functions
 		class updateMFDValues {};
 	};
 
+	class Event
+	{
+		file = "HMD\functions\event";
+
+		class onGetIn {};
+		class onGetInMan {};
+		class onGetOut {};
+		class onGetOutMan {};
+		class onKilled {};
+		class onMap {};
+		class onSeatSwitched {};
+	};
+
 	class GunView
 	{
 		file = "HMD\functions\gunview";
