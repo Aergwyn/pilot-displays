@@ -9,6 +9,26 @@ class APD_HMD_Functions
 		class updateMFDValues {};
 	};
 
+	class Event
+	{
+		file = "HMD\functions\event";
+
+		class onGetIn {};
+		class onGetInMan {};
+		class onGetOut {};
+		class onGetOutMan {};
+		class onKilled {};
+		class onMap {};
+		class onSeatSwitched {};
+	};
+
+	class GunView
+	{
+		file = "HMD\functions\gunview";
+
+		class toggleGunViewRendering {};
+	};
+
 	class Layout
 	{
 		file = "HMD\functions\layout";
@@ -22,6 +42,7 @@ class APD_HMD_Functions
 	{
 		file = "HMD\functions\processing";
 
+		class updateGunViewProcessing {};
 		class updateVehicleProcessing {};
 		class updateWaypointProcessing {};
 	};
@@ -41,6 +62,7 @@ class APD_HMD_Functions
 		file = "HMD\functions\util";
 
 		class directionRelativeToWaypoint {};
+		class getFirstCopilotTurret {};
 		class isValidHMDVehicle {};
 		class leftPadString {};
 		class vectorToHeading {};
