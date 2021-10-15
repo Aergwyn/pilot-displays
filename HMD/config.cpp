@@ -17,7 +17,7 @@ class CfgPatches
 
 class CfgFunctions
 {
-	#include "config/cfgFunctions.hpp"
+	#include "functions/cfgFunctions.hpp"
 };
 
 class Extended_PreInit_EventHandlers

@@ -2,13 +2,6 @@ class APD_HMD_Functions
 {
 	tag = "APD";
 
-	class Functions
-	{
-		file = "HMD\functions";
-
-		class updateMFDValues {};
-	};
-
 	class Event
 	{
 		file = "HMD\functions\event";
@@ -47,7 +40,7 @@ class APD_HMD_Functions
 		class updateWaypointProcessing {};
 	};
 
-	class UI
+	class Ui
 	{
 		file = "HMD\functions\ui";
 

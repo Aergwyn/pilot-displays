@@ -17,5 +17,6 @@ player setVariable ["APD_GetOutHandle", _getOutHandle];
 player setVariable ["APD_SeatSwitchedHandle", _seatSwitchedHandle];
 player setVariable ["APD_CopilotTurretData", [_vehicle] call APD_fnc_getFirstCopilotTurret];
 
-call APD_fnc_updateMFDValues;
+call APD_fnc_updateVehicleProcessing;
+call APD_fnc_updateWaypointProcessing;
 call APD_fnc_updateGunViewProcessing;

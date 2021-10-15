@@ -48,7 +48,10 @@ private _supportedSizes = [0.25, 4, 1, 2, true]; // Min, Max, Default, Decimals,
 	[_modCategory, _subCategory01],
 	TRUE,
 	nil,
-	{ call APD_fnc_updateMFDValues; }
+	{
+		call APD_fnc_updateVehicleProcessing;
+		call APD_fnc_updateWaypointProcessing;
+	}
 ] call CBA_fnc_addSetting;
 
 [
@@ -57,7 +60,7 @@ private _supportedSizes = [0.25, 4, 1, 2, true]; // Min, Max, Default, Decimals,
 	[_modCategory, _subCategory01],
 	[ 0, 1, 0, 1 ],
 	nil,
-	{ call APD_fnc_updateMFDValues; }
+	{  }
 ] call CBA_fnc_addSetting;
 
 [
@@ -78,7 +81,7 @@ private _supportedSizes = [0.25, 4, 1, 2, true]; // Min, Max, Default, Decimals,
 		], 0
 	],
 	nil,
-	{ call APD_fnc_updateMFDValues; }
+	{ call APD_fnc_updateVehicleLayout; }
 ] call CBA_fnc_addSetting;
 
 [
@@ -103,7 +106,7 @@ private _supportedSizes = [0.25, 4, 1, 2, true]; // Min, Max, Default, Decimals,
 		], 1
 	],
 	nil,
-	{ call APD_fnc_updateMFDValues; }
+	{ call APD_fnc_updateWaypointLayout; }
 ] call CBA_fnc_addSetting;
 
 [
@@ -122,29 +125,7 @@ private _supportedSizes = [0.25, 4, 1, 2, true]; // Min, Max, Default, Decimals,
 		], 0
 	],
 	nil,
-	{ call APD_fnc_updateMFDValues; }
-] call CBA_fnc_addSetting;
-
-// - Compass
-
-[
-	"APD_HMD_CompassEnabled", "CHECKBOX",
-	"Show Compass",
-	[_modCategory, _subCategory02],
-	TRUE,
-	nil,
-	{ call APD_fnc_updateMFDValues; }
-] call CBA_fnc_addSetting;
-
-// - Horizon
-
-[
-	"APD_HMD_HorizonStyle", "LIST",
-	"Horizon Style",
-	[_modCategory, _subCategory03],
-	[[0, 1, 2, 3, 4], ["Disabled", "0° Only", "10° Lines", "15° Lines", "30° Lines"], 2],
-	nil,
-	{ call APD_fnc_updateMFDValues; }
+	{ call APD_fnc_updateVehicleLayout; }
 ] call CBA_fnc_addSetting;
 
 // - Waypoint Marker
@@ -155,7 +136,7 @@ private _supportedSizes = [0.25, 4, 1, 2, true]; // Min, Max, Default, Decimals,
 	[_modCategory, _subCategory04],
 	TRUE,
 	nil,
-	{ call APD_fnc_updateWaypointLayout; }
+	{ call APD_fnc_updateWaypointProcessing; }
 ] call CBA_fnc_addSetting;
 
 [
@@ -164,7 +145,7 @@ private _supportedSizes = [0.25, 4, 1, 2, true]; // Min, Max, Default, Decimals,
 	[_modCategory, _subCategory04],
 	_supportedSizes,
 	nil,
-	{ call APD_fnc_updateWaypointLayout; }
+	{  }
 ] call CBA_fnc_addSetting;
 
 [
@@ -186,7 +167,7 @@ private _supportedSizes = [0.25, 4, 1, 2, true]; // Min, Max, Default, Decimals,
 		], 1
 	],
 	nil,
-	{ call APD_fnc_updateWaypointProcessing; }
+	{  }
 ] call CBA_fnc_addSetting;
 
 // Waypoint Information
