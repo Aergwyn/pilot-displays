@@ -15,28 +15,24 @@ class APD_HMD_Functions
 		class onSeatSwitched {};
 	};
 
-	class GunView
+	class Process
 	{
-		file = "HMD\functions\gunview";
+		file = "HMD\functions\process";
+
+		class startVehicleLoop {};
+		class startWaypointLoop {};
+	};
+
+	class Render
+	{
+		file = "HMD\functions\render";
 
 		class toggleGunViewRendering {};
-	};
-
-	class Layout
-	{
-		file = "HMD\functions\layout";
-
-		class setupHUD {};
-		class updateVehicleLayout  {};
-		class updateWaypointLayout {};
-	};
-
-	class Processing
-	{
-		file = "HMD\functions\processing";
-
+		class toggleWaypointRendering {};
 		class updateGunViewProcessing {};
+		class updateVehicleLayout  {};
 		class updateVehicleProcessing {};
+		class updateWaypointLayout {};
 		class updateWaypointProcessing {};
 	};
 
@@ -48,6 +44,7 @@ class APD_HMD_Functions
 		class setCtrlPosition {};
 		class setCtrlPositionAsGroup {};
 		class setCtrlVisibility {};
+		class setupHUD {};
 	};
 
 	class Util
@@ -59,20 +56,5 @@ class APD_HMD_Functions
 		class isValidHMDVehicle {};
 		class leftPadString {};
 		class vectorToHeading {};
-	};
-
-	class Vehicle
-	{
-		file = "HMD\functions\vehicle";
-
-		class startVehicleLoop {};
-	};
-
-	class Waypoint
-	{
-		file = "HMD\functions\waypoint";
-
-		class startWaypointLoop {};
-		class toggleWaypointRendering {};
 	};
 };

@@ -10,6 +10,8 @@ private _display = call APD_fnc_getDisplay;
 
 // Waypoint Stuff
 
+private _ctrlPictureWaypointMarker = _display ctrlCreate ["APDPicture", 5000];
+
 private _ctrlTextWaypointTitle = _display ctrlCreate ["APDText", 5001];
 _ctrlTextWaypointTitle ctrlSetText "WYPT";
 
