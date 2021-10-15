@@ -26,7 +26,7 @@ while { APD_HMD_VehicleLoopRunning } do
 
 	_ctrlTextVehicleAGL ctrlSetText (format ["AGL: %1 %2", _aglValue, _altUnit]);
 	_ctrlTextVehicleASL ctrlSetText (format ["ASL: %1 %2", _aslValue, _altUnit]);
-	_ctrlTextVehicleSPD ctrlSetText (format ["SPD: %1 %2", _speedValue, _speedUnit]);
+	_ctrlTextVehicleSPD ctrlSetText (format ["IAS: %1 %2", _speedValue, _speedUnit]);
 
 	sleep 0.1;
 };

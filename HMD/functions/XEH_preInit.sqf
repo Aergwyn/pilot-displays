@@ -15,8 +15,9 @@ private _modCategory = "Aergwyn's Pilot HMD";
 private _subCategory01 = "01 - General";
 private _subCategory02 = "02 - Compass";
 private _subCategory03 = "03 - Horizon";
-private _subCategory04 = "04 - Vehicle";
-private _subCategory05 = "05 - Waypoint";
+private _subCategory04 = "04 - Waypoint Marker";
+private _subCategory05 = "05 - Waypoint Information";
+private _subCategory06 = "06 - Vehicle Information";
 
 private _defaultFont = 1;
 private _supportedFonts =
@@ -146,96 +147,49 @@ private _supportedSizes = [0.25, 4, 1, 2, true]; // Min, Max, Default, Decimals,
 	{ call APD_fnc_updateMFDValues; }
 ] call CBA_fnc_addSetting;
 
-// - Vehicle
+// - Waypoint Marker
 
 [
-	"APD_HMD_VehicleAGLEnabled", "CHECKBOX",
-	"Show Altitude Above Ground Level (AGL)",
+	"APD_HMD_WaypointMarkerEnabled", "CHECKBOX",
+	"Enabled",
 	[_modCategory, _subCategory04],
 	TRUE,
 	nil,
-	{ call APD_fnc_updateVehicleProcessing; }
+	{ call APD_fnc_updateWaypointLayout; }
 ] call CBA_fnc_addSetting;
 
 [
-	"APD_HMD_VehicleASLEnabled", "CHECKBOX",
-	"Show Altitude Above Sea Level (ASL)",
-	[_modCategory, _subCategory04],
-	TRUE,
-	nil,
-	{ call APD_fnc_updateVehicleProcessing; }
-] call CBA_fnc_addSetting;
-
-[
-	"APD_HMD_VehicleSPDEnabled", "CHECKBOX",
-	"Show Speed (SPD)",
-	[_modCategory, _subCategory04],
-	TRUE,
-	nil,
-	{ call APD_fnc_updateVehicleProcessing; }
-] call CBA_fnc_addSetting;
-
-[
-	"APD_HMD_VehicleTextFont", "LIST",
-	"Font",
-	[_modCategory, _subCategory04],
-	[_supportedFonts, _supportedFonts, _defaultFont],
-	nil,
-	{ call APD_fnc_updateVehicleLayout; }
-] call CBA_fnc_addSetting;
-
-[
-	"APD_HMD_VehicleTextScale", "SLIDER",
-	"Text Size",
+	"APD_HMD_WaypointMarkerScale", "SLIDER",
+	"Size",
 	[_modCategory, _subCategory04],
 	_supportedSizes,
 	nil,
-	{ call APD_fnc_updateVehicleLayout; }
+	{ call APD_fnc_updateWaypointLayout; }
 ] call CBA_fnc_addSetting;
-
-[
-	"APD_HMD_VehicleXOffset", "SLIDER",
-	"Horizontal Position",
-	[_modCategory, _subCategory04],
-	[0, 1, 0.66, 2],
-	nil,
-	{ call APD_fnc_updateVehicleLayout; }
-] call CBA_fnc_addSetting;
-
-[
-	"APD_HMD_VehicleYOffset", "SLIDER",
-	"Vertical Position",
-	[_modCategory, _subCategory04],
-	[0, 1, 0.28, 2],
-	nil,
-	{ call APD_fnc_updateVehicleLayout; }
-] call CBA_fnc_addSetting;
-
-// - Waypoint
 
 [
 	"APD_HMD_WaypointMarkerTexture", "LIST",
-	"Marker Style",
-	[_modCategory, _subCategory05],
+	"Style",
+	[_modCategory, _subCategory04],
 	[
 		[
-			"",
 			"HMD\textures\wypt_plus.paa",
 			"HMD\textures\wypt_cross.paa",
 			"HMD\textures\wypt_square.paa",
 			"HMD\textures\wypt_circle.paa"
 		],
 		[
-			"Disabled",
 			"Plus",
 			"Cross",
 			"Square",
 			"Circle"
-		], 2
+		], 1
 	],
 	nil,
 	{ call APD_fnc_updateWaypointProcessing; }
 ] call CBA_fnc_addSetting;
+
+// Waypoint Information
 
 [
 	"APD_HMD_WaypointHeaderEnabled", "CHECKBOX",
@@ -301,4 +255,67 @@ private _supportedSizes = [0.25, 4, 1, 2, true]; // Min, Max, Default, Decimals,
 	{ call APD_fnc_updateWaypointLayout; }
 ] call CBA_fnc_addSetting;
 
-// - Other
+// - Vehicle Information
+
+[
+	"APD_HMD_VehicleAGLEnabled", "CHECKBOX",
+	"Show Altitude Above Ground Level (AGL)",
+	[_modCategory, _subCategory06],
+	TRUE,
+	nil,
+	{ call APD_fnc_updateVehicleProcessing; }
+] call CBA_fnc_addSetting;
+
+[
+	"APD_HMD_VehicleASLEnabled", "CHECKBOX",
+	"Show Altitude Above Sea Level (ASL)",
+	[_modCategory, _subCategory06],
+	TRUE,
+	nil,
+	{ call APD_fnc_updateVehicleProcessing; }
+] call CBA_fnc_addSetting;
+
+[
+	"APD_HMD_VehicleSPDEnabled", "CHECKBOX",
+	"Show Indicated Airspeed (IAS)",
+	[_modCategory, _subCategory06],
+	TRUE,
+	nil,
+	{ call APD_fnc_updateVehicleProcessing; }
+] call CBA_fnc_addSetting;
+
+[
+	"APD_HMD_VehicleTextFont", "LIST",
+	"Font",
+	[_modCategory, _subCategory06],
+	[_supportedFonts, _supportedFonts, _defaultFont],
+	nil,
+	{ call APD_fnc_updateVehicleLayout; }
+] call CBA_fnc_addSetting;
+
+[
+	"APD_HMD_VehicleTextScale", "SLIDER",
+	"Text Size",
+	[_modCategory, _subCategory06],
+	_supportedSizes,
+	nil,
+	{ call APD_fnc_updateVehicleLayout; }
+] call CBA_fnc_addSetting;
+
+[
+	"APD_HMD_VehicleXOffset", "SLIDER",
+	"Horizontal Position",
+	[_modCategory, _subCategory06],
+	[0, 1, 0.66, 2],
+	nil,
+	{ call APD_fnc_updateVehicleLayout; }
+] call CBA_fnc_addSetting;
+
+[
+	"APD_HMD_VehicleYOffset", "SLIDER",
+	"Vertical Position",
+	[_modCategory, _subCategory06],
+	[0, 1, 0.28, 2],
+	nil,
+	{ call APD_fnc_updateVehicleLayout; }
+] call CBA_fnc_addSetting;
