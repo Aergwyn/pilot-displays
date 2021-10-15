@@ -1,3 +1,16 @@
+class RscText;
+class APDText : RscText
+{
+	shadow = 0;
+};
+
+class RscPictureKeepAspect;
+class APDPicture : RscPictureKeepAspect
+{
+	h = 0.06;
+	w = 0.06;
+};
+
 class RscTitles
 {
 	class APD_HUD
