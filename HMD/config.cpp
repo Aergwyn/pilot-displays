@@ -7,7 +7,7 @@ class CfgPatches
 		weapons[] = {};
 		requiredVersion = 2.0;
 		requiredAddons[] = { "cba_settings" };
-		author = "Aergwyn"
+		author = "Aergwyn";
 		authors[] = { "Aergwyn" };
 		authorUrl = "https://github.com/Aergwyn/pilot-displays";
 	};
@@ -15,16 +15,9 @@ class CfgPatches
 
 #include "ui/hud_display.hpp"
 
-#include "hmd/hmd_base.hpp"
-
 class CfgFunctions
 {
 	#include "config/cfgFunctions.hpp"
-};
-
-class CfgVehicles
-{
-	#include "config/cfgVehicles.hpp"
 };
 
 class Extended_PreInit_EventHandlers
