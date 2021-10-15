@@ -218,7 +218,6 @@ private _supportedSizes = [0.25, 4, 1, 2, true]; // Min, Max, Default, Decimals,
 	{ call APD_fnc_updateWaypointProcessing; }
 ] call CBA_fnc_addSetting;
 
-
 [
 	"APD_HMD_WaypointTextFont", "LIST",
 	"Font",
