@@ -5,11 +5,11 @@ if (!hasInterface) exitWith {};
 
 private _display = call APD_fnc_getDisplay;
 
-private _ctrlTextWaypointTitle = _display displayCtrl 5000;
+private _ctrlTextWaypointTitle = _display displayCtrl 5001;
 _ctrlTextWaypointTitle setVariable ["APD_Control_Enabled", APD_HMD_WaypointHeaderEnabled];
-private _ctrlTextWaypointDistance = _display displayCtrl 5001;
+private _ctrlTextWaypointDistance = _display displayCtrl 5002;
 _ctrlTextWaypointDistance setVariable ["APD_Control_Enabled", APD_HMD_WaypointDistanceEnabled];
-private _ctrlTextWaypointTime = _display displayCtrl 5002;
+private _ctrlTextWaypointTime = _display displayCtrl 5003;
 _ctrlTextWaypointTime setVariable ["APD_Control_Enabled", APD_HMD_WaypointTimeEnabled];
 
 private _waypointControls = [_ctrlTextWaypointTitle, _ctrlTextWaypointDistance, _ctrlTextWaypointTime];

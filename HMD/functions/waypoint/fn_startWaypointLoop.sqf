@@ -6,8 +6,8 @@ if (!hasInterface) exitWith {};
 params ["_vehicle"];
 
 private _display = call APD_fnc_getDisplay;
-private _ctrlTextWaypointDistance = _display displayCtrl 5001;
-private _ctrlTextWaypointTime = _display displayCtrl 5002;
+private _ctrlTextWaypointDistance = _display displayCtrl 5002;
+private _ctrlTextWaypointTime = _display displayCtrl 5003;
 
 while { APD_HMD_WaypointLoopRunning } do
 {
