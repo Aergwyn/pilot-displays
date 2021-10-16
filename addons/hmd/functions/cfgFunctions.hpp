@@ -1,4 +1,4 @@
-class APD_HMD_Functions
+class APD_HMD
 {
 	tag = "APD";
 

@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class APD_HMD_Mod
+	class APD_HMD
 	{
 		name = "Aergwyn's Pilot HMD";
 		units[] = {};
