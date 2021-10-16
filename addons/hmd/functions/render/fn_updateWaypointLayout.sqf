@@ -3,7 +3,14 @@
 */
 if (!hasInterface) exitWith {};
 
+APD_HMD_WaypointMarkerTextureOffset = 0.03 * APD_HMD_WaypointMarkerScale;
+
 private _display = call APD_fnc_getDisplay;
+
+private _ctrlPictureWaypointMarker = _display displayCtrl 5000;
+_ctrlPictureWaypointMarker ctrlSetTextColor APD_HMD_Colour;
+_ctrlPictureWaypointMarker ctrlSetScale APD_HMD_WaypointMarkerScale;
+_ctrlPictureWaypointMarker ctrlCommit 0;
 
 private _ctrlTextWaypointTitle = _display displayCtrl 5001;
 _ctrlTextWaypointTitle setVariable ["APD_Control_Enabled", APD_HMD_WaypointHeaderEnabled];

@@ -9,17 +9,31 @@ private _handleName = "APD_WaypointRenderHandle";
 private _handle = player getVariable [_handleName, nil];
 private _exists = !isNil "_handle";
 
+private _display = call APD_fnc_getDisplay;
+private _ctrlPictureWaypointMarker = _display displayCtrl 5000;
+
 if (_enable && !_exists) then
 {
 	_handle = addMissionEventHandler ["Draw3D",
 	{
-		drawIcon3D [APD_HMD_WaypointMarkerTexture, APD_HMD_Colour, customWaypointPosition, 1, 1, 0];
-	}];
+		_thisArgs params ["_ctrl"];
+
+		private _uiPos = worldToScreen customWaypointPosition;
+		private _uiOffset = APD_HMD_WaypointMarkerTextureOffset;
+
+		if (count _uiPos >= 2) then
+		{
+			_ctrl ctrlSetText APD_HMD_WaypointMarkerTexture;
+			_ctrl ctrlSetPosition [_uiPos # 0 - _uiOffset, _uiPos # 1 - _uiOffset];
+			_ctrl ctrlCommit 0;
+		};
+	}, [_ctrlPictureWaypointMarker]];
 };
 
 if (!_enable && _exists) then
 {
 	removeMissionEventHandler ["Draw3D", _handle];
+	_ctrlPictureWaypointMarker ctrlSetText "";
 	_handle = nil;
 };
 

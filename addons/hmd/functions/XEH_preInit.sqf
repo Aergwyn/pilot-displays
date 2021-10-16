@@ -7,6 +7,8 @@ if (!hasInterface) exitWith {};
 APD_HMD_VehicleLoopRunning = false;
 APD_HMD_WaypointLoopRunning = false;
 
+APD_HMD_WaypointMarkerTextureOffset = 0;
+
 // --------------------
 // --- CBA-Settings ---
 // --------------------
@@ -60,7 +62,10 @@ private _supportedSizes = [0.25, 4, 1, 2, true]; // Min, Max, Default, Decimals,
 	[_modCategory, _subCategory01],
 	[ 0, 1, 0, 1 ],
 	nil,
-	{  }
+	{
+		call APD_fnc_updateVehicleLayout;
+		call APD_fnc_updateWaypointLayout;
+	}
 ] call CBA_fnc_addSetting;
 
 [
@@ -145,7 +150,7 @@ private _supportedSizes = [0.25, 4, 1, 2, true]; // Min, Max, Default, Decimals,
 	[_modCategory, _subCategory04],
 	_supportedSizes,
 	nil,
-	{  }
+	{ call APD_fnc_updateWaypointLayout; }
 ] call CBA_fnc_addSetting;
 
 [
