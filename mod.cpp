@@ -1,13 +1,13 @@
-name			= "Aergwyn's Pilot HMD";
+name			= "Aergwyn's Pilot Displays";
 author			= "Aergwyn";
 logo			= "";
 logoOver		= "";
-tooltip			= "Aergwyn's Pilot HMD";
+tooltip			= "Aergwyn's Pilot Displays";
 tooltipOwned	= "Aergwyn";
 picture			= "";
 actionName		= "";
 action			= "https://github.com/Aergwyn/pilot-displays";
-overview		= "Fully customizable HMD for pilots.";
+overview		= "Fully customizable displays for pilots.";
 hideName		= 1;
 hidePicture		= 1;
 dlcColor[]		= { 0.25, 0.5, 0.25, 1 };
