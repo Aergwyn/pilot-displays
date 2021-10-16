@@ -13,7 +13,7 @@ class CfgPatches
 	};
 };
 
-#include "ui\hud_display.hpp"
+#include "ui\display.hpp"
 
 class CfgFunctions
 {
