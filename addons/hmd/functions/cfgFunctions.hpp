@@ -4,7 +4,7 @@ class APD_HMD_Functions
 
 	class Event
 	{
-		file = "hmd\functions\event";
+		file = "z\pilot-displays\addons\hmd\functions\event";
 
 		class onGetIn {};
 		class onGetInMan {};
@@ -17,7 +17,7 @@ class APD_HMD_Functions
 
 	class Process
 	{
-		file = "hmd\functions\process";
+		file = "z\pilot-displays\addons\hmd\functions\process";
 
 		class startVehicleLoop {};
 		class startWaypointLoop {};
@@ -25,7 +25,7 @@ class APD_HMD_Functions
 
 	class Render
 	{
-		file = "hmd\functions\render";
+		file = "z\pilot-displays\addons\hmd\functions\render";
 
 		class toggleGunViewRendering {};
 		class toggleWaypointRendering {};
@@ -38,7 +38,7 @@ class APD_HMD_Functions
 
 	class Ui
 	{
-		file = "hmd\functions\ui";
+		file = "z\pilot-displays\addons\hmd\functions\ui";
 
 		class getDisplay {};
 		class setCtrlPosition {};
@@ -49,7 +49,7 @@ class APD_HMD_Functions
 
 	class Util
 	{
-		file = "hmd\functions\util";
+		file = "z\pilot-displays\addons\hmd\functions\util";
 
 		class directionRelativeToWaypoint {};
 		class getFirstCopilotTurret {};

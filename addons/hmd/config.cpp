@@ -13,18 +13,18 @@ class CfgPatches
 	};
 };
 
-#include "ui/hud_display.hpp"
+#include "ui\hud_display.hpp"
 
 class CfgFunctions
 {
-	#include "functions/cfgFunctions.hpp"
+	#include "functions\cfgFunctions.hpp"
 };
 
 class Extended_PreInit_EventHandlers
 {
 	class APD_HMD_PreInit
 	{
-		init = "call compileScript ['hmd\functions\XEH_preInit.sqf', true]";
+		init = "call compileScript ['z\pilot-displays\addons\hmd\functions\XEH_preInit.sqf', true]";
 	};
 };
 
@@ -32,6 +32,6 @@ class Extended_PostInit_EventHandlers
 {
 	class APD_HMD_PostInit
 	{
-		init = "call compileScript ['hmd\functions\XEH_postInit.sqf', true]";
+		init = "call compileScript ['z\pilot-displays\addons\hmd\functions\XEH_postInit.sqf', true]";
 	};
 };

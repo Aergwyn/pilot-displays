@@ -154,10 +154,10 @@ private _supportedSizes = [0.25, 4, 1, 2, true]; // Min, Max, Default, Decimals,
 	[_modCategory, _subCategory04],
 	[
 		[
-			"HMD\textures\wypt_plus.paa",
-			"HMD\textures\wypt_cross.paa",
-			"HMD\textures\wypt_square.paa",
-			"HMD\textures\wypt_circle.paa"
+			"z\pilot-displays\addons\hmd\textures\wypt_plus.paa",
+			"z\pilot-displays\addons\hmd\textures\wypt_cross.paa",
+			"z\pilot-displays\addons\hmd\textures\wypt_square.paa",
+			"z\pilot-displays\addons\hmd\textures\wypt_circle.paa"
 		],
 		[
 			"Plus",
