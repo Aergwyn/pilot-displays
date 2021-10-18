@@ -7,4 +7,4 @@ if (!hasInterface) exitWith {};
 
 systemChat "SeatSwitched";
 
-call APD_fnc_updateGunViewProcessing;
+call APD_fnc_updateCopilotProcessing;

@@ -19,4 +19,4 @@ player setVariable ["APD_CopilotTurretData", [_vehicle] call APD_fnc_getFirstCop
 
 call APD_fnc_updateVehicleProcessing;
 call APD_fnc_updateWaypointProcessing;
-call APD_fnc_updateGunViewProcessing;
+call APD_fnc_updateCopilotProcessing;

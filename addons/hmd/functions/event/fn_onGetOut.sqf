@@ -8,5 +8,5 @@ private _unit = param [2];
 
 if (_unit != player) then
 {
-	call APD_fnc_updateGunViewProcessing;
+	call APD_fnc_updateCopilotProcessing;
 };

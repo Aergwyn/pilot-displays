@@ -7,4 +7,4 @@ if (!hasInterface) exitWith {};
 
 call APD_fnc_updateVehicleProcessing;
 call APD_fnc_updateWaypointProcessing;
-call APD_fnc_updateGunViewProcessing;
+call APD_fnc_updateCopilotProcessing;

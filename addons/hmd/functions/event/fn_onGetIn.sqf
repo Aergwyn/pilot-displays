@@ -5,4 +5,4 @@ if (!hasInterface) exitWith {};
 
 //params ["_vehicle", "_role", "_unit", "_turret"];
 
-call APD_fnc_updateGunViewProcessing;
+call APD_fnc_updateCopilotProcessing;

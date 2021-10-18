@@ -14,4 +14,4 @@ if (_processingRequired && count _turretData > 0) then
 	_processingRequired = !isNull _turretUnit && _turretUnit != player;
 };
 
-[_processingRequired] call APD_fnc_toggleGunViewRendering;
+[_processingRequired] call APD_fnc_toggleCopilotRendering;

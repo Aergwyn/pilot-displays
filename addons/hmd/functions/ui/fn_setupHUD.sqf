@@ -20,9 +20,10 @@ private _ctrlTextWaypointTime = _display ctrlCreate ["APDText", 5003];
 
 // Vehicle Stuff
 
-private _ctrlTextVehicleAGL = _display ctrlCreate ["APDText", 5100];
-private _ctrlTextVehicleASL = _display ctrlCreate ["APDText", 5101];
-private _ctrlTextVehicleSPD = _display ctrlCreate ["APDText", 5102];
+private _ctrlPictureCopilotMarker = _display ctrlCreate ["APDPicture", 5100];
+private _ctrlTextVehicleAGL = _display ctrlCreate ["APDText", 5101];
+private _ctrlTextVehicleASL = _display ctrlCreate ["APDText", 5102];
+private _ctrlTextVehicleSPD = _display ctrlCreate ["APDText", 5103];
 
 // Initial Processing
 

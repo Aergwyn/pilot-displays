@@ -7,6 +7,7 @@ if (!hasInterface) exitWith {};
 APD_HMD_VehicleLoopRunning = false;
 APD_HMD_WaypointLoopRunning = false;
 
+APD_HMD_CopilotMarkerTextureOffset = 0;
 APD_HMD_WaypointMarkerTextureOffset = 0;
 
 // --------------------
