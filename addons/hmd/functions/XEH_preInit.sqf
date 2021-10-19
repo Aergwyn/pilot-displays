@@ -14,13 +14,11 @@ APD_HMD_WaypointMarkerTextureOffset = 0;
 // --- CBA-Settings ---
 // --------------------
 
-private _modCategory = "Aergwyn's Pilot HMD";
-private _subCategory01 = "01 - General";
-private _subCategory02 = "02 - Compass";
-private _subCategory03 = "03 - Horizon";
-private _subCategory04 = "04 - Waypoint Marker";
-private _subCategory05 = "05 - Waypoint Information";
-private _subCategory06 = "06 - Vehicle Information";
+private _modCategory = "Aergwyn's Pilot Displays - HMD";
+private _subCategory01 = "General";
+private _subCategory04 = "Waypoint Marker";
+private _subCategory05 = "Waypoint Information";
+private _subCategory06 = "Vehicle Information";
 
 private _defaultFont = 1;
 private _supportedFonts =

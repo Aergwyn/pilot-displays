@@ -1,8 +1,8 @@
-name			= "Pilot Displays";
+name			= "Aergwyns Pilot Displays";
 author			= "Aergwyn";
 logo			= "";
 logoOver		= "";
-tooltip			= "Pilot Displays";
+tooltip			= "Aergwyn's Pilot Displays";
 tooltipOwned	= "Aergwyn";
 picture			= "";
 actionName		= "";

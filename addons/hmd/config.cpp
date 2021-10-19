@@ -2,7 +2,7 @@ class CfgPatches
 {
 	class APD_HMD
 	{
-		name = "Aergwyn's Pilot HMD";
+		name = "Aergwyn's Pilot Displays - HMD";
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 2.0;
