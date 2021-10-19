@@ -8,9 +8,9 @@ private _vehicle = param [2];
 
 systemChat "GetInMan";
 
-private _getInHandle = _vehicle addEventHandler ["GetIn", { _this call APD_fnc_onGetIn; }];
-private _getOutHandle = _vehicle addEventHandler ["GetOut", { _this call APD_fnc_onGetOut; }];
-private _seatSwitchedHandle = _vehicle addEventHandler ["SeatSwitched", { _this call APD_fnc_onSeatSwitched; }];
+private _getInHandle = _vehicle addEventHandler ["GetIn", { _this call APD_fnc_handleGetIn; }];
+private _getOutHandle = _vehicle addEventHandler ["GetOut", { _this call APD_fnc_handleGetOut; }];
+private _seatSwitchedHandle = _vehicle addEventHandler ["SeatSwitched", { _this call APD_fnc_handleSeatSwitched; }];
 
 player setVariable ["APD_GetInHandle", _getInHandle];
 player setVariable ["APD_GetOutHandle", _getOutHandle];

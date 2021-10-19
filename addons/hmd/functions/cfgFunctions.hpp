@@ -6,14 +6,14 @@ class APD_HMD
 	{
 		file = "hmd\functions\event";
 
-		class onGetIn {};
-		class onGetInMan {};
-		class onGetOut {};
-		class onGetOutMan {};
-		class onKilled {};
-		class onMap {};
-		class onRespawn {};
-		class onSeatSwitched {};
+		class handleGetIn {};
+		class handleGetInMan {};
+		class handleGetOut {};
+		class handleGetOutMan {};
+		class handleKilled {};
+		class handleMap {};
+		class handleRespawn {};
+		class handleSeatSwitched {};
 	};
 
 	class Process
