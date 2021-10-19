@@ -1,5 +1,5 @@
 /*
-* This function processes the necessary vehicle statistics to display.
+* This function processes the necessary vehicle information to display.
 */
 if (!hasInterface) exitWith {};
 
@@ -12,13 +12,13 @@ private _ctrlTextVehicleSPD = _display displayCtrl 5102;
 
 while { APD_HMD_VehicleLoopRunning } do
 {
-	private _altUnit = APD_HMD_SoU_Altitude select 0;
-	private _altMultiplier = APD_HMD_SoU_Altitude select 1;
-	private _speedUnit = APD_HMD_SoU_Speed select 0;
-	private _speedMultiplier = APD_HMD_SoU_Speed select 1;
+	private _altUnit = APD_HMD_SoU_Altitude # 0;
+	private _altMultiplier = APD_HMD_SoU_Altitude # 1;
+	private _speedUnit = APD_HMD_SoU_Speed # 0;
+	private _speedMultiplier = APD_HMD_SoU_Speed # 1;
 
-	private _aglRaw = (getPosATL _vehicle) select 2;
-	private _aslRaw = (getPosASL _vehicle) select 2;
+	private _aglRaw = (getPosATL _vehicle) # 2;
+	private _aslRaw = (getPosASL _vehicle) # 2;
 	private _aglValue = (_aglRaw * _altMultiplier) toFixed 0;
 	private _aslValue = (_aslRaw * _altMultiplier) toFixed 0;
 	private _speedRaw = vectorMagnitude (velocity _vehicle);

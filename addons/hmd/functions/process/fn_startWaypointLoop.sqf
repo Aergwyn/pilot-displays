@@ -1,5 +1,5 @@
 /*
-* This function processes the necessary waypoint statistics to display.
+* This function processes the necessary waypoint information to display.
 */
 if (!hasInterface) exitWith {};
 
@@ -19,9 +19,9 @@ while { APD_HMD_WaypointLoopRunning } do
 		break;
 	};
 
-	private _distanceUnit = APD_HMD_SoU_Distance select 0;
-	private _distanceMultiplier = APD_HMD_SoU_Distance select 1;
-	private _distancePrecision = APD_HMD_SoU_Distance select 2;
+	private _distanceUnit = APD_HMD_SoU_Distance # 0;
+	private _distanceMultiplier = APD_HMD_SoU_Distance # 1;
+	private _distancePrecision = APD_HMD_SoU_Distance # 2;
 
 	private _distanceRaw = _vehicle distance2D _waypoint; // m
 	private _distanceValue = (_distanceRaw * _distanceMultiplier) toFixed _distancePrecision;
