@@ -6,9 +6,9 @@ if (!hasInterface) exitWith {};
 params ["_vehicle"];
 
 private _display = call APD_fnc_getDisplay;
-private _ctrlTextVehicleAGL = _display displayCtrl 5100;
-private _ctrlTextVehicleASL = _display displayCtrl 5101;
-private _ctrlTextVehicleSPD = _display displayCtrl 5102;
+private _ctrlTextVehicleAGL = _display displayCtrl 5101;
+private _ctrlTextVehicleASL = _display displayCtrl 5102;
+private _ctrlTextVehicleSPD = _display displayCtrl 5103;
 
 while { APD_HMD_VehicleLoopRunning } do
 {
