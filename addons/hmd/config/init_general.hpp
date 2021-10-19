@@ -1,9 +1,7 @@
-private _catGeneral = "General";
-
 [
 	"APD_HMD_Enabled", "CHECKBOX",
 	"Enabled",
-	[_modCategory, _catGeneral],
+	_modCategory,
 	TRUE,
 	nil,
 	{
@@ -15,7 +13,7 @@ private _catGeneral = "General";
 [
 	"APD_HMD_Colour", "COLOR",
 	"Colour",
-	[_modCategory, _catGeneral],
+	_modCategory,
 	[ 0, 1, 0, 1 ],
 	nil,
 	{
@@ -27,7 +25,7 @@ private _catGeneral = "General";
 [
 	"APD_HMD_SoU_Speed", "LIST",
 	"Unit for Speed",
-	[_modCategory, _catGeneral],
+	_modCategory,
 	[
 		// Unit, Multiplier (to convert from metric meter)
 		[
@@ -48,7 +46,7 @@ private _catGeneral = "General";
 [
 	"APD_HMD_SoU_Distance", "LIST",
 	"Unit for Distance",
-	[_modCategory, _catGeneral],
+	_modCategory,
 	[
 		// Unit, Multiplier (to convert from metric meter), Precision
 		[
@@ -73,7 +71,7 @@ private _catGeneral = "General";
 [
 	"APD_HMD_SoU_Altitude", "LIST",
 	"Unit for Altitude",
-	[_modCategory, _catGeneral],
+	_modCategory,
 	[
 		// Unit, Multiplier (to convert from metric meter)
 		[
