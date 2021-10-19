@@ -30,6 +30,7 @@ class APD_HMD
 
 		class toggleCopilotRendering {};
 		class toggleWaypointRendering {};
+		class updateCopilotLayout {};
 		class updateCopilotProcessing {};
 		class updateVehicleLayout {};
 		class updateVehicleProcessing {};

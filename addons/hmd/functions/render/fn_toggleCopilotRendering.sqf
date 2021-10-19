@@ -11,6 +11,9 @@ private _exists = !isNil "_handle";
 
 private _turretData = player getVariable ["APD_CopilotTurretData", []];
 
+private _display = call APD_fnc_getDisplay;
+private _ctrlPictureCopilotMarker = _display displayCtrl 5100;
+
 if (_enable && !_exists && count _turretData > 0) then
 {
 	private _vehicle = vehicle player;
@@ -19,7 +22,7 @@ if (_enable && !_exists && count _turretData > 0) then
 
 	_handle = addMissionEventHandler ["Draw3D",
 	{
-		_thisArgs params ["_vehicle", "_memPoint", "_memPointPos"];
+		_thisArgs params ["_ctrl", "_vehicle", "_memPoint", "_memPointPos"];
 
 		private _memPointVectors = _vehicle selectionVectorDirAndUp [_memPoint, "Memory"];
 		private _memPointDir = _vehicle vectorModelToWorld (_memPointVectors select 0);
@@ -30,15 +33,27 @@ if (_enable && !_exists && count _turretData > 0) then
 
 		if (_worldPos isNotEqualTo [0, 0, 0]) then
 		{
-			drawLine3D [_start, _end, [1, 0, 0, 1]];
-			drawIcon3D [APD_HMD_WaypointMarkerTexture, [1, 0, 0, 1], ASLToAGL _worldPos, 1, 1, 0];
+			private _uiPos = worldToScreen (ASLtoAGL _worldPos);
+			private _uiOffset = APD_HMD_CopilotMarkerTextureOffset;
+
+			if (count _uiPos >= 2) then
+			{
+				_ctrl ctrlSetText APD_HMD_WaypointMarkerTexture;
+				_ctrl ctrlSetPosition [_uiPos # 0 - _uiOffset, _uiPos # 1 - _uiOffset];
+				_ctrl ctrlCommit 0;
+			};
+		}
+		else
+		{
+			_ctrl ctrlSetText "";
 		};
-	}, [_vehicle, _memPoint, _memPointPos]];
+	}, [_ctrlPictureCopilotMarker, _vehicle, _memPoint, _memPointPos]];
 };
 
 if (!_enable && _exists) then
 {
 	removeMissionEventHandler ["Draw3D", _handle];
+	_ctrlPictureCopilotMarker ctrlSetText "";
 	_handle = nil;
 };
 

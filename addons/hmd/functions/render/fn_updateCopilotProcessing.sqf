@@ -15,3 +15,5 @@ if (_processingRequired && count _turretData > 0) then
 };
 
 [_processingRequired] call APD_fnc_toggleCopilotRendering;
+
+call APD_fnc_updateCopilotLayout;
