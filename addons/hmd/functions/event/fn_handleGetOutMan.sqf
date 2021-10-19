@@ -11,6 +11,7 @@ systemChat "GetOutMan";
 private _getInHandle = player getVariable ["APD_GetInHandle", -1];
 private _getOutHandle = player getVariable ["APD_GetOutHandle", -1];
 private _seatSwitchedHandle = player getVariable ["APD_SeatSwitchedHandle", -1];
+private _killedHandle = player getVariable ["APD_KilledHandle", -1];
 
 if (_getInHandle >= 0) then
 {
@@ -28,6 +29,12 @@ if (_seatSwitchedHandle >= 0) then
 {
 	_vehicle removeEventHandler ["SeatSwitched", _seatSwitchedHandle];
 	player setVariable ["APD_SeatSwitchedHandle", -1];
+};
+
+if (_killedHandle >= 0) then
+{
+	_vehicle removeEventHandler ["Killed", _killedHandle];
+	player setVariable ["APD_KilledHandle", -1];
 };
 
 player setVariable ["APD_CopilotTurretData", []];
