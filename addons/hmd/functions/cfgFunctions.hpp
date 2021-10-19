@@ -12,6 +12,7 @@ class APD_HMD
 		class onGetOutMan {};
 		class onKilled {};
 		class onMap {};
+		class onRespawn {};
 		class onSeatSwitched {};
 	};
 
