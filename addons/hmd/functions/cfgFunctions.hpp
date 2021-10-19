@@ -27,10 +27,10 @@ class APD_HMD
 	{
 		file = "hmd\functions\render";
 
-		class toggleGunViewRendering {};
+		class toggleCopilotRendering {};
 		class toggleWaypointRendering {};
-		class updateGunViewProcessing {};
-		class updateVehicleLayout  {};
+		class updateCopilotProcessing {};
+		class updateVehicleLayout {};
 		class updateVehicleProcessing {};
 		class updateWaypointLayout {};
 		class updateWaypointProcessing {};
