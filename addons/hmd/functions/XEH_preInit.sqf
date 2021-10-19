@@ -37,3 +37,4 @@ private _modCategory = "Aergwyn's Pilot Displays - HMD";
 #include "..\config\init_general.hpp"
 #include "..\config\init_waypoint.hpp"
 #include "..\config\init_vehicle.hpp"
+#include "..\config\init_copilot.hpp"

@@ -4,7 +4,7 @@
 if (!hasInterface) exitWith {};
 
 private _vehicle = vehicle player;
-private _processingRequired = [_vehicle] call APD_fnc_isValidHMDVehicle;
+private _processingRequired = [_vehicle] call APD_fnc_isValidHMDVehicle && APD_HMD_CopilotMarkerEnabled;
 
 private _turretData = player getVariable ["APD_CopilotTurretData", []];
 
