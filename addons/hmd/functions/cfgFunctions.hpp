@@ -11,7 +11,7 @@ class APD_HMD
 		class handleGetOut {};
 		class handleGetOutMan {};
 		class handleKilled {};
-		class handleMap {};
+		class handleMissionMap {};
 		class handleRespawn {};
 		class handleSeatSwitched {};
 	};
