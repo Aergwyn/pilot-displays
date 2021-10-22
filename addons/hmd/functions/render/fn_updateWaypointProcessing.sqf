@@ -5,7 +5,7 @@ if (!hasInterface) exitWith {};
 
 private _vehicle = vehicle player;
 private _loopRequired = APD_HMD_WaypointDistanceEnabled || APD_HMD_WaypointTimeEnabled;
-private _processingRequired = [_vehicle] call APD_fnc_isValidHMDVehicle && count customWaypointPosition > 0;
+private _processingRequired = [_vehicle] call APD_fnc_isValidForHMD && count customWaypointPosition > 0;
 
 [_processingRequired && APD_HMD_WaypointMarkerEnabled] call APD_fnc_toggleWaypointRendering;
 

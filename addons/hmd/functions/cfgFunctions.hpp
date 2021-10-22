@@ -55,7 +55,7 @@ class APD_HMD
 
 		class directionRelativeToWaypoint {};
 		class getFirstCopilotTurret {};
-		class isValidHMDVehicle {};
+		class isValidForHMD {};
 		class leftPadString {};
 		class vectorToHeading {};
 	};

@@ -5,7 +5,7 @@ if (!hasInterface) exitWith {};
 
 private _vehicle = vehicle player;
 private _loopRequired = APD_HMD_VehicleAGLEnabled || APD_HMD_VehicleASLEnabled || APD_HMD_VehicleSPDEnabled;
-private _processingRequired = [_vehicle] call APD_fnc_isValidHMDVehicle;
+private _processingRequired = [_vehicle] call APD_fnc_isValidForHMD;
 
 if (_processingRequired && _loopRequired) then
 {
