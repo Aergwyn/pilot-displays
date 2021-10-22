@@ -5,6 +5,6 @@ if (!hasInterface) exitWith {};
 
 //params ["_vehicle", "_unit1", "_unit2"];
 
-systemChat "SeatSwitched";
-
+call APD_fnc_updateVehicleProcessing;
+call APD_fnc_updateWaypointProcessing;
 call APD_fnc_updateCopilotProcessing;

@@ -6,8 +6,6 @@ if (!hasInterface) exitWith {};
 //params ["_unit", "_role", "_vehicle", "_turret"];
 private _vehicle = param [2];
 
-systemChat "GetInMan";
-
 private _getInHandle = _vehicle addEventHandler ["GetIn", { _this call APD_fnc_handleGetIn; }];
 private _getOutHandle = _vehicle addEventHandler ["GetOut", { _this call APD_fnc_handleGetOut; }];
 private _seatSwitchedHandle = _vehicle addEventHandler ["SeatSwitched", { _this call APD_fnc_handleSeatSwitched; }];

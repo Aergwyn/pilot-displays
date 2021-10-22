@@ -6,8 +6,6 @@ if (!hasInterface) exitWith {};
 //params ["_unit", "_role", "_vehicle", "_turret"];
 private _vehicle = param [2];
 
-systemChat "GetOutMan";
-
 private _getInHandle = player getVariable ["APD_GetInHandle", -1];
 private _getOutHandle = player getVariable ["APD_GetOutHandle", -1];
 private _seatSwitchedHandle = player getVariable ["APD_SeatSwitchedHandle", -1];
