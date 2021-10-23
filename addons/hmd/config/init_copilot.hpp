@@ -19,3 +19,12 @@ private _catCopilotMarker = "Copilot Marker (WIP)";
 	nil,
 	{ call APD_fnc_updateCopilotLayout; }
 ] call CBA_fnc_addSetting;
+
+[
+	"APD_HMD_CopilotMarkerTexture", "LIST",
+	"Style",
+	[_modCategory, _catCopilotMarker],
+	[_supportedTexturePaths, _supportedTextureNames, 3],
+	nil,
+	{  }
+] call CBA_fnc_addSetting;

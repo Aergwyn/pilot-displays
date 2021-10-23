@@ -38,7 +38,7 @@ if (_enable && !_exists && count _turretData > 0) then
 
 			if (count _uiPos >= 2) then
 			{
-				_ctrl ctrlSetText APD_HMD_WaypointMarkerTexture;
+				_ctrl ctrlSetText APD_HMD_CopilotMarkerTexture;
 				_ctrl ctrlSetPosition [_uiPos # 0 - _uiOffset, _uiPos # 1 - _uiOffset];
 				_ctrl ctrlCommit 0;
 			};

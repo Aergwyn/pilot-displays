@@ -28,6 +28,21 @@ private _supportedFonts =
 // TODO I'm not sure about the order as custom fonts appearing/disappearing could change the index and thus the used font randomly...
 //private _supportedFonts = ("true" configClasses (configFile >> "CfgFontFamilies")) apply { configName _x; };
 
+private _supportedTexturePaths =
+[
+	"hmd\textures\wypt_plus.paa",
+	"hmd\textures\wypt_cross.paa",
+	"hmd\textures\wypt_square.paa",
+	"hmd\textures\wypt_circle.paa"
+];
+private _supportedTextureNames =
+[
+	"Plus",
+	"Cross",
+	"Square",
+	"Circle"
+];
+
 private _supportedSizes = [0.25, 4, 1, 2, true]; // Min, Max, Default, Decimals, Percentage
 
 // CBA Init

@@ -25,20 +25,7 @@ private _catWyptInfo = "Waypoint Information";
 	"APD_HMD_WaypointMarkerTexture", "LIST",
 	"Style",
 	[_modCategory, _catWyptMarker],
-	[
-		[
-			"hmd\textures\wypt_plus.paa",
-			"hmd\textures\wypt_cross.paa",
-			"hmd\textures\wypt_square.paa",
-			"hmd\textures\wypt_circle.paa"
-		],
-		[
-			"Plus",
-			"Cross",
-			"Square",
-			"Circle"
-		], 1
-	],
+	[_supportedTexturePaths, _supportedTextureNames, 1],
 	nil,
 	{  }
 ] call CBA_fnc_addSetting;
