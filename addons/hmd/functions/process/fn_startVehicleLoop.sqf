@@ -24,7 +24,7 @@ while { APD_HMD_VehicleLoopRunning } do
 	// best effort we can make here without destroying performance
 	if (_aglRaw > _aslRaw) then
 	{
-		_aglRaw = _aslRaw;
+		_aglRaw = _aslRaw; // ensure that AGL matches ASL over water
 	};
 
 	private _aglValue = (_aglRaw * _altMultiplier) toFixed 0;
