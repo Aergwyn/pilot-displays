@@ -26,6 +26,10 @@ if (_enable && !_exists) then
 			_ctrl ctrlSetText APD_HMD_WaypointMarkerTexture;
 			_ctrl ctrlSetPosition [_uiPos # 0 - _uiOffset, _uiPos # 1 - _uiOffset];
 			_ctrl ctrlCommit 0;
+		}
+		else
+		{
+			_ctrl ctrlSetText "";
 		};
 	}, [_ctrlPictureWaypointMarker]];
 };
