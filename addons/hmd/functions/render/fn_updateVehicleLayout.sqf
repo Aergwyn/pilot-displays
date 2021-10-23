@@ -9,10 +9,12 @@ private _ctrlTextVehicleAGL = _display displayCtrl 5101;
 _ctrlTextVehicleAGL setVariable ["APD_Control_Enabled", APD_HMD_VehicleAGLEnabled];
 private _ctrlTextVehicleASL = _display displayCtrl 5102;
 _ctrlTextVehicleASL setVariable ["APD_Control_Enabled", APD_HMD_VehicleASLEnabled];
-private _ctrlTextVehicleSPD = _display displayCtrl 5103;
-_ctrlTextVehicleSPD setVariable ["APD_Control_Enabled", APD_HMD_VehicleSPDEnabled];
+private _ctrlTextVehicleVSI = _display displayCtrl 5103;
+_ctrlTextVehicleVSI setVariable ["APD_Control_Enabled", APD_HMD_VehicleVSIEnabled];
+private _ctrlTextVehicleIAS = _display displayCtrl 5104;
+_ctrlTextVehicleIAS setVariable ["APD_Control_Enabled", APD_HMD_VehicleIASEnabled];
 
-private _vehicleControls = [_ctrlTextVehicleAGL, _ctrlTextVehicleASL, _ctrlTextVehicleSPD];
+private _vehicleControls = [_ctrlTextVehicleAGL, _ctrlTextVehicleASL, _ctrlTextVehicleVSI, _ctrlTextVehicleIAS];
 
 [APD_HMD_VehicleXOffset, APD_HMD_VehicleYOffset, 0.02 * APD_HMD_VehicleTextScale, _vehicleControls] call APD_fnc_setCtrlPositionAsGroup;
 {

@@ -19,7 +19,16 @@ private _catVhclInfo = "Vehicle Information";
 ] call CBA_fnc_addSetting;
 
 [
-	"APD_HMD_VehicleSPDEnabled", "CHECKBOX",
+	"APD_HMD_VehicleVSIEnabled", "CHECKBOX",
+	"Show Vertical Speed Indicator (VSI)",
+	[_modCategory, _catVhclInfo],
+	TRUE,
+	nil,
+	{ call APD_fnc_updateVehicleProcessing; }
+] call CBA_fnc_addSetting;
+
+[
+	"APD_HMD_VehicleIASEnabled", "CHECKBOX",
 	"Show Indicated Airspeed (IAS)",
 	[_modCategory, _catVhclInfo],
 	TRUE,

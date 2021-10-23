@@ -10,22 +10,24 @@ private _display = call APD_fnc_getDisplay;
 
 // Waypoint Stuff
 
-private _ctrlPictureWaypointMarker = _display ctrlCreate ["APDPicture", 5000];
+_display ctrlCreate ["APDPicture", 5000];
 
 private _ctrlTextWaypointTitle = _display ctrlCreate ["APDText", 5001];
 _ctrlTextWaypointTitle ctrlSetText "WYPT";
 
-private _ctrlTextWaypointDistance = _display ctrlCreate ["APDText", 5002];
-private _ctrlTextWaypointTime = _display ctrlCreate ["APDText", 5003];
+_display ctrlCreate ["APDText", 5002];
+_display ctrlCreate ["APDText", 5003];
 
 // Vehicle Stuff
 
-private _ctrlPictureCopilotMarker = _display ctrlCreate ["APDPicture", 5100];
-private _ctrlTextVehicleAGL = _display ctrlCreate ["APDText", 5101];
-private _ctrlTextVehicleASL = _display ctrlCreate ["APDText", 5102];
-private _ctrlTextVehicleSPD = _display ctrlCreate ["APDText", 5103];
+_display ctrlCreate ["APDPicture", 5100];
+_display ctrlCreate ["APDText", 5101];
+_display ctrlCreate ["APDText", 5102];
+_display ctrlCreate ["APDText", 5103];
+_display ctrlCreate ["APDText", 5104];
 
 // Initial Processing
 
 call APD_fnc_updateVehicleProcessing;
 call APD_fnc_updateWaypointProcessing;
+call APD_fnc_updateCopilotProcessing;
