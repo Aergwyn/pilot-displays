@@ -17,9 +17,16 @@ while { APD_HMD_VehicleLoopRunning } do
 	private _speedUnit = APD_HMD_SoU_Speed # 0;
 	private _speedMultiplier = APD_HMD_SoU_Speed # 1;
 
-	private _alt = getPosASL _vehicle;
-	private _aglRaw = (ASLtoAGL _alt) # 2;
-	private _aslRaw = _alt # 2;
+	private _aglRaw = (getPosATL _vehicle) # 2;
+	private _aslRaw = (getPosASL _vehicle) # 2;
+
+	// getPos is inconsistent (and sometimes negative?)
+	// best effort we can make here without destroying performance
+	if (_aglRaw > _aslRaw) then
+	{
+		_aglRaw = _aslRaw;
+	};
+
 	private _aglValue = (_aglRaw * _altMultiplier) toFixed 0;
 	private _aslValue = (_aslRaw * _altMultiplier) toFixed 0;
 	private _speedRaw = vectorMagnitude (velocity _vehicle);
